@@ -1,0 +1,18 @@
+{
+  "name": "jsonresume-theme-even",
+  "version": "0.1.0",
+  "description": "A flat theme for JSON Resume, compatible with the bleeding edge resume schema",
+  "author": "Rafael Bardini",
+  "homepage": "https://github.com/rbardini/jsonresume-theme-even",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rbardini/jsonresume-theme-even"
+  },
+  "bugs": {
+    "url": "https://github.com/rbardini/jsonresume-theme-even/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "handlebars": "4.0.12"
+  }
+}
