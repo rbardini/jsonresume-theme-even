@@ -383,9 +383,7 @@
                   {{/name}}
                   {{#if keywords.length}}
                     <ul class="keywords">
-                      {{#keywords}}
-                        <li>{{.}}</li>
-                      {{/keywords}}
+                      {{#keywords}}<li>{{.}}</li>{{/keywords}}
                     </ul>
                   {{/if}}
                 </div>
@@ -437,9 +435,7 @@
                   {{/name}}
                   {{#if keywords.length}}
                     <ul class="keywords">
-                      {{#keywords}}
-                        <li>{{.}}</li>
-                      {{/keywords}}
+                      {{#keywords}}<li>{{.}}</li>{{/keywords}}
                     </ul>
                   {{/if}}
                 </div>
