@@ -4,10 +4,13 @@
   font-weight: normal;
   src: url("data:font/woff;base64,d09GRgABAAAAAAWgAAsAAAAABVQAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABPUy8yAAABCAAAAGAAAABgDxIMrGNtYXAAAAFoAAAAXAAAAFzxE/EEZ2FzcAAAAcQAAAAIAAAACAAAABBnbHlmAAABzAAAAXwAAAF8tFkZ3GhlYWQAAANIAAAANgAAADYYMkpraGhlYQAAA4AAAAAkAAAAJAfBA8dobXR4AAADpAAAABgAAAAYDAAAAWxvY2EAAAO8AAAADgAAAA4A5gBgbWF4cAAAA8wAAAAgAAAAIAAKAFBuYW1lAAAD7AAAAZIAAAGSxxxndHBvc3QAAAWAAAAAIAAAACAAAwAAAAMCqwGQAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAA8NcDwP/AAEADwABAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAwAAAAMAAAAcAAEAAwAAABwAAwABAAAAHAAEAEAAAAAMAAgAAgAEAAEAIPBS8Nf//f//AAAAAAAg8FLw1//9//8AAf/jD7IPLgADAAEAAAAAAAAAAAAAAAAAAQAB//8ADwABAAAAAAAAAAAAAgAANzkBAAAAAAEAAAAAAAAAAAACAAA3OQEAAAAAAQAAAAAAAAAAAAIAADc5AQAAAAABAAAAwAIAAsAAGwAAEzQ3PgE3NjMyFx4BFxYVFAcOAQcGIyInLgEnJgAUFEYvLjU1Li9GFBQUFEYvLjU1Li9GFBQBwDUuL0YUFBQURi8uNTUuL0YUFBQURi8uAAMAAQCZA/8DDgAzAEEATQAAAQcFHgEVFAYHBQYiJyUVHgEVFAYHHgEdARQiPQE0NjcuATU0Njc1Jy4BNTQ2NyUyNjMyFgEXIxYyPwEVFAYjIiY1ExQWMzI2NTQmIyIGAgcBAekHCQkH/hcDBwP+xw4SBQQEBYAFBAQFEg5vBwkJBwHpAgMCAQT++vUBBgwF9ZZqapbBJhobJSUbGiYDDQGZAgwHCAwCmAEBYl0IHRIJEAcHEAmlGhqlCRAHBxAJER4IcSQCCwgICwKZAQH+s0wCAkygMDAwMAFADRMTDQ0TEwAAAAEAAAABAADtMnsXXw889QALBAAAAAAA2oqDMAAAAADaioMwAAAAAAP/Aw4AAAAIAAIAAAAAAAAAAQAAA8D/wAAABAAAAAAAA/8AAQAAAAAAAAAAAAAAAAAAAAYEAAAAAAAAAAAAAAACAAAAAgAAAAQAAAEAAAAAAAoAFAAeAEwAvgAAAAEAAAAGAE4AAwAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAOAK4AAQAAAAAAAQAIAAAAAQAAAAAAAgAHAGkAAQAAAAAAAwAIADkAAQAAAAAABAAIAH4AAQAAAAAABQALABgAAQAAAAAABgAIAFEAAQAAAAAACgAaAJYAAwABBAkAAQAQAAgAAwABBAkAAgAOAHAAAwABBAkAAwAQAEEAAwABBAkABAAQAIYAAwABBAkABQAWACMAAwABBAkABgAQAFkAAwABBAkACgA0ALBvY3RpY29ucwBvAGMAdABpAGMAbwBuAHNWZXJzaW9uIDEuMABWAGUAcgBzAGkAbwBuACAAMQAuADBvY3RpY29ucwBvAGMAdABpAGMAbwBuAHNvY3RpY29ucwBvAGMAdABpAGMAbwBuAHNSZWd1bGFyAFIAZQBnAHUAbABhAHJvY3RpY29ucwBvAGMAdABpAGMAbwBuAHNGb250IGdlbmVyYXRlZCBieSBJY29Nb29uLgBGAG8AbgB0ACAAZwBlAG4AZQByAGEAdABlAGQAIABiAHkAIABJAGMAbwBNAG8AbwBuAC4AAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA") format("woff");
 }
+html {
+  font-size: 14px;
+}
 body {
   background: #fff;
   font-family: Lato, sans-serif;
-  margin: 0 0 80px;
+  margin: 0 0 6rem;
 }
 a {
   color: #2ecc71;
@@ -17,21 +20,8 @@ a:hover {
   color: #f1c40f;
   text-decoration: none;
 }
-p {
-  line-height: 1.5;
-  margin: 0;
-}
-p + p {
-  margin-top: 10px;
-}
-h1,
-h2,
-h3,
-h4 {
-  margin-top: 0
-}
 section {
-  margin-top: 30px;
+  margin-top: 2rem;
 }
 li {
   line-height: 1.8;
@@ -48,7 +38,7 @@ li:before {
 }
 blockquote {
   border-left: 5px solid #e7e9ec;
-  font-size: 14px;
+  font-size: 1rem;
 }
 em {
   color: #95a5a6;
@@ -56,21 +46,20 @@ em {
   font-style: normal;
 }
 h4 span:first-child {
-  color: #000;
   font-weight: bold;
 }
 .container {
   max-width: 750px;
-  padding: 0 30px;
+  padding: 0 2rem;
 }
 .col-sm-6 {
   margin-bottom: 10px;
 }
 .col-sm-12 h4 {
-  margin-top: 12px;
+  margin-top: 1rem;
 }
 .col-sm-12 + .col-sm-12 {
-  margin-top: 30px;
+  margin-top: 2rem;
 }
 .keywords {
   padding: 0;
@@ -86,21 +75,18 @@ h4 span:first-child {
 }
 #header {
   background: #f4f6f6;
-  padding: 50px 0;
-  margin-bottom: 30px;
+  padding: 4rem 0;
+  margin-bottom: 4rem;
 }
 #header h2 {
   color: #95a5a6;
-  font-size: 24px;
 }
 #content h3 {
   color: #f1c40f;
-  font-size: 26px;
-  margin-top: -4px;
 }
 #content aside {
   text-align: right;
-  padding-right: 30px;
+  padding-right: 2rem;
 }
 #work .position,
 #volunteer .position {
@@ -127,6 +113,14 @@ h4 span:first-child {
 #publications .website a:before {
   content: attr(href);
 }
+#interests .row,
+#skills .row {
+  display: block;
+}
+#interests .col-sm-6,
+#skills .col-sm-6 {
+  float: left;
+}
 
 @media (min-width: 480px) {
   .strike-through {
@@ -146,7 +140,7 @@ h4 span:first-child {
     margin-top: -12px;
   }
   .strike-through span + span {
-    font-size: 14px;
+    font-size: 1rem;
     margin-top: -10px;
     padding-left: 20px;
     right: 0;
@@ -154,7 +148,7 @@ h4 span:first-child {
 }
 @media (max-width: 768px) {
   .col-sm-6:last-child {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
   #content aside {
     margin-bottom: 20px;
@@ -166,12 +160,8 @@ h4 span:first-child {
   }
 }
 @media (max-width: 480px) {
-  h1 {
-    font-size: 26px;
-  }
   .date {
-    font-size: 14px;
-    margin-bottom: 5px;
+    font-size: 1rem;
   }
   .strike-through span:first-child {
     margin-bottom: 7px;

@@ -6,7 +6,7 @@
     <meta name="description" content="{{#resume.basics}}{{summary}}{{/resume.basics}}" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
     <style>
       {{{css}}}
     </style>
@@ -15,7 +15,7 @@
     <header id="header">
       <div class="container">
         <div class="row">
-          <div class="col-sm-9 col-sm-push-3">
+          <div class="col-sm-9 offset-sm-3">
             {{#resume.basics}}
               {{#name}}
                 <h1>{{.}}</h1>
@@ -127,7 +127,7 @@
                     </span>
                   </h4>
                   {{#url}}
-                    <div class="website pull-right">
+                    <div class="website float-right">
                       <a href="{{.}}">{{.}}</a>
                     </div>
                   {{/url}}
@@ -172,7 +172,7 @@
                     </span>
                   </h4>
                   {{#url}}
-                    <div class="website pull-right">
+                    <div class="website float-right">
                       <a href="{{.}}">{{.}}</a>
                     </div>
                   {{/url}}
@@ -217,7 +217,7 @@
                     </span>
                   </h4>
                   {{#url}}
-                    <div class="website pull-right">
+                    <div class="website float-right">
                       <a href="{{.}}">{{.}}</a>
                     </div>
                   {{/url}}
@@ -262,7 +262,7 @@
                     </span>
                   </h4>
                   {{#url}}
-                    <div class="website pull-right">
+                    <div class="website float-right">
                       <a href="{{.}}">{{.}}</a>
                     </div>
                   {{/url}}
@@ -306,7 +306,7 @@
                     <span>{{title}}</span>
                   </h4>
                   {{#date}}
-                    <div class="date pull-right">
+                    <div class="date float-right">
                       <em>Awarded</em>
                       {{formatDate .}}
                     </div>
@@ -345,7 +345,7 @@
                     </span>
                   </h4>
                   {{#url}}
-                    <div class="website pull-right">
+                    <div class="website float-right">
                       <a href="{{.}}">{{.}}</a>
                     </div>
                   {{/url}}
