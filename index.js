@@ -26,7 +26,3 @@ Handlebars.registerHelper("join", function(arr, separator) {
   separator = typeof separator === "string" ? separator : ", ";
   return arr.join(separator);
 });
-
-Handlebars.registerHelper("nl2br", function(value) {
-  return (value || "").replace(/\n/g, "</p><p>");
-});
