@@ -1,5 +1,4 @@
-jsonresume-theme-even
-=====================
+# jsonresume-theme-even
 
 [![npm package version](https://img.shields.io/npm/v/jsonresume-theme-even.svg)](https://www.npmjs.com/package/jsonresume-theme-even)
 [![Dependency status](https://img.shields.io/david/rbardini/jsonresume-theme-even.svg)](https://david-dm.org/rbardini/jsonresume-theme-even)
