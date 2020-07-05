@@ -58,6 +58,7 @@ li:before {
 blockquote {
   border-left: 5px solid #e7e9ec;
   font-size: 1rem;
+  padding-left: 1rem;
 }
 em {
   color: #95a5a6;
