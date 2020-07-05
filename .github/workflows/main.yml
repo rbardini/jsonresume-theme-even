@@ -21,7 +21,7 @@ jobs:
         run: npm run lint
 
       - name: Test
-        run: npm test -- --coverage-report=json
+        run: npm test -- --coverage-report=lcov --no-browser
 
       - name: Coverage
         uses: codecov/codecov-action@v1
