@@ -18,12 +18,14 @@
     "style.css"
   ],
   "scripts": {
+    "lint": "eslint .",
     "test": "tap"
   },
   "dependencies": {
     "handlebars": "4.7.6"
   },
   "devDependencies": {
+    "eslint": "7.4.0",
     "tap": "14.10.7"
   }
 }
