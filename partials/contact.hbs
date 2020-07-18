@@ -1,0 +1,23 @@
+<section id="contact">
+  <h3>Contact</h3>
+  <div class="grid-list">
+    {{#email}}
+      <div>
+        <h6>Email</h6>
+        <a href="mailto:{{.}}">{{.}}</a>
+      </div>
+    {{/email}}
+    {{#phone}}
+      <div>
+        <h6>Phone</h6>
+        {{.}}
+      </div>
+    {{/phone}}
+    {{#url}}
+      <div>
+        <h6>Website</h6>
+        <a href="{{.}}">{{.}}</a>
+      </div>
+    {{/url}}
+  </div>
+</section>
