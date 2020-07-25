@@ -28,11 +28,11 @@
     "handlebars": "4.7.6"
   },
   "devDependencies": {
-    "eslint": "7.4.0",
+    "eslint": "7.5.0",
     "html-validate": "3.0.0",
     "husky": "4.2.5",
     "lint-staged": "10.2.11",
     "prettier": "2.0.5",
-    "tap": "14.10.7"
+    "tap": "14.10.8"
   }
 }
