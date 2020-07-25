@@ -169,6 +169,11 @@ section {
   grid-column: main;
 }
 
+.stack {
+  display: grid;
+  gap: 1.5em;
+}
+
 .grid-list {
   display: grid;
   gap: 1em;
@@ -194,6 +199,7 @@ section {
 
 .tag-list {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   padding: 0;
 }
@@ -269,8 +275,8 @@ section {
 
       <section id="work">
         <h3>Work</h3>
-        <div>
-            <div>
+        <div class="stack">
+            <article>
               <div class="spaced-list">
                 <h4>Pied Piper</h4>
                 <span>
@@ -289,13 +295,13 @@ section {
                     <li>Successfully won Techcrunch Disrupt</li>
                     <li>Optimized an algorithm that holds the current world record for Weisman Scores</li>
                 </ul>
-            </div>
+            </article>
         </div>
       </section>
       <section id="volunteer">
         <h3>Volunteer</h3>
-        <div>
-            <div>
+        <div class="stack">
+            <article>
               <div class="spaced-list">
                 <h4>CoderDojo</h4>
                 <span>
@@ -312,13 +318,13 @@ section {
                 <ul>
                     <li>Awarded &#x27;Teacher of the Month&#x27;</li>
                 </ul>
-            </div>
+            </article>
         </div>
       </section>
       <section id="education">
         <h3>Education</h3>
-        <div>
-            <div>
+        <div class="stack">
+            <article>
               <div class="spaced-list">
                 <h4>University of Oklahoma</h4>
                 <span>
@@ -336,13 +342,13 @@ section {
                     <li>DB1101 - Basic SQL</li>
                     <li>CS2011 - Java Introduction</li>
                 </ul>
-            </div>
+            </article>
         </div>
       </section>
       <section id="projects">
         <h3>Projects</h3>
-        <div>
-            <div>
+        <div class="stack">
+            <article>
               <div class="spaced-list">
                 <h4>Miss Direction</h4>
                 <span>
@@ -364,13 +370,13 @@ section {
                     <li>Built by all women team of newbie programmers</li>
                     <li>Using modern technologies such as GoogleMaps, Chrome Extension and Javascript</li>
                 </ul>
-            </div>
+            </article>
         </div>
       </section>
       <section id="awards">
         <h3>Awards</h3>
-        <div>
-            <div>
+        <div class="stack">
+            <article>
               <div class="spaced-list">
                 <h4>Digital Compression Pioneer Award</h4>
                   <time datetime="2014-11-01">Nov 2014</time>
@@ -381,13 +387,13 @@ section {
                   </div>
               </div>
                 <p>There is no spoon.</p>
-            </div>
+            </article>
         </div>
       </section>
       <section id="publications">
         <h3>Publications</h3>
-        <div>
-            <div>
+        <div class="stack">
+            <article>
               <div class="spaced-list">
                 <h4>Video compression for 3d media</h4>
                   <time datetime="2014-10-01">Oct 2014</time>
@@ -399,7 +405,7 @@ section {
                   <a href="http://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)">http://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)</a>
               </div>
                 <p>Innovative middle-out compression algorithm that changes the way we store data.</p>
-            </div>
+            </article>
         </div>
       </section>
       <section id="skills">
@@ -446,7 +452,7 @@ section {
       </section>
       <section id="references">
         <h3>References</h3>
-        <div>
+        <div class="stack">
               <blockquote>
                 <p>It is my pleasure to recommend Richard, his performance working as a consultant for Main St. Company proved that he will be a valuable addition to any company.</p>
                   <p>
