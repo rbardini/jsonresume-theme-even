@@ -1,9 +1,9 @@
 {{#if resume.projects.length}}
   <section id="projects">
     <h3>Projects</h3>
-    <div>
+    <div class="stack">
       {{#each resume.projects}}
-        <div>
+        <article>
           <div class="spaced-list">
             <h4>{{name}}</h4>
             <span>
@@ -33,7 +33,7 @@
               {{/highlights}}
             </ul>
           {{/if}}
-        </div>
+        </article>
       {{/each}}
     </div>
   </section>

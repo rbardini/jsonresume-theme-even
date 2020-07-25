@@ -153,6 +153,11 @@ section {
   grid-column: main;
 }
 
+.stack {
+  display: grid;
+  gap: 1.5em;
+}
+
 .grid-list {
   display: grid;
   gap: 1em;
