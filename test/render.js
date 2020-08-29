@@ -2,7 +2,7 @@ const { test } = require('tap')
 const { HtmlValidate } = require('html-validate')
 
 const { render } = require('..')
-const resume = require('../resume.json')
+const resume = require('resume-schema/sample.resume.json')
 
 test('renders a resume', t => {
   t.matchSnapshot(render(resume))

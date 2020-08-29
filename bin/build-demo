@@ -3,7 +3,7 @@ const fs = require('fs')
 const path = require('path')
 
 const { render } = require('..')
-const resume = require('../resume.json')
+const resume = require('resume-schema/sample.resume.json')
 
 const dest = path.resolve(__dirname, '../public');
 const html = render(resume)
