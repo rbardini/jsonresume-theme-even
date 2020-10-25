@@ -358,7 +358,7 @@ section {
               </div>
               <div class="spaced-list">
                 <span>
-                  <strong>Team lead, Designer</strong>
+                    <strong>Team lead, Designer</strong>
                     at <strong>Smoogle</strong>
                 </span>
                   <a href="missdirection.example.com">missdirection.example.com</a>

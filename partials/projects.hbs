@@ -13,7 +13,9 @@
           </div>
           <div class="spaced-list">
             <span>
-              <strong>{{join roles}}</strong>
+              {{#if roles}}
+                <strong>{{join roles}}</strong>
+              {{/if}}
               {{#entity}}
                 at <strong>{{.}}</strong>
               {{/entity}}
