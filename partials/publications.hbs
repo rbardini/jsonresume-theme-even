@@ -4,22 +4,24 @@
     <div class="stack">
       {{#each resume.publications}}
         <article>
-          <div class="spaced-list">
-            <h4>{{name}}</h4>
-            {{#releaseDate}}
-              <time datetime="{{.}}">{{formatDate .}}</time>
-            {{/releaseDate}}
-          </div>
-          <div class="spaced-list">
-            {{#publisher}}
-              <span>
-                Published by <strong>{{.}}</strong>
-              </span>
-            {{/publisher}}
-            {{#url}}
-              <a href="{{.}}">{{.}}</a>
-            {{/url}}
-          </div>
+          <header>
+            <div class="spaced-list">
+              <h4>{{name}}</h4>
+              {{#releaseDate}}
+                <time datetime="{{.}}">{{formatDate .}}</time>
+              {{/releaseDate}}
+            </div>
+            <div class="spaced-list">
+              {{#publisher}}
+                <span>
+                  Published by <strong>{{.}}</strong>
+                </span>
+              {{/publisher}}
+              {{#url}}
+                <a href="{{.}}">{{.}}</a>
+              {{/url}}
+            </div>
+          </header>
           {{#summary}}
             <p>{{.}}</p>
           {{/summary}}

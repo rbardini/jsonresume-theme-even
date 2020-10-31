@@ -132,14 +132,6 @@ h6 {
   font-size: var(--scale0);
 }
 
-p:not(:first-child) {
-  margin-top: 1em;
-}
-
-p:not(:last-child) {
-  margin-bottom: 1em;
-}
-
 blockquote {
   border-left: 0.2em solid var(--mutedColor);
   padding-left: 1em;
@@ -154,7 +146,7 @@ cite::before {
   content: '— ';
 }
 
-header {
+.masthead {
   background: var(--mutedColor);
   display: inherit;
   gap: inherit;
@@ -164,9 +156,14 @@ header {
   row-gap: 0;
 }
 
-header > *,
+.masthead > *,
 section {
   grid-column: main;
+}
+
+article > * + *,
+blockquote > * + * {
+  margin-top: 0.6em;
 }
 
 .stack {
@@ -216,7 +213,7 @@ section {
     margin-bottom: inherit;
   }
 
-  header > *,
+  .masthead > *,
   section {
     grid-column: content;
   }
@@ -232,7 +229,7 @@ section {
 </style>
   </head>
   <body>
-      <header>
+      <header class="masthead">
           <h1>Richard Hendriks</h1>
           <h2>Programmer</h2>
       </header>
@@ -277,17 +274,19 @@ section {
         <h3>Work</h3>
         <div class="stack">
             <article>
-              <div class="spaced-list">
-                <h4>Pied Piper</h4>
-                <span>
-                  <time datetime="2013-12-01">Dec 2013</time> –
-                  <time datetime="2014-12-01">Dec 2014</time>
-                </span>
-              </div>
-              <div class="spaced-list">
-                  <strong>CEO/President</strong>
-                  <a href="http://piedpiper.example.com">http://piedpiper.example.com</a>
-              </div>
+              <header>
+                <div class="spaced-list">
+                  <h4>Pied Piper</h4>
+                  <span>
+                    <time datetime="2013-12-01">Dec 2013</time> –
+                    <time datetime="2014-12-01">Dec 2014</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>CEO/President</strong>
+                    <a href="http://piedpiper.example.com">http://piedpiper.example.com</a>
+                </div>
+              </header>
                 <p>Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.</p>
                 <h5>Highlights</h5>
                 <ul>
@@ -302,17 +301,19 @@ section {
         <h3>Volunteer</h3>
         <div class="stack">
             <article>
-              <div class="spaced-list">
-                <h4>CoderDojo</h4>
-                <span>
-                  <time datetime="2012-01-01">Jan 2012</time> –
-                  <time datetime="2013-01-01">Jan 2013</time>
-                </span>
-              </div>
-              <div class="spaced-list">
-                  <strong>Teacher</strong>
-                  <a href="http://coderdojo.example.com/">http://coderdojo.example.com/</a>
-              </div>
+              <header>
+                <div class="spaced-list">
+                  <h4>CoderDojo</h4>
+                  <span>
+                    <time datetime="2012-01-01">Jan 2012</time> –
+                    <time datetime="2013-01-01">Jan 2013</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Teacher</strong>
+                    <a href="http://coderdojo.example.com/">http://coderdojo.example.com/</a>
+                </div>
+              </header>
                 <p>Global movement of free coding clubs for young people.</p>
                 <h5>Highlights</h5>
                 <ul>
@@ -325,17 +326,19 @@ section {
         <h3>Education</h3>
         <div class="stack">
             <article>
-              <div class="spaced-list">
-                <h4>University of Oklahoma</h4>
-                <span>
-                  <time datetime="2011-06-01">Jun 2011</time> –
-                  <time datetime="2014-01-01">Jan 2014</time>
-                </span>
-              </div>
-              <div class="spaced-list">
-                  <strong>Information Technology</strong>
-                  <a href="https://www.ou.edu/">https://www.ou.edu/</a>
-              </div>
+              <header>
+                <div class="spaced-list">
+                  <h4>University of Oklahoma</h4>
+                  <span>
+                    <time datetime="2011-06-01">Jun 2011</time> –
+                    <time datetime="2014-01-01">Jan 2014</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Information Technology</strong>
+                    <a href="https://www.ou.edu/">https://www.ou.edu/</a>
+                </div>
+              </header>
                 <p>Bachelor</p>
                 <h5>Courses</h5>
                 <ul>
@@ -349,20 +352,22 @@ section {
         <h3>Projects</h3>
         <div class="stack">
             <article>
-              <div class="spaced-list">
-                <h4>Miss Direction</h4>
-                <span>
-                  <time datetime="2016-08-24">Aug 2016</time> –
-                  <time datetime="2016-08-24">Aug 2016</time>
-                </span>
-              </div>
-              <div class="spaced-list">
-                <span>
-                    <strong>Team lead, Designer</strong>
-                    at <strong>Smoogle</strong>
-                </span>
-                  <a href="missdirection.example.com">missdirection.example.com</a>
-              </div>
+              <header>
+                <div class="spaced-list">
+                  <h4>Miss Direction</h4>
+                  <span>
+                    <time datetime="2016-08-24">Aug 2016</time> –
+                    <time datetime="2016-08-24">Aug 2016</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                  <span>
+                      <strong>Team lead, Designer</strong>
+                      at <strong>Smoogle</strong>
+                  </span>
+                    <a href="missdirection.example.com">missdirection.example.com</a>
+                </div>
+              </header>
                 <p>A mapping engine that misguides you</p>
                 <h5>Highlights</h5>
                 <ul>
@@ -377,15 +382,17 @@ section {
         <h3>Awards</h3>
         <div class="stack">
             <article>
-              <div class="spaced-list">
-                <h4>Digital Compression Pioneer Award</h4>
-                  <time datetime="2014-11-01">Nov 2014</time>
-              </div>
-              <div class="spaced-list">
-                  <div>
-                    Awarded by <strong>Techcrunch</strong>
-                  </div>
-              </div>
+              <header>
+                <div class="spaced-list">
+                  <h4>Digital Compression Pioneer Award</h4>
+                    <time datetime="2014-11-01">Nov 2014</time>
+                </div>
+                <div class="spaced-list">
+                    <div>
+                      Awarded by <strong>Techcrunch</strong>
+                    </div>
+                </div>
+              </header>
                 <p>There is no spoon.</p>
             </article>
         </div>
@@ -394,16 +401,18 @@ section {
         <h3>Publications</h3>
         <div class="stack">
             <article>
-              <div class="spaced-list">
-                <h4>Video compression for 3d media</h4>
-                  <time datetime="2014-10-01">Oct 2014</time>
-              </div>
-              <div class="spaced-list">
-                  <span>
-                    Published by <strong>Hooli</strong>
-                  </span>
-                  <a href="http://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)">http://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)</a>
-              </div>
+              <header>
+                <div class="spaced-list">
+                  <h4>Video compression for 3d media</h4>
+                    <time datetime="2014-10-01">Oct 2014</time>
+                </div>
+                <div class="spaced-list">
+                    <span>
+                      Published by <strong>Hooli</strong>
+                    </span>
+                    <a href="http://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)">http://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)</a>
+                </div>
+              </header>
                 <p>Innovative middle-out compression algorithm that changes the way we store data.</p>
             </article>
         </div>

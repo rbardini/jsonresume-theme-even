@@ -116,14 +116,6 @@ h6 {
   font-size: var(--scale0);
 }
 
-p:not(:first-child) {
-  margin-top: 1em;
-}
-
-p:not(:last-child) {
-  margin-bottom: 1em;
-}
-
 blockquote {
   border-left: 0.2em solid var(--mutedColor);
   padding-left: 1em;
@@ -138,7 +130,7 @@ cite::before {
   content: '— ';
 }
 
-header {
+.masthead {
   background: var(--mutedColor);
   display: inherit;
   gap: inherit;
@@ -148,9 +140,14 @@ header {
   row-gap: 0;
 }
 
-header > *,
+.masthead > *,
 section {
   grid-column: main;
+}
+
+article > * + *,
+blockquote > * + * {
+  margin-top: 0.6em;
 }
 
 .stack {
@@ -200,7 +197,7 @@ section {
     margin-bottom: inherit;
   }
 
-  header > *,
+  .masthead > *,
   section {
     grid-column: content;
   }

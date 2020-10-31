@@ -4,26 +4,28 @@
     <div class="stack">
       {{#each resume.projects}}
         <article>
-          <div class="spaced-list">
-            <h4>{{name}}</h4>
-            <span>
-              <time datetime="{{startDate}}">{{formatDate startDate}}</time> –
-              {{#if endDate}}<time datetime="{{endDate}}">{{formatDate endDate}}</time>{{else}}Present{{/if}}
-            </span>
-          </div>
-          <div class="spaced-list">
-            <span>
-              {{#if roles}}
-                <strong>{{join roles}}</strong>
-              {{/if}}
-              {{#entity}}
-                at <strong>{{.}}</strong>
-              {{/entity}}
-            </span>
-            {{#url}}
-              <a href="{{.}}">{{.}}</a>
-            {{/url}}
-          </div>
+          <header>
+            <div class="spaced-list">
+              <h4>{{name}}</h4>
+              <span>
+                <time datetime="{{startDate}}">{{formatDate startDate}}</time> –
+                {{#if endDate}}<time datetime="{{endDate}}">{{formatDate endDate}}</time>{{else}}Present{{/if}}
+              </span>
+            </div>
+            <div class="spaced-list">
+              <span>
+                {{#if roles}}
+                  <strong>{{join roles}}</strong>
+                {{/if}}
+                {{#entity}}
+                  at <strong>{{.}}</strong>
+                {{/entity}}
+              </span>
+              {{#url}}
+                <a href="{{.}}">{{.}}</a>
+              {{/url}}
+            </div>
+          </header>
           {{#description}}
             <p>{{.}}</p>
           {{/description}}

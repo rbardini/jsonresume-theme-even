@@ -4,21 +4,23 @@
     <div class="stack">
       {{#each resume.volunteer}}
         <article>
-          <div class="spaced-list">
-            <h4>{{organization}}</h4>
-            <span>
-              <time datetime="{{startDate}}">{{formatDate startDate}}</time> –
-              {{#if endDate}}<time datetime="{{endDate}}">{{formatDate endDate}}</time>{{else}}Present{{/if}}
-            </span>
-          </div>
-          <div class="spaced-list">
-            {{#position}}
-              <strong>{{.}}</strong>
-            {{/position}}
-            {{#url}}
-              <a href="{{.}}">{{.}}</a>
-            {{/url}}
-          </div>
+          <header>
+            <div class="spaced-list">
+              <h4>{{organization}}</h4>
+              <span>
+                <time datetime="{{startDate}}">{{formatDate startDate}}</time> –
+                {{#if endDate}}<time datetime="{{endDate}}">{{formatDate endDate}}</time>{{else}}Present{{/if}}
+              </span>
+            </div>
+            <div class="spaced-list">
+              {{#position}}
+                <strong>{{.}}</strong>
+              {{/position}}
+              {{#url}}
+                <a href="{{.}}">{{.}}</a>
+              {{/url}}
+            </div>
+          </header>
           {{#summary}}
             <p>{{.}}</p>
           {{/summary}}
