@@ -246,7 +246,7 @@ blockquote > * + * {
             </div>
             <div>
               <h6>Website</h6>
-              <a href="http://richardhendricks.example.com">http://richardhendricks.example.com</a>
+              <a href="http://richardhendricks.example.com">richardhendricks.example.com</a>
             </div>
         </div>
       </section>
@@ -284,7 +284,7 @@ blockquote > * + * {
                 </div>
                 <div class="spaced-list">
                     <strong>CEO/President</strong>
-                    <a href="http://piedpiper.example.com">http://piedpiper.example.com</a>
+                    <a href="http://piedpiper.example.com">piedpiper.example.com</a>
                 </div>
               </header>
                 <p>Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.</p>
@@ -311,7 +311,7 @@ blockquote > * + * {
                 </div>
                 <div class="spaced-list">
                     <strong>Teacher</strong>
-                    <a href="http://coderdojo.example.com/">http://coderdojo.example.com/</a>
+                    <a href="http://coderdojo.example.com/">coderdojo.example.com</a>
                 </div>
               </header>
                 <p>Global movement of free coding clubs for young people.</p>
@@ -336,7 +336,7 @@ blockquote > * + * {
                 </div>
                 <div class="spaced-list">
                     <strong>Information Technology</strong>
-                    <a href="https://www.ou.edu/">https://www.ou.edu/</a>
+                    <a href="https://www.ou.edu/">www.ou.edu</a>
                 </div>
               </header>
                 <p>Bachelor</p>
@@ -410,7 +410,7 @@ blockquote > * + * {
                     <span>
                       Published by <strong>Hooli</strong>
                     </span>
-                    <a href="http://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)">http://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)</a>
+                    <a href="http://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)">en.wikipedia.org/wiki/Silicon_Valley_(TV_series)</a>
                 </div>
               </header>
                 <p>Innovative middle-out compression algorithm that changes the way we store data.</p>

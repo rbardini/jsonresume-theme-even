@@ -22,6 +22,10 @@ Handlebars.registerHelper('formatDate', dateString =>
   }),
 )
 
+Handlebars.registerHelper('formatURL', url =>
+  url.replace(/^(https?:|)\/\//, '').replace(/\/$/, ''),
+)
+
 Handlebars.registerHelper('join', (arr, separator) =>
   arr.join(typeof separator === 'string' ? separator : ', '),
 )
