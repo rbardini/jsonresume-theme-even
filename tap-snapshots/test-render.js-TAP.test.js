@@ -237,15 +237,15 @@ blockquote > * + * {
         <h3>Contact</h3>
         <div class="grid-list">
             <div>
-              <h6>Email</h6>
+              <h4>Email</h4>
               <a href="mailto:richard.hendriks@mail.com">richard.hendriks@mail.com</a>
             </div>
             <div>
-              <h6>Phone</h6>
+              <h4>Phone</h4>
               (912) 555-4321
             </div>
             <div>
-              <h6>Website</h6>
+              <h4>Website</h4>
               <a href="http://richardhendricks.example.com">richardhendricks.example.com</a>
             </div>
         </div>
@@ -260,11 +260,11 @@ blockquote > * + * {
           <h3>Profiles</h3>
           <div class="grid-list">
               <div>
-                  <h6>Twitter</h6>
+                  <h4>Twitter</h4>
                     neutralthoughts
               </div>
               <div>
-                  <h6>SoundCloud</h6>
+                  <h4>SoundCloud</h4>
                     <a href="https://soundcloud.example.com/dandymusicnl">dandymusicnl</a>
               </div>
           </div>
@@ -421,7 +421,7 @@ blockquote > * + * {
         <h3>Skills</h3>
         <div class="grid-list">
             <div>
-                <h5>Web Development</h5>
+                <h4>Web Development</h4>
                 <ul class="tag-list">
                     <li>HTML</li>
                     <li>CSS</li>
@@ -429,7 +429,7 @@ blockquote > * + * {
                 </ul>
             </div>
             <div>
-                <h5>Compression</h5>
+                <h4>Compression</h4>
                 <ul class="tag-list">
                     <li>Mpeg</li>
                     <li>MP4</li>
@@ -442,7 +442,7 @@ blockquote > * + * {
         <h3>Languages</h3>
         <div class="grid-list">
             <div>
-                <h6>English</h6>
+                <h4>English</h4>
               Native speaker
             </div>
         </div>
@@ -451,7 +451,7 @@ blockquote > * + * {
         <h3>Interests</h3>
         <div class="grid-list">
             <div>
-                <h5>Wildlife</h5>
+                <h4>Wildlife</h4>
                 <ul class="tag-list">
                     <li>Ferrets</li>
                     <li>Unicorns</li>

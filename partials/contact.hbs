@@ -3,19 +3,19 @@
   <div class="grid-list">
     {{#email}}
       <div>
-        <h6>Email</h6>
+        <h4>Email</h4>
         <a href="mailto:{{.}}">{{.}}</a>
       </div>
     {{/email}}
     {{#phone}}
       <div>
-        <h6>Phone</h6>
+        <h4>Phone</h4>
         {{.}}
       </div>
     {{/phone}}
     {{#url}}
       <div>
-        <h6>Website</h6>
+        <h4>Website</h4>
         <a href="{{.}}">{{formatURL .}}</a>
       </div>
     {{/url}}
