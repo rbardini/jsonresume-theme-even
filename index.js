@@ -1,6 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 const Handlebars = require('handlebars')
+const micromark = require('micromark')
 
 const extname = '.hbs'
 const partialsDir = path.join(__dirname, 'partials')
@@ -29,6 +30,8 @@ Handlebars.registerHelper('formatURL', url =>
 Handlebars.registerHelper('join', (arr, separator) =>
   arr.join(typeof separator === 'string' ? separator : ', '),
 )
+
+Handlebars.registerHelper('markdown', doc => micromark(doc))
 
 exports.render = resume => {
   const template = fs.readFileSync(path.join(__dirname, 'resume.hbs'), 'utf-8')

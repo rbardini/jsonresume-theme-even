@@ -252,9 +252,9 @@ blockquote > * + * {
       </section>
         <section id="about">
           <h3>About</h3>
-          <div>
+          <article>
             <p>Richard hails from Tulsa. He has earned degrees from the University of Oklahoma and Stanford. (Go Sooners and Cardinal!) Before starting Pied Piper, he worked for Hooli as a part time software developer. While his work focuses on applied information theory, mostly optimizing lossless compression schema of both the length-limited and adaptive variants, his non-work interests range widely, everything from quantum computing to chaos theory. He could tell you about it, but THAT would NOT be a “length-limited” conversation!</p>
-          </div>
+          </article>
         </section>
         <section id="profiles">
           <h3>Profiles</h3>

@@ -25,7 +25,8 @@
     "test": "tap"
   },
   "dependencies": {
-    "handlebars": "^4.7.6"
+    "handlebars": "^4.7.6",
+    "micromark": "^2.10.1"
   },
   "devDependencies": {
     "eslint": "7.12.0",
