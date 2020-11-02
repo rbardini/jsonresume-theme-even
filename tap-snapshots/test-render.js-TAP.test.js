@@ -207,7 +207,7 @@ blockquote > * + * {
   padding: 0.2em 0.6em;
 }
 
-@media (min-width: 48em) {
+@media print, (min-width: 48em) {
   h3 {
     text-align: right;
     margin-bottom: inherit;
