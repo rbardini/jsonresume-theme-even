@@ -33,6 +33,8 @@ Handlebars.registerHelper('join', (arr, separator) =>
 
 Handlebars.registerHelper('markdown', doc => micromark(doc))
 
+exports.pdfRenderOptions = { mediaType: 'print' }
+
 exports.render = resume => {
   const template = fs.readFileSync(path.join(__dirname, 'resume.hbs'), 'utf-8')
   const css = fs.readFileSync(path.join(__dirname, 'style.css'), 'utf-8')
