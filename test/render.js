@@ -11,9 +11,7 @@ test('renders a resume', t => {
 
 test('renders valid HTML', t => {
   const htmlvalidate = new HtmlValidate({
-    rules: {
-      'void-style': ['error', { style: 'selfclosing' }],
-    },
+    extends: ['html-validate:recommended'],
   })
 
   const {
