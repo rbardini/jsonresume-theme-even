@@ -29,7 +29,8 @@
   },
   "dependencies": {
     "handlebars": "^4.7.6",
-    "micromark": "^2.11.4"
+    "micromark": "^2.11.4",
+    "striptags": "^3.1.1"
   },
   "devDependencies": {
     "eslint": "7.20.0",

@@ -2,6 +2,7 @@ const fs = require('fs')
 const path = require('path')
 const Handlebars = require('handlebars')
 const micromark = require('micromark')
+const striptags = require('striptags')
 
 const extname = '.hbs'
 const partialsDir = path.join(__dirname, 'partials')
@@ -32,6 +33,8 @@ Handlebars.registerHelper('join', (arr, separator) =>
 )
 
 Handlebars.registerHelper('markdown', doc => micromark(doc))
+
+Handlebars.registerHelper('stripTags', html => striptags(html))
 
 exports.pdfRenderOptions = { mediaType: 'print' }
 
