@@ -57,7 +57,7 @@ ul {
 }
 
 li + li {
-  margin-top: 0.2em;
+  margin-top: 0.4em;
 }
 
 li::marker {
@@ -130,6 +130,16 @@ cite::before {
   content: '— ';
 }
 
+svg {
+  fill: none;
+  margin-right: 0.2em;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+  vertical-align: -0.2em;
+}
+
 .masthead {
   background: var(--mutedColor);
   display: inherit;
@@ -137,7 +147,6 @@ cite::before {
   grid-column: full;
   grid-template-columns: inherit;
   padding: 4em 0;
-  row-gap: 0;
 }
 
 .masthead > *,
@@ -153,6 +162,11 @@ blockquote > * + * {
 .stack {
   display: grid;
   gap: 1.5em;
+}
+
+.icon-list {
+  list-style: none;
+  padding: 0;
 }
 
 .grid-list {

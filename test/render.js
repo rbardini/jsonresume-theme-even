@@ -12,6 +12,7 @@ test('renders a resume', t => {
 test('renders valid HTML', t => {
   const htmlvalidate = new HtmlValidate({
     extends: ['html-validate:recommended'],
+    rules: { 'svg-focusable': 'off' },
   })
 
   const {

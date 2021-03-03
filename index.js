@@ -17,11 +17,21 @@ fs.readdirSync(partialsDir)
     Handlebars.registerPartial(path.basename(filename, extname), template),
   )
 
+Handlebars.registerHelper('formatCountry', countryCode =>
+  Intl.DisplayNames
+    ? new Intl.DisplayNames(['en'], { type: 'region' }).of(countryCode)
+    : countryCode,
+)
+
 Handlebars.registerHelper('formatDate', dateString =>
   new Date(dateString).toLocaleDateString('en', {
     month: 'short',
     year: 'numeric',
   }),
+)
+
+Handlebars.registerHelper('formatPhone', phone =>
+  phone.replace(/[^\d|+]+/g, ''),
 )
 
 Handlebars.registerHelper('formatURL', url =>
