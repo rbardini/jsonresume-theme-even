@@ -5,11 +5,11 @@
 [![Code coverage](https://img.shields.io/codecov/c/github/rbardini/jsonresume-theme-even.svg)](https://codecov.io/gh/rbardini/jsonresume-theme-even)
 [![Dependencies status](https://img.shields.io/david/rbardini/jsonresume-theme-even.svg)](https://david-dm.org/rbardini/jsonresume-theme-even)
 [![devDependencies status](https://img.shields.io/david/rbardini/jsonresume-theme-even.svg)](https://david-dm.org/rbardini/jsonresume-theme-even?type=dev)
-[![Demo](https://img.shields.io/badge/dynamic/json.svg?url=https://api.netlify.com/api/v1/sites/jsonresume-theme-even.netlify.app/deploys&label=demo&query=$[0].state&colorB=blue)](https://jsonresume-theme-even.netlify.app)
+[![Demo](https://img.shields.io/netlify/7c0cb4f0-e270-4085-8f75-a8850cf45b2a?color=blue&label=demo)](https://jsonresume-theme-even.netlify.app)
 
-A flat theme for [JSON Resume](https://jsonresume.org/), compatible with the bleeding edge [resume schema](https://github.com/jsonresume/resume-schema/tree/v1.0.0).
+A flat [JSON Resume](https://jsonresume.org/) theme, compatible with the latest [resume schema](https://github.com/jsonresume/resume-schema).
 
-Based on [jsonresume-theme-flat](https://github.com/erming/jsonresume-theme-flat).
+Inspired by [jsonresume-theme-flat](https://github.com/erming/jsonresume-theme-flat).
 
 ## Installation
 
