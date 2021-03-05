@@ -76,8 +76,9 @@ li + li {
   margin-top: 0.4em;
 }
 
-li::marker {
-  color: var(--mutedColor);
+li::marker,
+.network {
+  color: var(--secondaryColor);
 }
 
 a {
@@ -265,6 +266,16 @@ blockquote > * + * {
               <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
               <a href="http://richardhendricks.example.com">richardhendricks.example.com</a>
             </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                  neutralthoughts
+                <span class="network">(Twitter)</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                  <a href="https://soundcloud.example.com/dandymusicnl">dandymusicnl</a>
+                <span class="network">(SoundCloud)</span>
+            </li>
         </ul>
       </header>
         <section id="about">
@@ -272,19 +283,6 @@ blockquote > * + * {
           <article>
             <p>Richard hails from Tulsa. He has earned degrees from the University of Oklahoma and Stanford. (Go Sooners and Cardinal!) Before starting Pied Piper, he worked for Hooli as a part time software developer. While his work focuses on applied information theory, mostly optimizing lossless compression schema of both the length-limited and adaptive variants, his non-work interests range widely, everything from quantum computing to chaos theory. He could tell you about it, but THAT would NOT be a “length-limited” conversation!</p>
           </article>
-        </section>
-        <section id="profiles">
-          <h3>Profiles</h3>
-          <div class="grid-list">
-              <div>
-                  <h4>Twitter</h4>
-                    neutralthoughts
-              </div>
-              <div>
-                  <h4>SoundCloud</h4>
-                    <a href="https://soundcloud.example.com/dandymusicnl">dandymusicnl</a>
-              </div>
-          </div>
         </section>
 
       <section id="work">

@@ -60,8 +60,9 @@ li + li {
   margin-top: 0.4em;
 }
 
-li::marker {
-  color: var(--mutedColor);
+li::marker,
+.network {
+  color: var(--secondaryColor);
 }
 
 a {

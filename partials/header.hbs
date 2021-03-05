@@ -34,5 +34,24 @@
         <a href="{{.}}">{{formatURL .}}</a>
       </li>
     {{/url}}
+    {{#profiles}}
+      <li>
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        {{#if username}}
+          {{#if url}}
+            <a href="{{url}}">{{username}}</a>
+          {{else}}
+            {{username}}
+          {{/if}}
+        {{else}}
+          {{#url}}
+            <a href="{{.}}">{{formatURL .}}</a>
+          {{/url}}
+        {{/if}}
+        {{#network}}
+          <span class="network">({{.}})</span>
+        {{/network}}
+      </li>
+    {{/profiles}}
   </ul>
 </header>
