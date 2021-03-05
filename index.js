@@ -39,8 +39,11 @@ Handlebars.registerHelper('formatURL', url =>
   url.replace(/^(https?:|)\/\//, '').replace(/\/$/, ''),
 )
 
-Handlebars.registerHelper('icon', name =>
-  icons[name].toSvg({ width: 16, height: 16 }),
+Handlebars.registerHelper('icon', (name, fallback) =>
+  (icons[name.toLowerCase()] || icons[fallback.toLowerCase()]).toSvg({
+    width: 16,
+    height: 16,
+  }),
 )
 
 Handlebars.registerHelper('join', (arr, separator) =>
