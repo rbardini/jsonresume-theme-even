@@ -132,12 +132,7 @@ cite::before {
 }
 
 svg {
-  fill: none;
   margin-right: 0.2em;
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 2;
   vertical-align: -0.2em;
 }
 

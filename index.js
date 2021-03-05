@@ -1,5 +1,6 @@
 const fs = require('fs')
 const path = require('path')
+const { icons } = require('feather-icons')
 const Handlebars = require('handlebars')
 const micromark = require('micromark')
 const striptags = require('striptags')
@@ -36,6 +37,10 @@ Handlebars.registerHelper('formatPhone', phone =>
 
 Handlebars.registerHelper('formatURL', url =>
   url.replace(/^(https?:|)\/\//, '').replace(/\/$/, ''),
+)
+
+Handlebars.registerHelper('icon', name =>
+  icons[name].toSvg({ width: 16, height: 16 }),
 )
 
 Handlebars.registerHelper('join', (arr, separator) =>
