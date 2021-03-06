@@ -12,14 +12,16 @@
   },
   "license": "MIT",
   "author": "Rafael Bardini",
+  "bin": "bin/cli.js",
   "files": [
+    "bin",
     "index.js",
     "resume.hbs",
     "partials/*.hbs",
     "style.css"
   ],
   "scripts": {
-    "build:demo": "./bin/build-demo",
+    "build:demo": "mkdir public && cat node_modules/resume-schema/sample.resume.json | ./bin/cli.js > public/index.html",
     "format": "prettier --write .",
     "lint": "eslint .",
     "postinstall": "husky install",
