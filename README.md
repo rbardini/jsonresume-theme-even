@@ -2,17 +2,50 @@
 
 [![npm package version](https://img.shields.io/npm/v/jsonresume-theme-even.svg)](https://www.npmjs.com/package/jsonresume-theme-even)
 [![Build status](https://img.shields.io/github/workflow/status/rbardini/jsonresume-theme-even/Main)](https://github.com/rbardini/jsonresume-theme-even/actions)
+[![Deploy status](https://img.shields.io/netlify/7c0cb4f0-e270-4085-8f75-a8850cf45b2a?label=deploy)](https://app.netlify.com/sites/jsonresume-theme-even/deploys)
 [![Code coverage](https://img.shields.io/codecov/c/github/rbardini/jsonresume-theme-even.svg)](https://codecov.io/gh/rbardini/jsonresume-theme-even)
 [![Dependencies status](https://img.shields.io/david/rbardini/jsonresume-theme-even.svg)](https://david-dm.org/rbardini/jsonresume-theme-even)
 [![devDependencies status](https://img.shields.io/david/rbardini/jsonresume-theme-even.svg)](https://david-dm.org/rbardini/jsonresume-theme-even?type=dev)
-[![Demo](https://img.shields.io/netlify/7c0cb4f0-e270-4085-8f75-a8850cf45b2a?color=blue&label=demo)](https://jsonresume-theme-even.netlify.app)
 
 A flat [JSON Resume](https://jsonresume.org/) theme, compatible with the latest [resume schema](https://github.com/jsonresume/resume-schema).
-
 Inspired by [jsonresume-theme-flat](https://github.com/erming/jsonresume-theme-flat).
+
+- 💄 Markdown support
+- 📐 CSS grid layout
+- 🧩 Standalone CLI
+
+[View demo →](https://jsonresume-theme-even.netlify.app)
 
 ## Installation
 
 ```console
 npm install jsonresume-theme-even
+```
+
+## Usage
+
+### With resume-cli
+
+[resume-cli](https://github.com/jsonresume/resume-cli) comes with _Even_ and uses it by default, so you don't even (pun intended) need to install the theme yourself:
+
+```console
+npm install resume-cli
+npx resume export resume.html
+```
+
+### With Resumed
+
+[Resumed](https://github.com/rbardini/resumed) requires you to install the theme, since it does not come with any by default. It will then automatically load and use _Even_ when rendering a resume:
+
+```console
+npm install resumed jsonresume-theme-even
+npx resumed render
+```
+
+### Standalone usage
+
+_Even_ comes with a barebones CLI that reads resumes from `stdin` and outputs HTML to `stdout`. This allows usage without any resume builder tools:
+
+```console
+cat resume.json | npx jsonresume-theme-even > resume.html
 ```
