@@ -12,6 +12,7 @@ Inspired by [jsonresume-theme-flat](https://github.com/erming/jsonresume-theme-f
 
 - 💄 Markdown support
 - 📐 CSS grid layout
+- 🌗 Light and dark modes
 - 🧩 Standalone CLI
 
 [View demo →](https://jsonresume-theme-even.netlify.app)

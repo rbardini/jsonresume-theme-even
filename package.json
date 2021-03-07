@@ -23,7 +23,7 @@
     "style.css"
   ],
   "scripts": {
-    "build:demo": "mkdir public && cat node_modules/resume-schema/sample.resume.json | ./bin/cli.js > public/index.html",
+    "build:demo": "mkdir -p public && cat node_modules/resume-schema/sample.resume.json | ./bin/cli.js > public/index.html",
     "format": "prettier --write .",
     "lint": "eslint .",
     "postinstall": "husky install",

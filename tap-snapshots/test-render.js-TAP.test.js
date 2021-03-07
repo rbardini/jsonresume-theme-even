@@ -16,6 +16,7 @@ exports[`test/render.js TAP renders a resume > must match snapshot 1`] = `
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap">
     <style>:root {
   /* Colors */
+  --backgroundColor: #ffffff;
   --primaryColor: #212529;
   --secondaryColor: #95a5a6;
   --accentColor: #f1c40f;
@@ -32,6 +33,15 @@ exports[`test/render.js TAP renders a resume > must match snapshot 1`] = `
   --scale5: calc(var(--scale4) * var(--ratio));
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --backgroundColor: #181a1b;
+    --primaryColor: #d1cdc7;
+    --secondaryColor: #aaa398;
+    --mutedColor: #1e2021;
+  }
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -43,6 +53,7 @@ html {
 }
 
 body {
+  background: var(--backgroundColor);
   color: var(--primaryColor);
   display: grid;
   font: 1em/1.5 Lato, sans-serif;
