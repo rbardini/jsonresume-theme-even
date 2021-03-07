@@ -1,4 +1,6 @@
 :root {
+  color-scheme: light dark;
+
   /* Colors */
   --backgroundColor: #ffffff;
   --primaryColor: #212529;

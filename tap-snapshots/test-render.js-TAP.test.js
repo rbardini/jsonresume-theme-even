@@ -15,6 +15,8 @@ exports[`test/render.js TAP renders a resume > must match snapshot 1`] = `
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap">
     <style>:root {
+  color-scheme: light dark;
+
   /* Colors */
   --backgroundColor: #ffffff;
   --primaryColor: #212529;
