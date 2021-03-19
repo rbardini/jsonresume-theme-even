@@ -17,30 +17,28 @@ exports[`test/render.js TAP renders a resume > must match snapshot 1`] = `
     <style>:root {
   color-scheme: light dark;
 
-  /* Colors */
-  --backgroundColor: #ffffff;
-  --primaryColor: #212529;
-  --secondaryColor: #95a5a6;
-  --accentColor: #f1c40f;
-  --linkColor: #2ecc71;
-  --mutedColor: #f4f6f6;
+  --color-background: #ffffff;
+  --color-primary: #212529;
+  --color-secondary: #95a5a6;
+  --color-muted: #f4f6f6;
+  --color-accent: #f1c40f;
+  --color-link: #2ecc71;
 
-  /* Typography */
-  --ratio: 1.25;
+  --scale-ratio: 1.25;
   --scale0: 1rem;
-  --scale1: calc(var(--scale0) * var(--ratio));
-  --scale2: calc(var(--scale1) * var(--ratio));
-  --scale3: calc(var(--scale2) * var(--ratio));
-  --scale4: calc(var(--scale3) * var(--ratio));
-  --scale5: calc(var(--scale4) * var(--ratio));
+  --scale1: calc(var(--scale0) * var(--scale-ratio));
+  --scale2: calc(var(--scale1) * var(--scale-ratio));
+  --scale3: calc(var(--scale2) * var(--scale-ratio));
+  --scale4: calc(var(--scale3) * var(--scale-ratio));
+  --scale5: calc(var(--scale4) * var(--scale-ratio));
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --backgroundColor: #181a1b;
-    --primaryColor: #d1cdc7;
-    --secondaryColor: #aaa398;
-    --mutedColor: #1e2021;
+    --color-background: #181a1b;
+    --color-primary: #d1cdc7;
+    --color-secondary: #aaa398;
+    --color-muted: #1e2021;
   }
 }
 
@@ -55,8 +53,8 @@ html {
 }
 
 body {
-  background: var(--backgroundColor);
-  color: var(--primaryColor);
+  background: var(--color-background);
+  color: var(--color-primary);
   display: grid;
   font: 1em/1.5 Lato, sans-serif;
   gap: 2em;
@@ -91,18 +89,18 @@ li + li {
 
 li::marker,
 .network {
-  color: var(--secondaryColor);
+  color: var(--color-secondary);
 }
 
 a {
-  color: var(--linkColor);
+  color: var(--color-link);
   text-decoration: none;
   transition: color 0.2s;
 }
 
 a:focus,
 a:hover {
-  color: var(--accentColor);
+  color: var(--color-accent);
 }
 
 h1,
@@ -123,12 +121,12 @@ h1 {
 }
 
 h2 {
-  color: var(--secondaryColor);
+  color: var(--color-secondary);
   font-size: var(--scale4);
 }
 
 h3 {
-  color: var(--accentColor);
+  color: var(--color-accent);
   font-size: var(--scale3);
   grid-column: side;
   margin-bottom: 1rem;
@@ -147,12 +145,12 @@ h6 {
 }
 
 blockquote {
-  border-left: 0.2em solid var(--mutedColor);
+  border-left: 0.2em solid var(--color-muted);
   padding-left: 1em;
 }
 
 cite {
-  color: var(--secondaryColor);
+  color: var(--color-secondary);
   font-style: inherit;
 }
 
@@ -166,7 +164,7 @@ svg {
 }
 
 .masthead {
-  background: var(--mutedColor);
+  background: var(--color-muted);
   display: inherit;
   gap: inherit;
   grid-column: full;
@@ -206,7 +204,7 @@ blockquote > * + * {
 }
 
 .spaced-list:first-child::before {
-  border-bottom: 1px solid var(--mutedColor);
+  border-bottom: 1px solid var(--color-muted);
   content: '';
   flex-grow: 1;
   margin: 0 1em;
@@ -225,7 +223,7 @@ blockquote > * + * {
 }
 
 .tag-list > li {
-  background: var(--mutedColor);
+  background: var(--color-muted);
   margin: 0 0.2em 0.2em 0;
   padding: 0.2em 0.6em;
 }
