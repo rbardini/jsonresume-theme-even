@@ -317,7 +317,6 @@ blockquote > * + * {
                 </div>
               </header>
                 <p>Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.</p>
-                <h5>Highlights</h5>
                 <ul>
                     <li>Build an algorithm for artist to detect if their music was violating copy right infringement laws</li>
                     <li>Successfully won Techcrunch Disrupt</li>
@@ -344,7 +343,6 @@ blockquote > * + * {
                 </div>
               </header>
                 <p>Global movement of free coding clubs for young people.</p>
-                <h5>Highlights</h5>
                 <ul>
                     <li>Awarded &#x27;Teacher of the Month&#x27;</li>
                 </ul>
@@ -398,7 +396,6 @@ blockquote > * + * {
                 </div>
               </header>
                 <p>A mapping engine that misguides you</p>
-                <h5>Highlights</h5>
                 <ul>
                     <li>Won award at AIHacks 2016</li>
                     <li>Built by all women team of newbie programmers</li>
