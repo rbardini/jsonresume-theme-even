@@ -177,6 +177,13 @@ section {
   grid-column: main;
 }
 
+.masthead > img {
+  border-radius: 50%;
+  grid-column: side;
+  grid-row: span 2;
+  max-width: 100%;
+}
+
 article > * + *,
 blockquote > * + * {
   margin-top: 0.6em;
@@ -251,6 +258,7 @@ blockquote > * + * {
   </head>
   <body>
       <header class="masthead">
+          <img src="image.jpg" alt="">
         <div>
             <h1>Richard Hendriks</h1>
             <h2>Programmer</h2>
