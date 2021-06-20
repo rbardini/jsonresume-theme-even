@@ -170,6 +170,7 @@ svg {
   grid-column: full;
   grid-template-columns: inherit;
   padding: 4em 0;
+  text-align: center;
 }
 
 .masthead > *,
@@ -179,9 +180,8 @@ section {
 
 .masthead > img {
   border-radius: 50%;
-  grid-column: side;
-  grid-row: span 2;
-  max-width: 100%;
+  margin: 0 auto;
+  max-width: 12em;
 }
 
 article > * + *,
@@ -241,9 +241,19 @@ blockquote > * + * {
     margin-bottom: inherit;
   }
 
+  .masthead {
+    text-align: inherit;
+  }
+
   .masthead > *,
   section {
     grid-column: content;
+  }
+
+  .masthead img {
+    grid-column: side;
+    grid-row: span 2;
+    max-width: 100%;
   }
 
   section {
