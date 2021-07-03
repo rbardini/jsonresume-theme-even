@@ -6,16 +6,16 @@
         <article>
           <header>
             <div class="spaced-list">
-              <h4>{{name}}</h4>
+              <h4>{{position}}</h4>
               <span>
                 <time datetime="{{startDate}}">{{formatDate startDate}}</time> –
                 {{#if endDate}}<time datetime="{{endDate}}">{{formatDate endDate}}</time>{{else}}Present{{/if}}
               </span>
             </div>
             <div class="spaced-list">
-              {{#position}}
+              {{#name}}
                 <strong>{{.}}</strong>
-              {{/position}}
+              {{/name}}
               {{#url}}
                 <a href="{{.}}">{{formatURL .}}</a>
               {{/url}}
