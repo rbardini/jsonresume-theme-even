@@ -10,6 +10,11 @@
       <h2>{{.}}</h2>
     {{/label}}
   </div>
+  {{#summary}}
+    <article>
+      {{{markdown .}}}
+    </article>
+  {{/summary}}
   <ul class="icon-list">
     {{#location}}
       {{#if city}}
