@@ -365,14 +365,14 @@ blockquote > * + * {
             <article>
               <header>
                 <div class="spaced-list">
-                  <h4>Information Technology</h4>
+                  <h4>University of Oklahoma</h4>
                   <span>
                     <time datetime="2011-06-01">Jun 2011</time> –
                     <time datetime="2014-01-01">Jan 2014</time>
                   </span>
                 </div>
                 <div class="spaced-list">
-                    <strong>University of Oklahoma</strong>
+                    <strong>Information Technology</strong>
                     <a href="https://www.ou.edu/">www.ou.edu</a>
                 </div>
               </header>
