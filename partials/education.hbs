@@ -6,20 +6,15 @@
         <article>
           <header>
             <div class="spaced-list">
-              <h4>{{institution}}</h4>
+              <h4>{{> link name=institution}}</h4>
               <span>
                 <time datetime="{{startDate}}">{{formatDate startDate}}</time> –
                 {{#if endDate}}<time datetime="{{endDate}}">{{formatDate endDate}}</time>{{else}}Present{{/if}}
               </span>
             </div>
-            <div class="spaced-list">
-              {{#area}}
-                <strong>{{.}}</strong>
-              {{/area}}
-              {{#url}}
-                <a href="{{.}}">{{formatURL .}}</a>
-              {{/url}}
-            </div>
+            {{#area}}
+              <strong>{{.}}</strong>
+            {{/area}}
           </header>
           {{#studyType}}
             {{{markdown .}}}

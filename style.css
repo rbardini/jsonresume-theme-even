@@ -194,7 +194,7 @@ blockquote > * + * {
   justify-content: space-between;
 }
 
-.spaced-list:first-child::before {
+.spaced-list::before {
   border-bottom: 1px solid var(--color-muted);
   content: '';
   flex-grow: 1;

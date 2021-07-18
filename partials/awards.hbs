@@ -11,13 +11,11 @@
                 <time datetime="{{.}}">{{formatDate .}}</time>
               {{/date}}
             </div>
-            <div class="spaced-list">
-              {{#awarder}}
-                <div>
-                  Awarded by <strong>{{.}}</strong>
-                </div>
-              {{/awarder}}
-            </div>
+            {{#awarder}}
+              <span>
+                Awarded by <strong>{{.}}</strong>
+              </span>
+            {{/awarder}}
           </header>
           {{#summary}}
             {{{markdown .}}}

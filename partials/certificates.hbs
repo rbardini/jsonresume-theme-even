@@ -6,21 +6,16 @@
         <article>
           <header>
             <div class="spaced-list">
-              <h4>{{name}}</h4>
+              <h4>{{> link}}</h4>
               {{#date}}
                 <time datetime="{{.}}">{{formatDate .}}</time>
               {{/date}}
             </div>
-            <div class="spaced-list">
-              {{#issuer}}
-                <span>
-                  Issued by <strong>{{.}}</strong>
-                </span>
-              {{/issuer}}
-              {{#url}}
-                <a href="{{.}}">{{formatURL .}}</a>
-              {{/url}}
-            </div>
+            {{#issuer}}
+              <span>
+                Issued by <strong>{{.}}</strong>
+              </span>
+            {{/issuer}}
           </header>
         </article>
       {{/each}}

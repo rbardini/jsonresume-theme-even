@@ -12,14 +12,7 @@
                 {{#if endDate}}<time datetime="{{endDate}}">{{formatDate endDate}}</time>{{else}}Present{{/if}}
               </span>
             </div>
-            <div class="spaced-list">
-              {{#name}}
-                <strong>{{.}}</strong>
-              {{/name}}
-              {{#url}}
-                <a href="{{.}}">{{formatURL .}}</a>
-              {{/url}}
-            </div>
+            <strong>{{> link}}</strong>
           </header>
           {{#summary}}
             {{{markdown .}}}
