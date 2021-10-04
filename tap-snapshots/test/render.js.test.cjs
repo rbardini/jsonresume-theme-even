@@ -386,7 +386,7 @@ blockquote > * + * {
                   </span>
                 </div>
                 <span>
-                    <strong>Team lead, Designer</strong>
+                    <strong>Team lead and Designer</strong>
                     at <strong>Smoogle</strong>
                 </span>
               </header>

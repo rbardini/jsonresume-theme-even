@@ -46,8 +46,8 @@ Handlebars.registerHelper('icon', (name, fallback) =>
   }),
 )
 
-Handlebars.registerHelper('join', (arr, separator) =>
-  arr.join(typeof separator === 'string' ? separator : ', '),
+Handlebars.registerHelper('join', arr =>
+  Intl.ListFormat ? new Intl.ListFormat('en').format(arr) : arr.join(', '),
 )
 
 Handlebars.registerHelper('markdown', doc => micromark(doc))
