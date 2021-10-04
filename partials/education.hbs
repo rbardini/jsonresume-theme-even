@@ -23,7 +23,7 @@
             <h5>Courses</h5>
             <ul>
               {{#courses}}
-                <li>{{.}}</li>
+                <li>{{{markdown .}}}</li>
               {{/courses}}
             </ul>
           {{/if}}

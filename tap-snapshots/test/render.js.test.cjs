@@ -322,9 +322,9 @@ blockquote > * + * {
               </header>
                 <p>Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.</p>
                 <ul>
-                    <li>Build an algorithm for artist to detect if their music was violating copy right infringement laws</li>
-                    <li>Successfully won Techcrunch Disrupt</li>
-                    <li>Optimized an algorithm that holds the current world record for Weisman Scores</li>
+                    <li><p>Build an algorithm for artist to detect if their music was violating copy right infringement laws</p></li>
+                    <li><p>Successfully won Techcrunch Disrupt</p></li>
+                    <li><p>Optimized an algorithm that holds the current world record for Weisman Scores</p></li>
                 </ul>
             </article>
         </div>
@@ -345,7 +345,7 @@ blockquote > * + * {
               </header>
                 <p>Global movement of free coding clubs for young people.</p>
                 <ul>
-                    <li>Awarded &#x27;Teacher of the Month&#x27;</li>
+                    <li><p>Awarded 'Teacher of the Month'</p></li>
                 </ul>
             </article>
         </div>
@@ -367,8 +367,8 @@ blockquote > * + * {
                 <p>Bachelor</p>
                 <h5>Courses</h5>
                 <ul>
-                    <li>DB1101 - Basic SQL</li>
-                    <li>CS2011 - Java Introduction</li>
+                    <li><p>DB1101 - Basic SQL</p></li>
+                    <li><p>CS2011 - Java Introduction</p></li>
                 </ul>
             </article>
         </div>
@@ -392,9 +392,9 @@ blockquote > * + * {
               </header>
                 <p>A mapping engine that misguides you</p>
                 <ul>
-                    <li>Won award at AIHacks 2016</li>
-                    <li>Built by all women team of newbie programmers</li>
-                    <li>Using modern technologies such as GoogleMaps, Chrome Extension and Javascript</li>
+                    <li><p>Won award at AIHacks 2016</p></li>
+                    <li><p>Built by all women team of newbie programmers</p></li>
+                    <li><p>Using modern technologies such as GoogleMaps, Chrome Extension and Javascript</p></li>
                 </ul>
             </article>
         </div>
