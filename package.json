@@ -36,12 +36,12 @@
     "striptags": "^3.2.0"
   },
   "devDependencies": {
-    "eslint": "7.31.0",
-    "html-validate": "5.1.1",
-    "husky": "7.0.1",
-    "lint-staged": "11.0.1",
-    "prettier": "2.3.2",
+    "eslint": "7.32.0",
+    "html-validate": "6.1.0",
+    "husky": "7.0.2",
+    "lint-staged": "11.2.0",
+    "prettier": "2.4.1",
     "resume-schema": "1.0.0",
-    "tap": "15.0.9"
+    "tap": "15.0.10"
   }
 }
