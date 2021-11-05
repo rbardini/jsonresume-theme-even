@@ -2,6 +2,14 @@
   "name": "jsonresume-theme-even",
   "version": "0.13.0",
   "description": "A flat theme for JSON Resume, compatible with the bleeding edge resume schema",
+  "keywords": [
+    "resume",
+    "json",
+    "theme",
+    "flat",
+    "curriculum-vitae",
+    "cv"
+  ],
   "homepage": "https://github.com/rbardini/jsonresume-theme-even",
   "bugs": {
     "url": "https://github.com/rbardini/jsonresume-theme-even/issues"
