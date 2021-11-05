@@ -39,6 +39,7 @@
   "scripts": {
     "build": "microbundle build --target node",
     "postbuild": "cp -r resume.hbs partials style.css dist",
+    "prebuild:demo": "npm run build",
     "build:demo": "mkdir -p public && cat node_modules/resume-schema/sample.resume.json | ./bin/cli.js > public/index.html",
     "format": "prettier --ignore-path .gitignore .",
     "lint": "eslint --ignore-path .gitignore .",
