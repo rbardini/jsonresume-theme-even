@@ -1,8 +1,10 @@
 {
   "env": {
-    "commonjs": true,
-    "es2017": true,
+    "es2021": true,
     "node": true
   },
-  "extends": "eslint:recommended"
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "sourceType": "module"
+  }
 }

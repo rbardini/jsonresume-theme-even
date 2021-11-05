@@ -12,22 +12,30 @@
   },
   "license": "MIT",
   "author": "Rafael Bardini",
+  "type": "module",
+  "exports": {
+    "require": "./dist/index.cjs",
+    "default": "./dist/index.modern.js"
+  },
+  "main": "./dist/index.cjs",
+  "unpkg": "./dist/index.umd.js",
+  "module": "./dist/index.module.js",
+  "source": "index.js",
   "bin": {
     "jsonresume-theme-even": "bin/cli.js"
   },
   "files": [
     "bin",
-    "index.js",
-    "resume.hbs",
-    "partials/*.hbs",
-    "style.css"
+    "dist"
   ],
   "scripts": {
+    "build": "microbundle build --target node",
+    "postbuild": "cp -r resume.hbs partials style.css dist",
     "build:demo": "mkdir -p public && cat node_modules/resume-schema/sample.resume.json | ./bin/cli.js > public/index.html",
-    "format": "prettier --write .",
-    "lint": "eslint .",
+    "format": "prettier --ignore-path .gitignore .",
+    "lint": "eslint --ignore-path .gitignore .",
     "prepare": "husky install",
-    "test": "tap --no-check-coverage"
+    "test": "c8 tap --node-arg=--experimental-json-modules --no-coverage"
   },
   "dependencies": {
     "feather-icons": "^4.28.0",
@@ -36,10 +44,12 @@
     "striptags": "^3.2.0"
   },
   "devDependencies": {
+    "c8": "7.10.0",
     "eslint": "7.32.0",
     "html-validate": "6.1.0",
     "husky": "7.0.2",
     "lint-staged": "11.2.0",
+    "microbundle": "0.14.1",
     "prettier": "2.4.1",
     "resume-schema": "1.0.0",
     "tap": "15.0.10"

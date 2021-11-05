@@ -1,8 +1,8 @@
-const { test } = require('tap')
-const { HtmlValidate } = require('html-validate')
+import { test } from 'tap'
+import { HtmlValidate } from 'html-validate'
 
-const { render } = require('..')
-const resume = require('resume-schema/sample.resume.json')
+import { render } from '../index.js'
+import resume from 'resume-schema/sample.resume.json'
 
 // Overwrite empty sample resume values
 resume.basics.image = 'image.jpg'

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-const fs = require('fs')
-const { render } = require('..')
+import fs from 'fs'
+import { render } from '../dist/index.modern.js'
 
 const resume = JSON.parse(fs.readFileSync(process.stdin.fd, 'utf-8'))
 const html = render(resume)

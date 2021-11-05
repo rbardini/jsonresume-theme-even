@@ -14,6 +14,7 @@ Inspired by [jsonresume-theme-flat](https://github.com/erming/jsonresume-theme-f
 - 📐 CSS grid layout
 - 🌗 Light and dark modes
 - 🧩 Standalone CLI
+- 📦 ESM and CommonJS builds
 
 [View demo →](https://jsonresume-theme-even.netlify.app)
 

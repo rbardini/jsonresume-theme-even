@@ -3,7 +3,7 @@ on: push
 
 jobs:
   test-and-release:
-    name: Test and release
+    name: Test and build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -22,6 +22,9 @@ jobs:
 
       - name: Test
         run: npm test
+
+      - name: Build
+        run: npm run build
 
       - name: Coverage
         uses: codecov/codecov-action@v1
