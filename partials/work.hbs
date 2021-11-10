@@ -11,6 +11,9 @@
               <time datetime="{{startDate}}">{{formatDate startDate}}</time> –
               {{#if endDate}}<time datetime="{{endDate}}">{{formatDate endDate}}</time>{{else}}Present{{/if}}
             </div>
+            {{#location}}
+              <div>{{.}}</div>
+            {{/location}}
           </header>
           {{#summary}}
             {{{markdown .}}}

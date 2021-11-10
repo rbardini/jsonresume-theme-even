@@ -299,6 +299,7 @@ blockquote > * + * {
                   <time datetime="2013-12-01">Dec 2013</time> –
                   <time datetime="2014-12-01">Dec 2014</time>
                 </div>
+                  <div>Palo Alto, CA</div>
               </header>
                 <p>Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.</p>
                 <ul>
