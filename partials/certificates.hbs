@@ -5,17 +5,15 @@
       {{#each resume.certificates}}
         <article>
           <header>
-            <div class="spaced-list">
-              <h4>{{> link}}</h4>
-              {{#date}}
-                <time datetime="{{.}}">{{formatDate .}}</time>
-              {{/date}}
-            </div>
+            <h4>{{> link}}</h4>
             {{#issuer}}
-              <span>
+              <div>
                 Issued by <strong>{{.}}</strong>
-              </span>
+              </div>
             {{/issuer}}
+            {{#date}}
+              <time datetime="{{.}}">{{formatDate .}}</time>
+            {{/date}}
           </header>
         </article>
       {{/each}}

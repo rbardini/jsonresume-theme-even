@@ -5,17 +5,15 @@
       {{#each resume.publications}}
         <article>
           <header>
-            <div class="spaced-list">
-              <h4>{{> link}}</h4>
-              {{#releaseDate}}
-                <time datetime="{{.}}">{{formatDate .}}</time>
-              {{/releaseDate}}
-            </div>
+            <h4>{{> link}}</h4>
             {{#publisher}}
-              <span>
+              <div>
                 Published by <strong>{{.}}</strong>
-              </span>
+              </div>
             {{/publisher}}
+            {{#releaseDate}}
+              <time datetime="{{.}}">{{formatDate .}}</time>
+            {{/releaseDate}}
           </header>
           {{#summary}}
             {{{markdown .}}}

@@ -5,16 +5,14 @@
       {{#each resume.education}}
         <article>
           <header>
-            <div class="spaced-list">
-              <h4>{{> link name=institution}}</h4>
-              <span>
-                <time datetime="{{startDate}}">{{formatDate startDate}}</time> –
-                {{#if endDate}}<time datetime="{{endDate}}">{{formatDate endDate}}</time>{{else}}Present{{/if}}
-              </span>
-            </div>
+            <h4>{{> link name=institution}}</h4>
             {{#area}}
               <strong>{{.}}</strong>
             {{/area}}
+            <div>
+              <time datetime="{{startDate}}">{{formatDate startDate}}</time> –
+              {{#if endDate}}<time datetime="{{endDate}}">{{formatDate endDate}}</time>{{else}}Present{{/if}}
+            </div>
           </header>
           {{#studyType}}
             {{{markdown .}}}

@@ -5,17 +5,15 @@
       {{#each resume.awards}}
         <article>
           <header>
-            <div class="spaced-list">
-              <h4>{{title}}</h4>
-              {{#date}}
-                <time datetime="{{.}}">{{formatDate .}}</time>
-              {{/date}}
-            </div>
+            <h4>{{title}}</h4>
             {{#awarder}}
-              <span>
+              <div>
                 Awarded by <strong>{{.}}</strong>
-              </span>
+              </div>
             {{/awarder}}
+            {{#date}}
+              <time datetime="{{.}}">{{formatDate .}}</time>
+            {{/date}}
           </header>
           {{#summary}}
             {{{markdown .}}}

@@ -188,24 +188,6 @@ blockquote > * + * {
   gap: 1em;
 }
 
-.spaced-list {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.spaced-list::before {
-  border-bottom: 1px solid var(--color-muted);
-  content: '';
-  flex-grow: 1;
-  margin: 0 1em;
-  order: 1;
-}
-
-.spaced-list > :nth-child(2) {
-  order: 2;
-}
-
 .tag-list {
   display: flex;
   flex-wrap: wrap;
