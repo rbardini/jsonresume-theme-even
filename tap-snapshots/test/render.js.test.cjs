@@ -217,6 +217,11 @@ blockquote > * + * {
   padding: 0.2em 0.6em;
 }
 
+.bullet-item:not(:first-child)::before {
+  content: '· ';
+  margin: 0 0.2em;
+}
+
 @media print, (min-width: 48em) {
   h3 {
     text-align: right;
@@ -294,7 +299,10 @@ blockquote > * + * {
             <article>
               <header>
                 <h4>CEO/President</h4>
-                <strong><a href="http://piedpiper.example.com">Pied Piper</a></strong>
+                <div>
+                  <strong><a href="http://piedpiper.example.com">Pied Piper</a></strong>
+                    <span class="bullet-item">Awesome compression company</span>
+                </div>
                 <div>
                   <time datetime="2013-12-01">Dec 2013</time> –
                   <time datetime="2014-12-01">Dec 2014</time>

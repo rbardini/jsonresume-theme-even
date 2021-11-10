@@ -201,6 +201,11 @@ blockquote > * + * {
   padding: 0.2em 0.6em;
 }
 
+.bullet-item:not(:first-child)::before {
+  content: '· ';
+  margin: 0 0.2em;
+}
+
 @media print, (min-width: 48em) {
   h3 {
     text-align: right;
