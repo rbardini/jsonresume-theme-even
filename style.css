@@ -173,6 +173,10 @@ blockquote > * + * {
   margin-top: 0.6em;
 }
 
+.meta {
+  color: var(--color-secondary);
+}
+
 .stack {
   display: grid;
   gap: 1.5em;

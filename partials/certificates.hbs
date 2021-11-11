@@ -6,14 +6,16 @@
         <article>
           <header>
             <h4>{{> link}}</h4>
-            {{#issuer}}
-              <div>
-                Issued by <strong>{{.}}</strong>
-              </div>
-            {{/issuer}}
-            {{#date}}
-              <time datetime="{{.}}">{{formatDate .}}</time>
-            {{/date}}
+            <div class="meta">
+              {{#issuer}}
+                <div>
+                  Issued by <strong>{{.}}</strong>
+                </div>
+              {{/issuer}}
+              {{#date}}
+                <time datetime="{{.}}">{{formatDate .}}</time>
+              {{/date}}
+            </div>
           </header>
         </article>
       {{/each}}

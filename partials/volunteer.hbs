@@ -6,10 +6,12 @@
         <article>
           <header>
             <h4>{{position}}</h4>
-            <strong>{{> link name=organization}}</strong>
-            <div>
-              <time datetime="{{startDate}}">{{formatDate startDate}}</time> –
-              {{#if endDate}}<time datetime="{{endDate}}">{{formatDate endDate}}</time>{{else}}Present{{/if}}
+            <div class="meta">
+              <strong>{{> link name=organization}}</strong>
+              <div>
+                <time datetime="{{startDate}}">{{formatDate startDate}}</time> –
+                {{#if endDate}}<time datetime="{{endDate}}">{{formatDate endDate}}</time>{{else}}Present{{/if}}
+              </div>
             </div>
           </header>
           {{#summary}}

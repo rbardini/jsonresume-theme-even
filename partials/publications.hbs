@@ -6,14 +6,16 @@
         <article>
           <header>
             <h4>{{> link}}</h4>
-            {{#publisher}}
-              <div>
-                Published by <strong>{{.}}</strong>
-              </div>
-            {{/publisher}}
-            {{#releaseDate}}
-              <time datetime="{{.}}">{{formatDate .}}</time>
-            {{/releaseDate}}
+            <div class="meta">
+              {{#publisher}}
+                <div>
+                  Published by <strong>{{.}}</strong>
+                </div>
+              {{/publisher}}
+              {{#releaseDate}}
+                <time datetime="{{.}}">{{formatDate .}}</time>
+              {{/releaseDate}}
+            </div>
           </header>
           {{#summary}}
             {{{markdown .}}}

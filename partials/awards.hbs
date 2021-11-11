@@ -6,14 +6,16 @@
         <article>
           <header>
             <h4>{{title}}</h4>
-            {{#awarder}}
-              <div>
-                Awarded by <strong>{{.}}</strong>
-              </div>
-            {{/awarder}}
-            {{#date}}
-              <time datetime="{{.}}">{{formatDate .}}</time>
-            {{/date}}
+            <div class="meta">
+              {{#awarder}}
+                <div>
+                  Awarded by <strong>{{.}}</strong>
+                </div>
+              {{/awarder}}
+              {{#date}}
+                <time datetime="{{.}}">{{formatDate .}}</time>
+              {{/date}}
+            </div>
           </header>
           {{#summary}}
             {{{markdown .}}}

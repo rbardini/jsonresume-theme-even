@@ -6,12 +6,14 @@
         <article>
           <header>
             <h4>{{> link name=institution}}</h4>
-            {{#area}}
-              <strong>{{.}}</strong>
-            {{/area}}
-            <div>
-              <time datetime="{{startDate}}">{{formatDate startDate}}</time> –
-              {{#if endDate}}<time datetime="{{endDate}}">{{formatDate endDate}}</time>{{else}}Present{{/if}}
+            <div class="meta">
+              {{#area}}
+                <strong>{{.}}</strong>
+              {{/area}}
+              <div>
+                <time datetime="{{startDate}}">{{formatDate startDate}}</time> –
+                {{#if endDate}}<time datetime="{{endDate}}">{{formatDate endDate}}</time>{{else}}Present{{/if}}
+              </div>
             </div>
           </header>
           {{#studyType}}

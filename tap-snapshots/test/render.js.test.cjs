@@ -189,6 +189,10 @@ blockquote > * + * {
   margin-top: 0.6em;
 }
 
+.meta {
+  color: var(--color-secondary);
+}
+
 .stack {
   display: grid;
   gap: 1.5em;
@@ -299,15 +303,17 @@ blockquote > * + * {
             <article>
               <header>
                 <h4>CEO/President</h4>
-                <div>
-                  <strong><a href="http://piedpiper.example.com">Pied Piper</a></strong>
-                    <span class="bullet-item">Awesome compression company</span>
+                <div class="meta">
+                  <div>
+                    <strong><a href="http://piedpiper.example.com">Pied Piper</a></strong>
+                      <span class="bullet-item">Awesome compression company</span>
+                  </div>
+                  <div>
+                    <time datetime="2013-12-01">Dec 2013</time> –
+                    <time datetime="2014-12-01">Dec 2014</time>
+                  </div>
+                    <div>Palo Alto, CA</div>
                 </div>
-                <div>
-                  <time datetime="2013-12-01">Dec 2013</time> –
-                  <time datetime="2014-12-01">Dec 2014</time>
-                </div>
-                  <div>Palo Alto, CA</div>
               </header>
                 <p>Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.</p>
                 <ul>
@@ -324,10 +330,12 @@ blockquote > * + * {
             <article>
               <header>
                 <h4>Teacher</h4>
-                <strong><a href="http://coderdojo.example.com/">CoderDojo</a></strong>
-                <div>
-                  <time datetime="2012-01-01">Jan 2012</time> –
-                  <time datetime="2013-01-01">Jan 2013</time>
+                <div class="meta">
+                  <strong><a href="http://coderdojo.example.com/">CoderDojo</a></strong>
+                  <div>
+                    <time datetime="2012-01-01">Jan 2012</time> –
+                    <time datetime="2013-01-01">Jan 2013</time>
+                  </div>
                 </div>
               </header>
                 <p>Global movement of free coding clubs for young people.</p>
@@ -343,10 +351,12 @@ blockquote > * + * {
             <article>
               <header>
                 <h4><a href="https://www.ou.edu/">University of Oklahoma</a></h4>
-                  <strong>Information Technology</strong>
-                <div>
-                  <time datetime="2011-06-01">Jun 2011</time> –
-                  <time datetime="2014-01-01">Jan 2014</time>
+                <div class="meta">
+                    <strong>Information Technology</strong>
+                  <div>
+                    <time datetime="2011-06-01">Jun 2011</time> –
+                    <time datetime="2014-01-01">Jan 2014</time>
+                  </div>
                 </div>
               </header>
                 <p>Bachelor</p>
@@ -364,13 +374,15 @@ blockquote > * + * {
             <article>
               <header>
                 <h4><a href="missdirection.example.com">Miss Direction</a></h4>
-                <div>
-                    <strong>Team lead and Designer</strong>
-                    at <strong>Smoogle</strong>
-                </div>
-                <div>
-                  <time datetime="2016-08-24">Aug 2016</time> –
-                  <time datetime="2016-08-24">Aug 2016</time>
+                <div class="meta">
+                  <div>
+                      <strong>Team lead and Designer</strong>
+                      at <strong>Smoogle</strong>
+                  </div>
+                  <div>
+                    <time datetime="2016-08-24">Aug 2016</time> –
+                    <time datetime="2016-08-24">Aug 2016</time>
+                  </div>
                 </div>
               </header>
                 <p>A mapping engine that misguides you</p>
@@ -388,10 +400,12 @@ blockquote > * + * {
             <article>
               <header>
                 <h4>Digital Compression Pioneer Award</h4>
-                  <div>
-                    Awarded by <strong>Techcrunch</strong>
-                  </div>
-                  <time datetime="2014-11-01">Nov 2014</time>
+                <div class="meta">
+                    <div>
+                      Awarded by <strong>Techcrunch</strong>
+                    </div>
+                    <time datetime="2014-11-01">Nov 2014</time>
+                </div>
               </header>
                 <p>There is no spoon.</p>
             </article>
@@ -403,10 +417,12 @@ blockquote > * + * {
             <article>
               <header>
                 <h4><a href="http://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)">Video compression for 3d media</a></h4>
-                  <div>
-                    Published by <strong>Hooli</strong>
-                  </div>
-                  <time datetime="2014-10-01">Oct 2014</time>
+                <div class="meta">
+                    <div>
+                      Published by <strong>Hooli</strong>
+                    </div>
+                    <time datetime="2014-10-01">Oct 2014</time>
+                </div>
               </header>
                 <p>Innovative middle-out compression algorithm that changes the way we store data.</p>
             </article>

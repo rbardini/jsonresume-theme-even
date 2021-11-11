@@ -6,19 +6,21 @@
         <article>
           <header>
             <h4>{{position}}</h4>
-            <div>
-              <strong>{{> link}}</strong>
-              {{#description}}
-                <span class="bullet-item">{{.}}</span>
-              {{/description}}
+            <div class="meta">
+              <div>
+                <strong>{{> link}}</strong>
+                {{#description}}
+                  <span class="bullet-item">{{.}}</span>
+                {{/description}}
+              </div>
+              <div>
+                <time datetime="{{startDate}}">{{formatDate startDate}}</time> –
+                {{#if endDate}}<time datetime="{{endDate}}">{{formatDate endDate}}</time>{{else}}Present{{/if}}
+              </div>
+              {{#location}}
+                <div>{{.}}</div>
+              {{/location}}
             </div>
-            <div>
-              <time datetime="{{startDate}}">{{formatDate startDate}}</time> –
-              {{#if endDate}}<time datetime="{{endDate}}">{{formatDate endDate}}</time>{{else}}Present{{/if}}
-            </div>
-            {{#location}}
-              <div>{{.}}</div>
-            {{/location}}
           </header>
           {{#summary}}
             {{{markdown .}}}
