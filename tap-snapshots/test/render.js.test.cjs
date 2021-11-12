@@ -17,12 +17,12 @@ exports[`test/render.js TAP renders a resume > must match snapshot 1`] = `
     <style>:root {
   color-scheme: light dark;
 
-  --color-background: #ffffff;
-  --color-primary: #212529;
-  --color-secondary: #95a5a6;
-  --color-muted: #f4f6f6;
-  --color-accent: #f1c40f;
-  --color-link: #2ecc71;
+  --color-background: #ffffff; /* White */
+  --color-muted: #f3f4f5; /* Light Gray 200 */
+  --color-primary: #191e23; /* Dark Gray 900 */
+  --color-secondary: #6c7781; /* Dark Gray 300 */
+  --color-accent: #ffb900; /* Accent Yellow */
+  --color-link: #46b450; /* Accent Green */
 
   --scale-ratio: 1.25;
   --scale0: 1rem;
@@ -35,10 +35,10 @@ exports[`test/render.js TAP renders a resume > must match snapshot 1`] = `
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-background: #181a1b;
-    --color-primary: #d1cdc7;
-    --color-secondary: #aaa398;
-    --color-muted: #1e2021;
+    --color-background: #191e23; /* Dark Gray 900 */
+    --color-muted: #23282d; /* Dark Gray 800 */
+    --color-primary: #fbfbfc; /* Light Gray 100 */
+    --color-secondary: #ccd0d4; /* Light Gray 700 */
   }
 }
 
