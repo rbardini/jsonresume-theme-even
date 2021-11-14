@@ -56,9 +56,9 @@
   "devDependencies": {
     "c8": "7.10.0",
     "eslint": "8.2.0",
-    "html-validate": "6.1.0",
+    "html-validate": "6.1.2",
     "husky": "7.0.4",
-    "lint-staged": "11.2.6",
+    "lint-staged": "12.0.2",
     "microbundle": "0.14.1",
     "prettier": "2.4.1",
     "resume-schema": "1.0.0",
