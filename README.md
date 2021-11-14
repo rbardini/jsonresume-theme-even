@@ -4,8 +4,6 @@
 [![Build status](https://img.shields.io/github/workflow/status/rbardini/jsonresume-theme-even/Main)](https://github.com/rbardini/jsonresume-theme-even/actions)
 [![Deploy status](https://img.shields.io/netlify/7c0cb4f0-e270-4085-8f75-a8850cf45b2a?label=deploy)](https://app.netlify.com/sites/jsonresume-theme-even/deploys)
 [![Code coverage](https://img.shields.io/codecov/c/github/rbardini/jsonresume-theme-even.svg)](https://codecov.io/gh/rbardini/jsonresume-theme-even)
-[![Dependencies status](https://img.shields.io/david/rbardini/jsonresume-theme-even.svg)](https://david-dm.org/rbardini/jsonresume-theme-even)
-[![devDependencies status](https://img.shields.io/david/rbardini/jsonresume-theme-even.svg)](https://david-dm.org/rbardini/jsonresume-theme-even?type=dev)
 
 A flat [JSON Resume](https://jsonresume.org/) theme, compatible with the latest [resume schema](https://github.com/jsonresume/resume-schema).
 Inspired by [jsonresume-theme-flat](https://github.com/erming/jsonresume-theme-flat).
