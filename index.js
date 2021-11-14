@@ -6,10 +6,12 @@ import Handlebars from 'handlebars'
 import micromark from 'micromark'
 import striptags from 'striptags'
 
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
+const dirname =
+  typeof __dirname === 'string'
+    ? __dirname
+    : path.dirname(fileURLToPath(import.meta.url))
 const extname = '.hbs'
-const partialsDir = path.join(__dirname, 'partials')
+const partialsDir = path.join(dirname, 'partials')
 
 fs.readdirSync(partialsDir)
   .filter(filename => path.extname(filename) === extname)
@@ -60,8 +62,8 @@ Handlebars.registerHelper('stripTags', html => striptags(html))
 export const pdfRenderOptions = { mediaType: 'print' }
 
 export const render = resume => {
-  const template = fs.readFileSync(path.join(__dirname, 'resume.hbs'), 'utf-8')
-  const css = fs.readFileSync(path.join(__dirname, 'style.css'), 'utf-8')
+  const template = fs.readFileSync(path.resolve(dirname, 'resume.hbs'), 'utf-8')
+  const css = fs.readFileSync(path.resolve(dirname, 'style.css'), 'utf-8')
 
   return Handlebars.compile(template)({ css, resume })
 }
