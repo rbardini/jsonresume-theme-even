@@ -83,7 +83,7 @@ ul {
   padding-left: 1em;
 }
 
-li + li {
+:not(.icon-list) > li + li {
   margin-top: 0.4em;
 }
 
@@ -199,6 +199,10 @@ blockquote > * + * {
 }
 
 .icon-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em 1em;
+  justify-content: center;
   list-style: none;
   padding: 0;
 }
@@ -249,6 +253,10 @@ blockquote > * + * {
 
   section {
     display: contents;
+  }
+
+  .icon-list {
+    flex-direction: column;
   }
 
   .grid-list {
