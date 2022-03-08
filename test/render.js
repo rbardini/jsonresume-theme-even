@@ -2,7 +2,7 @@ import { test } from 'tap'
 import { HtmlValidate } from 'html-validate'
 
 import { render } from '../index.js'
-import resume from 'resume-schema/sample.resume.json'
+import resume from 'resume-schema/sample.resume.json' assert { type: 'json' }
 
 // Overwrite empty sample resume values
 resume.basics.image = 'image.jpg'

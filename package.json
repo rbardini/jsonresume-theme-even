@@ -42,7 +42,7 @@
     "prebuild:demo": "npm run build",
     "build:demo": "mkdir -p public && cat node_modules/resume-schema/sample.resume.json | ./bin/cli.js > public/index.html",
     "format": "prettier --ignore-path .gitignore .",
-    "lint": "eslint --ignore-path .gitignore .",
+    "lint": "eslint --ignore-path .gitignore --ignore-pattern test .",
     "prepare": "husky install",
     "prepublishOnly": "npm run build",
     "test": "c8 tap --node-arg=--experimental-json-modules --no-coverage"
