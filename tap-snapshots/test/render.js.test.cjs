@@ -261,7 +261,10 @@ blockquote > * + * {
   }
 
   .grid-list {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(calc((100% - 1em) / 2), 1fr)
+    );
   }
 }
 </style>
