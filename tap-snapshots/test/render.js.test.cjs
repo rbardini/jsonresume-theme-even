@@ -83,7 +83,7 @@ ul {
   padding-left: 1em;
 }
 
-:not(.icon-list) > li + li {
+:not(.icon-list, .tag-list) > li + li {
   margin-top: 0.4em;
 }
 
@@ -215,13 +215,14 @@ blockquote > * + * {
 .tag-list {
   display: flex;
   flex-wrap: wrap;
+  gap: 0.4em;
   list-style: none;
   padding: 0;
 }
 
 .tag-list > li {
   background: var(--color-muted);
-  margin: 0 0.2em 0.2em 0;
+  border-radius: 0.2em;
   padding: 0.2em 0.6em;
 }
 
