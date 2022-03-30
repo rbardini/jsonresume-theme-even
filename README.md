@@ -15,7 +15,7 @@ Inspired by [jsonresume-theme-flat](https://github.com/erming/jsonresume-theme-f
 - 🧩 Standalone CLI
 - 📦 ESM and CommonJS builds
 
-[View demo →](https://jsonresume-theme-even.netlify.app)
+[View demo →](https://jsonresume-theme-even.rbrd.in)
 
 ## Installation
 
