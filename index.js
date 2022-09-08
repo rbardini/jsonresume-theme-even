@@ -33,6 +33,7 @@ Handlebars.registerHelper('formatDate', dateString =>
   new Date(dateString).toLocaleDateString('en', {
     month: 'short',
     year: 'numeric',
+    timeZone: 'UTC',
   }),
 )
 
