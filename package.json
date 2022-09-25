@@ -55,11 +55,11 @@
   },
   "devDependencies": {
     "c8": "7.12.0",
-    "eslint": "8.20.0",
-    "html-validate": "7.1.2",
+    "eslint": "8.24.0",
+    "html-validate": "7.5.0",
     "husky": "8.0.1",
     "lint-staged": "13.0.3",
-    "microbundle": "0.15.0",
+    "microbundle": "0.15.1",
     "prettier": "2.7.1",
     "resume-schema": "1.0.0",
     "tap": "16.3.0"
