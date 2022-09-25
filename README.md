@@ -50,7 +50,7 @@ See [example](https://github.com/rbardini/resume.rbardini.com).
 _Even_ comes with a barebones CLI that reads resumes from `stdin` and outputs HTML to `stdout`. This allows usage without any resume builder tools:
 
 ```console
-cat resume.json | npx jsonresume-theme-even > resume.html
+npx jsonresume-theme-even < resume.json > resume.html
 ```
 
 See [example](https://github.com/beacampbell/resume).
