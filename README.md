@@ -43,8 +43,6 @@ npm install resumed jsonresume-theme-even
 npx resumed render
 ```
 
-See [example](https://github.com/rbardini/resume.rbardini.com).
-
 ### Standalone usage
 
 _Even_ comes with a barebones CLI that reads resumes from `stdin` and outputs HTML to `stdout`. This allows usage without any resume builder tools:
@@ -52,5 +50,3 @@ _Even_ comes with a barebones CLI that reads resumes from `stdin` and outputs HT
 ```console
 npx jsonresume-theme-even < resume.json > resume.html
 ```
-
-See [example](https://github.com/beacampbell/resume).
