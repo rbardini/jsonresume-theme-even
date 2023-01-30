@@ -38,7 +38,7 @@
   ],
   "scripts": {
     "build": "microbundle build --target node",
-    "postbuild": "cp -r resume.hbs partials style.css dist",
+    "postbuild": "cp -r style.css dist",
     "prebuild:demo": "npm run build",
     "build:demo": "mkdir -p public && cat node_modules/resume-schema/sample.resume.json | ./bin/cli.js > public/index.html",
     "format": "prettier --ignore-path .gitignore .",
@@ -49,7 +49,6 @@
   },
   "dependencies": {
     "feather-icons": "^4.28.0",
-    "handlebars": "^4.7.0",
     "micromark": "^2.11.0",
     "striptags": "^3.2.0"
   },

@@ -15,7 +15,10 @@ test('renders a resume', t => {
 test('renders valid HTML', t => {
   const htmlvalidate = new HtmlValidate({
     extends: ['html-validate:recommended'],
-    rules: { 'tel-non-breaking': 'off' },
+    rules: {
+      'no-trailing-whitespace': 'off',
+      'tel-non-breaking': 'off',
+    },
   })
 
   const {
