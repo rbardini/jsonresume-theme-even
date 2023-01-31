@@ -23,11 +23,11 @@
   "type": "module",
   "exports": {
     "require": "./dist/index.cjs",
-    "default": "./dist/index.modern.js"
+    "default": "./dist/index.js"
   },
   "main": "./dist/index.cjs",
-  "unpkg": "./dist/index.umd.js",
-  "module": "./dist/index.module.js",
+  "unpkg": "./dist/index.umd.cjs",
+  "module": "./dist/index.js",
   "source": "index.js",
   "bin": {
     "jsonresume-theme-even": "bin/cli.js"
@@ -37,15 +37,14 @@
     "dist"
   ],
   "scripts": {
-    "build": "microbundle build --target node",
-    "postbuild": "cp -r style.css dist",
+    "build": "vite build",
     "prebuild:demo": "npm run build",
-    "build:demo": "mkdir -p public && cat node_modules/resume-schema/sample.resume.json | ./bin/cli.js > public/index.html",
+    "build:demo": "mkdir -p public && ./bin/cli.js < node_modules/resume-schema/sample.resume.json > public/index.html",
     "format": "prettier --ignore-path .gitignore .",
-    "lint": "eslint --ignore-path .gitignore --ignore-pattern test .",
+    "lint": "eslint --ignore-path .gitignore .",
     "prepare": "husky install",
     "prepublishOnly": "npm run build",
-    "test": "c8 tap --node-arg=--experimental-json-modules --no-coverage"
+    "test": "vitest"
   },
   "dependencies": {
     "feather-icons": "^4.28.0",
@@ -53,14 +52,15 @@
     "striptags": "^3.2.0"
   },
   "devDependencies": {
-    "c8": "7.12.0",
+    "@vitest/coverage-c8": "0.28.3",
     "eslint": "8.31.0",
     "html-validate": "7.12.1",
     "husky": "8.0.3",
     "lint-staged": "13.1.0",
-    "microbundle": "0.15.1",
     "prettier": "2.8.2",
+    "prettier-plugin-packagejson": "2.4.2",
     "resume-schema": "1.0.0",
-    "tap": "16.3.2"
+    "vite": "4.0.4",
+    "vitest": "0.28.3"
   }
 }

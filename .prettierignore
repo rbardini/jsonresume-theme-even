@@ -1,4 +1,3 @@
 .nyc_output
 coverage
 public
-tap-snapshots

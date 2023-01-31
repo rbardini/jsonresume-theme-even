@@ -1,5 +1,5 @@
-import { test } from 'tap'
 import { HtmlValidate } from 'html-validate'
+import { expect, it } from 'vitest'
 
 import { render } from '../index.js'
 import resume from 'resume-schema/sample.resume.json' assert { type: 'json' }
@@ -7,12 +7,11 @@ import resume from 'resume-schema/sample.resume.json' assert { type: 'json' }
 // Overwrite empty sample resume values
 resume.basics.image = 'image.jpg'
 
-test('renders a resume', t => {
-  t.matchSnapshot(render(resume))
-  t.end()
+it('renders a resume', () => {
+  expect(render(resume)).toMatchSnapshot()
 })
 
-test('renders valid HTML', t => {
+it('renders valid HTML', () => {
   const htmlvalidate = new HtmlValidate({
     extends: ['html-validate:recommended'],
     rules: {
@@ -25,6 +24,5 @@ test('renders valid HTML', t => {
     results: [{ messages } = {}],
   } = htmlvalidate.validateString(render(resume))
 
-  t.equal(messages, undefined)
-  t.end()
+  expect(messages).toBeUndefined()
 })

@@ -4,6 +4,7 @@
     "node": true
   },
   "extends": "eslint:recommended",
+  "ignorePatterns": ["test", "vite.config.js"],
   "parserOptions": {
     "sourceType": "module"
   }
