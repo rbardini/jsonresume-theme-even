@@ -11,7 +11,7 @@ it('renders a resume', () => {
   expect(render(resume)).toMatchSnapshot()
 })
 
-it('renders valid HTML', () => {
+it('renders valid HTML', async () => {
   const htmlvalidate = new HtmlValidate({
     extends: ['html-validate:recommended'],
     rules: {
@@ -22,7 +22,7 @@ it('renders valid HTML', () => {
 
   const {
     results: [{ messages } = {}],
-  } = htmlvalidate.validateString(render(resume))
+  } = await htmlvalidate.validateString(render(resume))
 
   expect(messages).toBeUndefined()
 })
