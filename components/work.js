@@ -11,11 +11,11 @@ export default function Work(work = []) {
         ${work.map(({ description, highlights = [], location, name, position, startDate, endDate, summary, url }) => html`
           <article>
             <header>
-              <h4>${position}</h4>
+              <h4>${Link(url, name)}</h4>
               <div class="meta">
                 <div>
-                  <strong>${Link(url, name)}</strong>
-                  ${description && html`<span class="bullet-item">${description}</span>`}
+                  ${description && html`<div>${description}</div>`}
+                  <strong>${position}</strong>
                 </div>
                 <div>${Duration(startDate, endDate)}</div>
                 ${location && html`<div>${location}</div>`}
