@@ -144,7 +144,7 @@ cite::before {
 
 svg {
   margin-right: 0.2em;
-  vertical-align: -0.2em;
+  vertical-align: text-bottom;
 }
 
 .masthead {
