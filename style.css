@@ -169,7 +169,8 @@ section {
 }
 
 article > * + *,
-blockquote > * + * {
+blockquote > * + *,
+.timeline > div > * + * {
   margin-top: 0.6em;
 }
 
@@ -210,9 +211,34 @@ blockquote > * + * {
   padding: 0.2em 0.6em;
 }
 
-.bullet-item:not(:first-child)::before {
-  content: '· ';
-  margin: 0 0.2em;
+.timeline > div {
+  position: relative;
+}
+
+.timeline > div:not(:last-child) {
+  padding-bottom: 1rem;
+}
+
+.timeline > div:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  top: 1rem;
+  left: -15px;
+  width: 2px;
+  height: 100%;
+  background: var(--color-secondary);
+}
+
+.timeline > div:not(:only-child)::after {
+  content: '';
+  position: absolute;
+  top: 0.6rem;
+  left: -20px;
+  width: 8px;
+  height: 8px;
+  background: var(--color-secondary);
+  border: 2px solid var(--color-background);
+  border-radius: 50%;
 }
 
 @media print, (min-width: 48em) {
