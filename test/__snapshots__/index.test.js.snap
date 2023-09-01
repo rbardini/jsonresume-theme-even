@@ -162,12 +162,18 @@ exports[`renders a resume 1`] = `
                 at <strong>Smoogle</strong>
               </div>
               <div><time datetime=\\"2016-08-24\\">Aug 2016</time> – <time datetime=\\"2016-08-24\\">Aug 2016</time></div>
+              <div>application</div>
             </div>
           </header>
           <p>A mapping engine that misguides you</p>
           
             <ul>
               <li><p>Won award at AIHacks 2016</p></li><li><p>Built by all women team of newbie programmers</p></li><li><p>Using modern technologies such as GoogleMaps, Chrome Extension and Javascript</p></li>
+            </ul>
+          
+          
+            <ul class=\\"tag-list\\">
+              <li>GoogleMaps</li><li>Chrome Extension</li><li>Javascript</li>
             </ul>
           
         </article>

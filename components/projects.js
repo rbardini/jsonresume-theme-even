@@ -12,7 +12,7 @@ export default function Projects(projects = []) {
     <section id="projects">
       <h3>Projects</h3>
       <div class="stack">
-      ${projects.map(({ description, entity, highlights = [], name, startDate, endDate, roles = [], url }) => html`
+      ${projects.map(({ description, entity, highlights = [], keywords = [], name, startDate, endDate, roles = [], type, url }) => html`
         <article>
           <header>
             <h4>${Link(url, name)}</h4>
@@ -22,12 +22,18 @@ export default function Projects(projects = []) {
                 ${entity && html`at <strong>${entity}</strong>`}
               </div>
               <div>${Duration(startDate, endDate)}</div>
+              ${type && html`<div>${type}</div>`}
             </div>
           </header>
           ${description && markdown(description)}
           ${highlights.length > 0 && html`
             <ul>
               ${highlights.map(highlight => html`<li>${markdown(highlight)}</li>`)}
+            </ul>
+          `}
+          ${keywords.length > 0 && html`
+            <ul class="tag-list">
+              ${keywords.map(keyword => html`<li>${keyword}</li>`)}
             </ul>
           `}
         </article>
