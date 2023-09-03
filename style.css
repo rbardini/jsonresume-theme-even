@@ -5,8 +5,7 @@
   --color-muted: #f3f4f5; /* Light Gray 200 */
   --color-primary: #191e23; /* Dark Gray 900 */
   --color-secondary: #6c7781; /* Dark Gray 300 */
-  --color-accent: #ffb900; /* Accent Yellow */
-  --color-link: #46b450; /* Accent Green */
+  --color-accent: #0073aa; /* WordPress Blue */
 
   --scale-ratio: 1.25;
   --scale0: 1rem;
@@ -23,6 +22,7 @@
     --color-muted: #23282d; /* Dark Gray 800 */
     --color-primary: #fbfbfc; /* Light Gray 100 */
     --color-secondary: #ccd0d4; /* Light Gray 700 */
+    --color-accent: #00a0d2; /* Medium Blue */
   }
 }
 
@@ -77,14 +77,13 @@ li::marker,
 }
 
 a {
-  color: var(--color-link);
+  color: var(--color-accent);
   text-decoration: none;
-  transition: color 0.2s;
 }
 
 a:focus,
 a:hover {
-  color: var(--color-accent);
+  text-decoration: underline;
 }
 
 h1,
@@ -110,7 +109,7 @@ h2 {
 }
 
 h3 {
-  color: var(--color-accent);
+  color: var(--color-secondary);
   font-size: var(--scale3);
   grid-column: side;
   margin-bottom: 1rem;
