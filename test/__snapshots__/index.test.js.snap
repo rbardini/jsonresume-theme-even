@@ -2,7 +2,7 @@
 
 exports[`renders a resume 1`] = `
 "<!DOCTYPE html>
-    <html lang=\\"en\\">
+    <html lang=\\"en\\" style=\\"--color-background-light:lightgray; --color-background-dark:darkgray;\\">
       <head>
         <meta charset=\\"utf-8\\">
         

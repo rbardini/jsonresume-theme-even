@@ -2,10 +2,21 @@ import { HtmlValidate } from 'html-validate'
 import { expect, it } from 'vitest'
 
 import { render } from '../index.js'
-import resume from 'resume-schema/sample.resume.json' assert { type: 'json' }
+import sampleResume from 'resume-schema/sample.resume.json' assert { type: 'json' }
 
-// Overwrite empty sample resume values
-resume.basics.image = 'image.jpg'
+const resume = {
+  ...sampleResume,
+  meta: {
+    ...sampleResume.meta,
+    colors: {
+      background: ['lightgray', 'darkgray'],
+    },
+  },
+  basics: {
+    ...sampleResume.basics,
+    image: 'image.jpg',
+  },
+}
 
 it('renders a resume', () => {
   expect(render(resume)).toMatchSnapshot()
@@ -15,6 +26,7 @@ it('renders valid HTML', async () => {
   const htmlvalidate = new HtmlValidate({
     extends: ['html-validate:recommended'],
     rules: {
+      'no-inline-style': 'off',
       'no-trailing-whitespace': 'off',
       'tel-non-breaking': 'off',
     },

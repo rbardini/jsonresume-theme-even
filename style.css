@@ -1,11 +1,23 @@
 :root {
   color-scheme: light dark;
 
-  --color-background: #ffffff; /* White */
-  --color-muted: #f3f4f5; /* Light Gray 200 */
-  --color-primary: #191e23; /* Dark Gray 900 */
-  --color-secondary: #6c7781; /* Dark Gray 300 */
-  --color-accent: #0073aa; /* WordPress Blue */
+  --color-background-light: #ffffff; /* White */
+  --color-dimmed-light: #f3f4f5; /* Light Gray 200 */
+  --color-primary-light: #191e23; /* Dark Gray 900 */
+  --color-secondary-light: #6c7781; /* Dark Gray 300 */
+  --color-accent-light: #0073aa; /* WordPress Blue */
+
+  --color-background-dark: #191e23; /* Dark Gray 900 */
+  --color-dimmed-dark: #23282d; /* Dark Gray 800 */
+  --color-primary-dark: #fbfbfc; /* Light Gray 100 */
+  --color-secondary-dark: #ccd0d4; /* Light Gray 700 */
+  --color-accent-dark: #00a0d2; /* Medium Blue */
+
+  --color-background: var(--color-background-light);
+  --color-dimmed: var(--color-dimmed-light);
+  --color-primary: var(--color-primary-light);
+  --color-secondary: var(--color-secondary-light);
+  --color-accent: var(--color-accent-light);
 
   --scale-ratio: 1.25;
   --scale0: 1rem;
@@ -18,11 +30,11 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-background: #191e23; /* Dark Gray 900 */
-    --color-muted: #23282d; /* Dark Gray 800 */
-    --color-primary: #fbfbfc; /* Light Gray 100 */
-    --color-secondary: #ccd0d4; /* Light Gray 700 */
-    --color-accent: #00a0d2; /* Medium Blue */
+    --color-background: var(--color-background-dark);
+    --color-dimmed: var(--color-dimmed-dark);
+    --color-primary: var(--color-primary-dark);
+    --color-secondary: var(--color-secondary-dark);
+    --color-accent: var(--color-accent-dark);
   }
 }
 
@@ -128,7 +140,7 @@ h6 {
 }
 
 blockquote {
-  border-left: 0.2em solid var(--color-muted);
+  border-left: 0.2em solid var(--color-dimmed);
   padding-left: 1em;
 }
 
@@ -147,7 +159,7 @@ svg {
 }
 
 .masthead {
-  background: var(--color-muted);
+  background: var(--color-dimmed);
   display: inherit;
   gap: inherit;
   grid-column: full;
@@ -206,7 +218,7 @@ blockquote > * + *,
 }
 
 .tag-list > li {
-  background: var(--color-muted);
+  background: var(--color-dimmed);
   border-radius: 0.2em;
   padding: 0.2em 0.6em;
 }

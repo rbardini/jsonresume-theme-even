@@ -11,11 +11,12 @@ import References from './components/references.js'
 import Skills from './components/skills.js'
 import Volunteer from './components/volunteer.js'
 import Work from './components/work.js'
+import colors from './utils/colors.js'
 import html from './utils/html.js'
 
 export default function Resume(resume, css) {
   return html`<!DOCTYPE html>
-    <html lang="en">
+    <html lang="en" style="${colors(resume.meta)}">
       <head>
         <meta charset="utf-8">
         ${Meta(resume.basics)}

@@ -12,6 +12,7 @@ Inspired by [jsonresume-theme-flat](https://github.com/erming/jsonresume-theme-f
 - 💄 Markdown support
 - 📐 CSS grid layout
 - 🌗 Light and dark modes
+- 🎨 Customizable colors
 - 🧩 Standalone CLI
 - 📦 ESM and CommonJS builds
 
@@ -49,4 +50,26 @@ _Even_ comes with a barebones CLI that reads resumes from `stdin` and outputs HT
 
 ```console
 npx jsonresume-theme-even < resume.json > resume.html
+```
+
+## Options
+
+### Colors
+
+You can override theme colors via the `.meta.colors` resume field. Each entry defines a tuple of light and (optional) dark color values. If only one array value is defined, it will be used in both light and dark modes.
+
+Here's an example using the default theme colors:
+
+```json
+{
+  "meta": {
+    "colors": {
+      "background": ["#ffffff", "#191e23"],
+      "dimmed": ["#f3f4f5", "#23282d"],
+      "primary": ["#191e23", "#fbfbfc"],
+      "secondary": ["#6c7781", "#ccd0d4"],
+      "accent": ["#0073aa", "#00a0d2"]
+    }
+  }
+}
 ```
