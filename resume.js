@@ -15,9 +15,9 @@ import colors from './utils/colors.js'
 import html from './utils/html.js'
 
 export default function Resume(resume, css) {
-  let order = resume.meta.order
-  if (order === undefined) {
-    order = [
+  let resumeOrder = resume.meta.order
+  if (resumeOrder === undefined) {
+    resumeOrder = [
       'work',
       'volunteer',
       'education',
@@ -46,23 +46,18 @@ export default function Resume(resume, css) {
     references: References(resume.references),
   }
 
-  return html`<!doctype html>
+  return html`<!DOCTYPE html>
     <html lang="en" style="${colors(resume.meta)}">
       <head>
-        <meta charset="utf-8" />
+        <meta charset="utf-8">
         ${Meta(resume.basics)}
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap"
-        />
-        <style>
-          ${css}
-        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap">
+        <style>${css}</style>
       </head>
       <body>
         ${Header(resume.basics)}
-        ${order.map(section => html`${orderComponentMap[section]}`)}
+        ${resumeOrder.map(section => html`${orderComponentMap[section]}`)}
       </body>
     </html>`
 }
