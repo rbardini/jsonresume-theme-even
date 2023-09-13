@@ -99,7 +99,6 @@ exports[`renders a resume 1`] = `
       </div>
     </section>
   
-        
     <section id=\\"volunteer\\">
       <h3>Volunteer</h3>
       <div class=\\"stack\\">
@@ -123,7 +122,6 @@ exports[`renders a resume 1`] = `
       </div>
     </section>
   
-        
     <section id=\\"education\\">
       <h3>Education</h3>
       <div class=\\"stack\\">
@@ -148,7 +146,6 @@ exports[`renders a resume 1`] = `
       </div>
     </section>
   
-        
     <section id=\\"projects\\">
       <h3>Projects</h3>
       <div class=\\"stack\\">
@@ -181,7 +178,6 @@ exports[`renders a resume 1`] = `
       </div>
     </section>
   
-        
     <section id=\\"awards\\">
       <h3>Awards</h3>
       <div class=\\"stack\\">
@@ -204,8 +200,6 @@ exports[`renders a resume 1`] = `
       </div>
     </section>
   
-        
-        
     <section id=\\"publications\\">
       <h3>Publications</h3>
       <div class=\\"stack\\">
@@ -228,7 +222,6 @@ exports[`renders a resume 1`] = `
       </div>
     </section>
   
-        
     <section id=\\"skills\\">
       <h3>Skills</h3>
       <div class=\\"grid-list\\">
@@ -254,7 +247,6 @@ exports[`renders a resume 1`] = `
       </div>
     </section>
   
-        
     <section id=\\"languages\\">
       <h3>Languages</h3>
       <div class=\\"grid-list\\">
@@ -267,7 +259,6 @@ exports[`renders a resume 1`] = `
       </div>
     </section>
   
-        
     <section id=\\"interests\\">
       <h3>Interests</h3>
       <div class=\\"grid-list\\">
@@ -284,7 +275,6 @@ exports[`renders a resume 1`] = `
       </div>
     </section>
   
-        
     <section id=\\"references\\">
       <h3>References</h3>
       <div class=\\"stack\\">

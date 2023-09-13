@@ -15,28 +15,54 @@ import colors from './utils/colors.js'
 import html from './utils/html.js'
 
 export default function Resume(resume, css) {
-  return html`<!DOCTYPE html>
+  let order = resume.meta.order
+  if (order === undefined) {
+    order = [
+      'work',
+      'volunteer',
+      'education',
+      'projects',
+      'awards',
+      'certificates',
+      'publications',
+      'skills',
+      'languages',
+      'interests',
+      'references',
+    ]
+  }
+
+  const orderComponentMap = {
+    work: Work(resume.work),
+    volunteer: Volunteer(resume.volunteer),
+    education: Education(resume.education),
+    projects: Projects(resume.projects),
+    awards: Awards(resume.awards),
+    certificates: Certificates(resume.certificates),
+    publications: Publications(resume.publications),
+    skills: Skills(resume.skills),
+    languages: Languages(resume.languages),
+    interests: Interests(resume.interests),
+    references: References(resume.references),
+  }
+
+  return html`<!doctype html>
     <html lang="en" style="${colors(resume.meta)}">
       <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8" />
         ${Meta(resume.basics)}
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap">
-        <style>${css}</style>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap"
+        />
+        <style>
+          ${css}
+        </style>
       </head>
       <body>
         ${Header(resume.basics)}
-        ${Work(resume.work)}
-        ${Volunteer(resume.volunteer)}
-        ${Education(resume.education)}
-        ${Projects(resume.projects)}
-        ${Awards(resume.awards)}
-        ${Certificates(resume.certificates)}
-        ${Publications(resume.publications)}
-        ${Skills(resume.skills)}
-        ${Languages(resume.languages)}
-        ${Interests(resume.interests)}
-        ${References(resume.references)}
+        ${order.map(section => html`${orderComponentMap[section]}`)}
       </body>
     </html>`
 }
