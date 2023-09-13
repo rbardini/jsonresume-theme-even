@@ -73,3 +73,31 @@ Here's an example using the default theme colors:
   }
 }
 ```
+
+### Order
+
+You can override the default order of sections via the `.meta.order` resume field.
+You can put however many sections you wish, ordered from top to bottom.
+The available sections you may order are provided below:
+
+```json
+{
+  "meta": {
+    "order": [
+      "work",
+      "volunteer",
+      "education",
+      "projects",
+      "awards",
+      "certificates",
+      "publications",
+      "skills",
+      "languages",
+      "interests",
+      "references"
+    ]
+  }
+}
+```
+
+Any sections not in the above list are not registered and won't be displayed in the final render.
