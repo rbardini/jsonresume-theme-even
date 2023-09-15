@@ -1,7 +1,7 @@
 {
   "name": "jsonresume-theme-even",
   "version": "0.21.0",
-  "description": "A flat theme for JSON Resume, compatible with the bleeding edge resume schema",
+  "description": "A flat JSON Resume theme, compatible with the latest resume schema",
   "keywords": [
     "resume",
     "json",
@@ -38,8 +38,7 @@
   ],
   "scripts": {
     "build": "vite build",
-    "prebuild:demo": "npm run build",
-    "build:demo": "mkdir -p public && ./bin/cli.js < node_modules/resume-schema/sample.resume.json > public/index.html",
+    "dev": "vite",
     "format": "prettier .",
     "lint": "eslint --ignore-path .gitignore .",
     "prepare": "husky install",
@@ -52,7 +51,13 @@
     "striptags": "^3.2.0"
   },
   "devDependencies": {
+    "@codemirror/commands": "6.2.5",
+    "@codemirror/lang-json": "6.0.1",
+    "@codemirror/theme-one-dark": "6.1.2",
+    "@codemirror/view": "6.19.0",
     "@vitest/coverage-v8": "0.34.3",
+    "codemirror": "6.0.1",
+    "debounce": "1.2.1",
     "eslint": "8.48.0",
     "html-validate": "8.3.0",
     "husky": "8.0.3",
