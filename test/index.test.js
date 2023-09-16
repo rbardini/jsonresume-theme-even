@@ -8,8 +8,10 @@ const resume = {
   ...sampleResume,
   meta: {
     ...sampleResume.meta,
-    colors: {
-      background: ['lightgray', 'darkgray'],
+    themeOptions: {
+      colors: {
+        background: ['lightgray', 'darkgray'],
+      },
     },
   },
   basics: {

@@ -56,19 +56,21 @@ npx jsonresume-theme-even < resume.json > resume.html
 
 ### Colors
 
-You can override theme colors via the `.meta.colors` resume field. Each entry defines a tuple of light and (optional) dark color values. If only one array value is defined, it will be used in both light and dark modes.
+You can override theme colors via the `.meta.themeOptions.colors` resume field. Each entry defines a tuple of light and (optional) dark color values. If only one array value is defined, it will be used in both light and dark modes.
 
 Here's an example using the default theme colors:
 
 ```json
 {
   "meta": {
-    "colors": {
-      "background": ["#ffffff", "#191e23"],
-      "dimmed": ["#f3f4f5", "#23282d"],
-      "primary": ["#191e23", "#fbfbfc"],
-      "secondary": ["#6c7781", "#ccd0d4"],
-      "accent": ["#0073aa", "#00a0d2"]
+    "themeOptions": {
+      "colors": {
+        "background": ["#ffffff", "#191e23"],
+        "dimmed": ["#f3f4f5", "#23282d"],
+        "primary": ["#191e23", "#fbfbfc"],
+        "secondary": ["#6c7781", "#ccd0d4"],
+        "accent": ["#0073aa", "#00a0d2"]
+      }
     }
   }
 }
