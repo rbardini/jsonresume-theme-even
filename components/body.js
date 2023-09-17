@@ -11,37 +11,21 @@ import Interests from "./interests.js";
 import References from "./references.js";
 import html from "../utils/html.js";
 
-export default function Body(resume) {
-    let resumeOrder = resume.meta.order
-    if (resumeOrder === undefined) {
-        resumeOrder = [
-            'work',
-            'volunteer',
-            'education',
-            'projects',
-            'awards',
-            'certificates',
-            'publications',
-            'skills',
-            'languages',
-            'interests',
-            'references',
-        ]
-    }
+const sectionComponentMap = {
+  work: (resume) => Work(resume.work),
+  volunteer: (resume) => Volunteer(resume.volunteer),
+  education: (resume) => Education(resume.education),
+  projects: (resume) => Projects(resume.projects),
+  awards: (resume) => Awards(resume.awards),
+  certificates: (resume) => Certificates(resume.certificates),
+  publications: (resume) => Publications(resume.publications),
+  skills: (resume) => Skills(resume.skills),
+  languages: (resume) => Languages(resume.languages),
+  interests: (resume) => Interests(resume.interests),
+  references: (resume) => References(resume.references),
+}
 
-    const orderComponentMap = {
-        work: Work(resume.work),
-        volunteer: Volunteer(resume.volunteer),
-        education: Education(resume.education),
-        projects: Projects(resume.projects),
-        awards: Awards(resume.awards),
-        certificates: Certificates(resume.certificates),
-        publications: Publications(resume.publications),
-        skills: Skills(resume.skills),
-        languages: Languages(resume.languages),
-        interests: Interests(resume.interests),
-        references: References(resume.references),
-    }
-
-    return html`${resumeOrder.map(section => html`${orderComponentMap[section]}`)}`;
+export default function Sections(resume) {
+  const sections = resume.meta?.sections || Object.keys(sectionComponentMap)
+  return html`${sections.map(section => sectionComponentMap[section]?.(resume))}`
 }
