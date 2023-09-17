@@ -1,8 +1,8 @@
 import Header from './components/header.js'
 import Meta from './components/meta.js'
+import Sections from './components/sections.js'
 import colors from './utils/colors.js'
 import html from './utils/html.js'
-import Body from "./components/body.js";
 
 export default function Resume(resume, css) {
   return html`<!DOCTYPE html>
