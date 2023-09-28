@@ -3,10 +3,18 @@ import markdown from '../utils/markdown.js'
 import Duration from './duration.js'
 import Link from './link.js'
 
-const formatRoles = arr => Intl.ListFormat
-  ? new Intl.ListFormat('en').format(arr)
-  : arr.join(', ')
+/**
+ * @param {string[]} roles
+ * @returns {string}
+ */
+const formatRoles = roles => Intl.ListFormat
+  ? new Intl.ListFormat('en').format(roles)
+  : roles.join(', ')
 
+/**
+ * @param {import('../schema.d.ts').ResumeSchema['projects']} projects
+ * @returns {string | false}
+ */
 export default function Projects(projects = []) {
   return projects.length > 0 && html`
     <section id="projects">
@@ -21,7 +29,7 @@ export default function Projects(projects = []) {
                 ${roles.length > 0 && html`<strong>${formatRoles(roles)}</strong>`}
                 ${entity && html`at <strong>${entity}</strong>`}
               </div>
-              <div>${Duration(startDate, endDate)}</div>
+              ${startDate && html`<div>${Duration(startDate, endDate)}</div>`}
               ${type && html`<div>${type}</div>`}
             </div>
           </header>

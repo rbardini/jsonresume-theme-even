@@ -2,6 +2,10 @@ import html from '../utils/html.js'
 import markdown from '../utils/markdown.js'
 import Date from './date.js'
 
+/**
+ * @param {import('../schema.d.ts').ResumeSchema['awards']} awards
+ * @returns {string | false}
+ */
 export default function Awards(awards = []) {
   return awards.length > 0 && html`
     <section id="awards">

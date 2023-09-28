@@ -15,6 +15,7 @@ Inspired by [jsonresume-theme-flat](https://github.com/erming/jsonresume-theme-f
 - 🎨 Customizable colors
 - 🧩 Standalone CLI
 - 📦 ESM and CommonJS builds
+- 🤖 TypeScript typings
 
 [View demo →](https://jsonresume-theme-even.rbrd.in)
 

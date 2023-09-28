@@ -3,6 +3,10 @@ import markdown from '../utils/markdown.js'
 import Duration from './duration.js'
 import Link from './link.js'
 
+/**
+ * @param {import('../schema.d.ts').ResumeSchema['education']} education
+ * @returns {string | false}
+ */
 export default function Education(education = []) {
   return education.length > 0 && html`
     <section id="education">
@@ -14,7 +18,7 @@ export default function Education(education = []) {
               <h4>${Link(url, institution)}</h4>
               <div class="meta">
                 ${area && html`<strong>${area}</strong>`}
-                <div>${Duration(startDate, endDate)}</div>
+                ${startDate && html`<div>${Duration(startDate, endDate)}</div>`}
               </div>
             </header>
             ${studyType && markdown(studyType)}

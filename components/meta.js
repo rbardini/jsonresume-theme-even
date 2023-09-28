@@ -1,6 +1,10 @@
 import html from '../utils/html.js'
 import markdown from '../utils/markdown.js'
 
+/**
+ * @param {import('../schema.d.ts').ResumeSchema['basics']} basics
+ * @returns {string}
+ */
 export default function Meta(basics = {}) {
   const { name, summary } = basics
 

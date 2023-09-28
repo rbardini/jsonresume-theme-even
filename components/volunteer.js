@@ -3,6 +3,10 @@ import markdown from '../utils/markdown.js'
 import Duration from './duration.js'
 import Link from './link.js'
 
+/**
+ * @param {import('../schema.d.ts').ResumeSchema['volunteer']} volunteer
+ * @returns {string | false}
+ */
 export default function Volunteer(volunteer = []) {
   return volunteer.length > 0 && html`
     <section id="volunteer">
@@ -14,7 +18,7 @@ export default function Volunteer(volunteer = []) {
               <h4>${Link(url, organization)}</h4>
               <div class="meta">
                 <strong>${position}</strong>
-                <div>${Duration(startDate, endDate)}</div>
+                ${startDate && html`<div>${Duration(startDate, endDate)}</div>`}
               </div>
             </header>
             ${summary && markdown(summary)}

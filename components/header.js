@@ -3,10 +3,18 @@ import markdown from '../utils/markdown.js'
 import Icon from './icon.js'
 import Link from './link.js'
 
+/**
+ * @param {string} countryCode
+ * @returns {string | undefined}
+ */
 const formatCountry = countryCode => Intl.DisplayNames
   ? new Intl.DisplayNames(['en'], { type: 'region' }).of(countryCode)
   : countryCode
 
+/**
+ * @param {import('../schema.d.ts').ResumeSchema['basics']} basics
+ * @returns {string}
+ */
 export default function Header(basics = {}) {
   const { email, image, label, location, name, phone, profiles = [], summary, url } = basics
 
@@ -45,7 +53,7 @@ export default function Header(basics = {}) {
         `}
         ${profiles.map(({ network, url, username }) => html`
           <li>
-            ${Icon(network, 'user')}
+            ${network && Icon(network, 'user')}
             ${Link(url, username)}
             ${network && html`<span class="network">(${network})</span>`}
           </li>

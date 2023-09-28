@@ -14,6 +14,11 @@ import Work from './components/work.js'
 import colors from './utils/colors.js'
 import html from './utils/html.js'
 
+/**
+ * @param {import('./schema.d.ts').ResumeSchema} resume
+ * @param {string} css
+ * @returns
+ */
 export default function Resume(resume, css) {
   return html`<!DOCTYPE html>
     <html lang="en" style="${colors(resume.meta)}">

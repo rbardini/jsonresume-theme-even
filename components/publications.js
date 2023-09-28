@@ -3,6 +3,10 @@ import markdown from '../utils/markdown.js'
 import Date from './date.js'
 import Link from './link.js'
 
+/**
+ * @param {import('../schema.d.ts').ResumeSchema['publications']} publications
+ * @returns {string | false}
+ */
 export default function Publications(publications = []) {
   return publications.length > 0 && html`
     <section id="publications">

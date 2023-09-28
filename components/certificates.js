@@ -2,6 +2,10 @@ import html from '../utils/html.js'
 import Date from './date.js'
 import Link from './link.js'
 
+/**
+ * @param {import('../schema.d.ts').ResumeSchema['certificates']} certificates
+ * @returns {string | false}
+ */
 export default function Certificates(certificates = []) {
   return certificates.length > 0 && html`
     <section id="certificates">

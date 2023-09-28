@@ -1,5 +1,9 @@
 import html from '../utils/html.js'
 
+/**
+ * @param {import('../schema.d.ts').ResumeSchema['skills']} skills
+ * @returns {string | false}
+ */
 export default function Skills(skills = []) {
   return skills.length > 0 && html`
     <section id="skills">

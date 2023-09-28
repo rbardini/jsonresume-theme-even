@@ -1,5 +1,9 @@
 import html from '../utils/html.js'
 
+/**
+ * @param {import('../schema.d.ts').ResumeSchema['interests']} interests
+ * @returns {string | false}
+ */
 export default function Interests(interests = []) {
   return interests.length > 0 && html`
     <section id="interests">
