@@ -52,7 +52,9 @@ body {
   background: var(--color-background);
   color: var(--color-primary);
   display: grid;
-  font: 1em/1.5 Lato, sans-serif;
+  font:
+    1em/1.5 Lato,
+    sans-serif;
   gap: 2em;
   grid-template-columns:
     [full-start]
@@ -283,9 +285,6 @@ blockquote > * + *,
   }
 
   .grid-list {
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(calc((100% - 1em) / 2), 1fr)
-    );
+    grid-template-columns: repeat(auto-fit, minmax(calc((100% - 1em) / 2), 1fr));
   }
 }

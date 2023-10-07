@@ -1,8 +1,8 @@
 import { HtmlValidate } from 'html-validate'
 import { expect, it } from 'vitest'
 
-import { render } from '../index.js'
 import sampleResume from 'resume-schema/sample.resume.json' assert { type: 'json' }
+import { render } from '../index.js'
 
 const resume = {
   ...sampleResume,
@@ -26,8 +26,9 @@ it('renders a resume', () => {
 
 it('renders valid HTML', async () => {
   const htmlvalidate = new HtmlValidate({
-    extends: ['html-validate:recommended'],
+    extends: ['html-validate:recommended', 'html-validate:prettier'],
     rules: {
+      'doctype-style': 'off',
       'no-inline-style': 'off',
       'no-trailing-whitespace': 'off',
       'tel-non-breaking': 'off',

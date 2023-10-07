@@ -28,8 +28,8 @@
   "main": "./dist/index.cjs",
   "unpkg": "./dist/index.umd.cjs",
   "module": "./dist/index.js",
-  "typings": "./dist/index.d.ts",
   "source": "index.js",
+  "typings": "./dist/index.d.ts",
   "bin": {
     "jsonresume-theme-even": "bin/cli.js"
   },
@@ -67,7 +67,8 @@
     "json-schema-to-typescript": "13.1.1",
     "lint-staged": "14.0.1",
     "prettier": "3.0.3",
-    "prettier-plugin-packagejson": "2.4.5",
+    "prettier-plugin-organize-imports": "3.2.3",
+    "prettier-plugin-packagejson": "2.4.6",
     "resume-schema": "1.0.0",
     "typescript": "5.2.2",
     "vite": "4.4.9",
