@@ -62,8 +62,7 @@ exports[`renders a resume 1`] = `
         
       </ul>
     </header>
-  
-        
+   
     <section id=\\"work\\">
       <h3>Work</h3>
       <div class=\\"stack\\">
