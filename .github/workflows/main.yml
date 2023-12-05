@@ -17,11 +17,17 @@ jobs:
       - name: Install
         run: npm ci
 
+      - name: Type-check
+        run: npm run type-check
+
       - name: Lint
         run: npm run lint
 
       - name: Test
         run: npm test -- --coverage
+
+      - name: Format-check
+        run: npm run format -- --check
 
       - name: Build
         run: npm run build
