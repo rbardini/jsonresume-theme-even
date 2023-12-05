@@ -76,3 +76,31 @@ Here's an example using the default theme colors:
   }
 }
 ```
+
+### Sections
+
+You can override what sections are displayed, and in what order, via the `.meta.sections` resume field.
+
+Here's an example with all available sections in their default order:
+
+```json
+{
+  "meta": {
+    "sections": [
+      "work",
+      "volunteer",
+      "education",
+      "projects",
+      "awards",
+      "certificates",
+      "publications",
+      "skills",
+      "languages",
+      "interests",
+      "references"
+    ]
+  }
+}
+```
+
+Any sections not in the above list are not registered and won't be displayed in the final render.
