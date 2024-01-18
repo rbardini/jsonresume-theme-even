@@ -19,7 +19,7 @@ export default function Projects(projects = []) {
     html`
       <section id="projects">
         <h3>Projects</h3>
-        <div class="stack">
+        <div class="grid-list">
           ${projects.map(
             ({
               description,

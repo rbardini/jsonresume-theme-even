@@ -1,23 +1,26 @@
 :root {
   color-scheme: light dark;
 
-  --color-background-light: #ffffff; /* White */
-  --color-dimmed-light: #f3f4f5; /* Light Gray 200 */
+  --color-background-light: #fbf9f1; /* White */
+  --color-dimmed-light: #638889; /* Light Gray 200 */
   --color-primary-light: #191e23; /* Dark Gray 900 */
-  --color-secondary-light: #6c7781; /* Dark Gray 300 */
-  --color-accent-light: #0073aa; /* WordPress Blue */
+  --color-secondary-light: #191e23; /* Dark Gray 300 */
+  --color-accent-light: #0b60b0; /* WordPress Blue */
+  --odd-background-color-light: #ebebeb;
 
-  --color-background-dark: #191e23; /* Dark Gray 900 */
-  --color-dimmed-dark: #23282d; /* Dark Gray 800 */
-  --color-primary-dark: #fbfbfc; /* Light Gray 100 */
-  --color-secondary-dark: #ccd0d4; /* Light Gray 700 */
-  --color-accent-dark: #00a0d2; /* Medium Blue */
+  --color-background-dark: #fbf9f1; /* Dark Gray 900 */
+  --color-dimmed-dark: #638889; /* Dark Gray 800 */
+  --color-primary-dark: #191e23; /* Light Gray 100 */
+  --color-secondary-dark: #191e23; /* Light Gray 700 */
+  --color-accent-dark: #0b60b0; /* Medium Blue */
+  --odd-background-color-dark: #ebebeb;
 
   --color-background: var(--color-background-light);
   --color-dimmed: var(--color-dimmed-light);
   --color-primary: var(--color-primary-light);
   --color-secondary: var(--color-secondary-light);
   --color-accent: var(--color-accent-light);
+  --odd-background-color: var(--odd-background-color-light);
 
   --scale-ratio: 1.25;
   --scale0: 1rem;
@@ -55,19 +58,31 @@ body {
   font:
     1em/1.5 Lato,
     sans-serif;
-  gap: 2em;
+  gap: 0 2em;
   grid-template-columns:
     [full-start]
     1fr
     [main-start side-start]
     minmax(min-content, 12em)
     [side-end content-start]
-    minmax(min-content, 36em)
+    minmax(min-content, 75em)
     [main-end content-end]
     1fr
     [full-end];
   grid-template-rows: auto [content] 0;
-  margin-bottom: 4em;
+  /* margin-bottom: 4em; */
+}
+
+body > section:nth-child(odd) {
+  background: var(--odd-background-color);
+}
+
+body > section {
+  display: inherit;
+  gap: inherit;
+  grid-column: full;
+  grid-template-columns: inherit;
+  padding: 2em 0;
 }
 
 body::before {
@@ -85,9 +100,11 @@ ul {
   margin-top: 0.4em;
 }
 
-li::marker,
+li::marker {
+  color: var(--color-primary);
+}
 .network {
-  color: var(--color-secondary);
+  color: var(--color-background);
 }
 
 a {
@@ -118,7 +135,7 @@ h1 {
 }
 
 h2 {
-  color: var(--color-secondary);
+  color: var(--odd-background-color);
   font-size: var(--scale4);
 }
 
@@ -162,6 +179,7 @@ svg {
 
 .masthead {
   background: var(--color-dimmed);
+  color: var(--color-background);
   display: inherit;
   gap: inherit;
   grid-column: full;
@@ -206,6 +224,10 @@ blockquote > * + *,
   padding: 0;
 }
 
+.icon-list > li > a {
+  color: var(--color-background);
+}
+
 .grid-list {
   display: grid;
   gap: 1em;
@@ -220,6 +242,7 @@ blockquote > * + *,
 }
 
 .tag-list > li {
+  color: var(--color-background);
   background: var(--color-dimmed);
   border-radius: 0.2em;
   padding: 0.2em 0.6em;

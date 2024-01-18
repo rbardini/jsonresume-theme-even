@@ -12,7 +12,7 @@ export default function Awards(awards = []) {
     html`
       <section id="awards">
         <h3>Awards</h3>
-        <div class="stack">
+        <div class="grid-list">
           ${awards.map(
             ({ awarder, date, summary, title }) => html`
               <article>

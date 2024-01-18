@@ -11,7 +11,7 @@ export default function References(references = []) {
     html`
       <section id="references">
         <h3>References</h3>
-        <div class="stack">
+        <div class="grid-list">
           ${references.map(
             ({ name, reference }) => html`
               <blockquote>

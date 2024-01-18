@@ -13,9 +13,9 @@ export default function Education(education = []) {
     html`
       <section id="education">
         <h3>Education</h3>
-        <div class="stack">
+        <div class="grid-list">
           ${education.map(
-            ({ area, courses = [], institution, startDate, endDate, studyType, url }) => html`
+            ({ area, courses = [], keywords = [], institution, startDate, endDate, studyType, url }) => html`
               <article>
                 <header>
                   <h4>${Link(url, institution)}</h4>
@@ -25,9 +25,15 @@ export default function Education(education = []) {
                   </div>
                 </header>
                 ${studyType && markdown(studyType)}
+                ${keywords.length > 0 &&
+                html`
+                  <ul class="tag-list">
+                    ${keywords.map(keyword => html`<li>${keyword}</li>`)}
+                  </ul>
+                `}
                 ${courses.length > 0 &&
                 html`
-                  <h5>Courses</h5>
+                  <h5>Skills</h5>
                   <ul>
                     ${courses.map(course => html`<li>${markdown(course)}</li>`)}
                   </ul>

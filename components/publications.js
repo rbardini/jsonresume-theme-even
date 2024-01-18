@@ -13,7 +13,7 @@ export default function Publications(publications = []) {
     html`
       <section id="publications">
         <h3>Publications</h3>
-        <div class="stack">
+        <div class="grid-list">
           ${publications.map(
             ({ name, publisher, releaseDate, summary, url }) => html`
               <article>

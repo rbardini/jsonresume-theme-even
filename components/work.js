@@ -24,7 +24,7 @@ export default function Work(work = []) {
     html`
       <section id="work">
         <h3>Work</h3>
-        <div class="stack">
+        <div class="grid-list">
           ${nestedWork.map(
             ({ description, name, url, items = [] }) => html`
               <article>
@@ -34,7 +34,7 @@ export default function Work(work = []) {
                 </header>
                 <div class="timeline">
                   ${items.map(
-                    ({ highlights = [], location, position, startDate, endDate, summary }) => html`
+                    ({ highlights = [], keywords = [], location, position, startDate, endDate, summary }) => html`
                       <div>
                         <div>
                           <h5>${position}</h5>
@@ -44,6 +44,12 @@ export default function Work(work = []) {
                           </div>
                         </div>
                         ${summary && markdown(summary)}
+                        ${keywords.length > 0 &&
+                        html`
+                          <ul class="tag-list">
+                            ${keywords.map(keyword => html`<li>${keyword}</li>`)}
+                          </ul>
+                        `}
                         ${highlights.length > 0 &&
                         html`
                           <ul>

@@ -13,7 +13,7 @@ export default function Volunteer(volunteer = []) {
     html`
       <section id="volunteer">
         <h3>Volunteer</h3>
-        <div class="stack">
+        <div class="grid-list">
           ${volunteer.map(
             ({ highlights = [], organization, position, startDate, endDate, summary, url }) => html`
               <article>

@@ -32,9 +32,9 @@ export default function Resume(resume, css) {
         </style>
       </head>
       <body>
-        ${Header(resume.basics)} ${Work(resume.work)} ${Volunteer(resume.volunteer)} ${Education(resume.education)}
-        ${Projects(resume.projects)} ${Awards(resume.awards)} ${Certificates(resume.certificates)}
-        ${Publications(resume.publications)} ${Skills(resume.skills)} ${Languages(resume.languages)}
+        ${Header(resume.basics)} ${Work(resume.work)} ${Education(resume.education)} ${Skills(resume.skills)}
+        ${Languages(resume.languages)} ${Projects(resume.projects)} ${Volunteer(resume.volunteer)}
+        ${Awards(resume.awards)} ${Certificates(resume.certificates)} ${Publications(resume.publications)}
         ${Interests(resume.interests)} ${References(resume.references)}
       </body>
     </html>`

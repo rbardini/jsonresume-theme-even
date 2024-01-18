@@ -8,8 +8,8 @@ html {
 }
 
 body {
-  display: grid;
-  grid-template: 50% 50% / 100%;
+  /* display: grid; */
+  /* grid-template: 50% 50% / 100%; */
   margin: 0;
 }
 

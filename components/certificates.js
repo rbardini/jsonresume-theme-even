@@ -12,7 +12,7 @@ export default function Certificates(certificates = []) {
     html`
       <section id="certificates">
         <h3>Certificates</h3>
-        <div class="stack">
+        <div class="grid-list">
           ${certificates.map(
             ({ date, issuer, name, url }) => html`
               <article>
