@@ -4,7 +4,7 @@ import { oneDark } from '@codemirror/theme-one-dark'
 import { EditorView, keymap } from '@codemirror/view'
 import { basicSetup } from 'codemirror'
 import { debounce } from 'debounce'
-import resume from 'resume-schema/sample.resume.json' assert { type: 'json' }
+import resume from 'resume-schema/sample.resume.json' with { type: 'json' }
 
 import './editor.css'
 import { render } from './index.js'

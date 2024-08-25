@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
 import { viteStaticCopy } from 'vite-plugin-static-copy'
-import pkg from './package.json' assert { type: 'json' }
+import pkg from './package.json' with { type: 'json' }
 
 export default defineConfig(({ mode }) => {
   if (mode === 'development') {
