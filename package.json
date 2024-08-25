@@ -51,7 +51,6 @@
     "dev": "vite",
     "format": "prettier .",
     "prepare": "husky && npm run build",
-    "prepublishOnly": "npm run build",
     "test": "vitest",
     "type-check": "tsc"
   },
