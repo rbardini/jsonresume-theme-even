@@ -2,9 +2,9 @@ import { indentWithTab } from '@codemirror/commands'
 import { json } from '@codemirror/lang-json'
 import { oneDark } from '@codemirror/theme-one-dark'
 import { EditorView, keymap } from '@codemirror/view'
+import resume from '@jsonresume/schema/sample.resume.json' with { type: 'json' }
 import { basicSetup } from 'codemirror'
 import { debounce } from 'debounce'
-import resume from 'resume-schema/sample.resume.json' with { type: 'json' }
 
 import './editor.css'
 import { render } from './index.js'
