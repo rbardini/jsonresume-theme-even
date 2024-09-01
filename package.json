@@ -60,7 +60,7 @@
     "striptags": "^3.2.0"
   },
   "devDependencies": {
-    "@codemirror/commands": "6.6.0",
+    "@codemirror/commands": "6.6.1",
     "@codemirror/lang-json": "6.0.1",
     "@codemirror/theme-one-dark": "6.1.2",
     "@codemirror/view": "6.33.0",
@@ -71,8 +71,8 @@
     "debounce": "2.1.0",
     "html-validate": "8.21.0",
     "husky": "9.1.5",
-    "json-schema-to-typescript": "15.0.1",
-    "lint-staged": "15.2.9",
+    "json-schema-to-typescript": "15.0.2",
+    "lint-staged": "15.2.10",
     "prettier": "3.3.3",
     "prettier-plugin-organize-imports": "4.0.0",
     "prettier-plugin-packagejson": "2.5.2",
