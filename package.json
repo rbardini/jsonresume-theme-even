@@ -55,6 +55,7 @@
     "type-check": "tsc"
   },
   "dependencies": {
+    "@rbardini/html": "^1.0.0",
     "feather-icons": "^4.28.0",
     "micromark": "^2.11.0",
     "striptags": "^3.2.0"

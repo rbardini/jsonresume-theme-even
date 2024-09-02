@@ -1,3 +1,4 @@
+import { html } from '@rbardini/html'
 import Awards from './components/awards.js'
 import Certificates from './components/certificates.js'
 import Education from './components/education.js'
@@ -12,7 +13,6 @@ import Skills from './components/skills.js'
 import Volunteer from './components/volunteer.js'
 import Work from './components/work.js'
 import colors from './utils/colors.js'
-import html from './utils/html.js'
 
 /**
  * @param {import('./schema.d.ts').ResumeSchema} resume

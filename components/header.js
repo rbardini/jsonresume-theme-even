@@ -1,4 +1,4 @@
-import html from '../utils/html.js'
+import { html } from '@rbardini/html'
 import markdown from '../utils/markdown.js'
 import Icon from './icon.js'
 import Link from './link.js'

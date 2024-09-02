@@ -1,4 +1,4 @@
-import html from '../utils/html.js'
+import { html } from '@rbardini/html'
 import Date from './date.js'
 
 /**
