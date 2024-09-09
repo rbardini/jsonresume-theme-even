@@ -1,21 +1,21 @@
 import { html } from '@rbardini/html'
-import Awards from './components/awards.js'
-import Certificates from './components/certificates.js'
-import Education from './components/education.js'
-import Header from './components/header.js'
-import Interests from './components/interests.js'
-import Languages from './components/languages.js'
-import Meta from './components/meta.js'
-import Projects from './components/projects.js'
-import Publications from './components/publications.js'
-import References from './components/references.js'
-import Skills from './components/skills.js'
-import Volunteer from './components/volunteer.js'
-import Work from './components/work.js'
-import colors from './utils/colors.js'
+import colors from '../utils/colors.js'
+import Awards from './awards.js'
+import Certificates from './certificates.js'
+import Education from './education.js'
+import Header from './header.js'
+import Interests from './interests.js'
+import Languages from './languages.js'
+import Meta from './meta.js'
+import Projects from './projects.js'
+import Publications from './publications.js'
+import References from './references.js'
+import Skills from './skills.js'
+import Volunteer from './volunteer.js'
+import Work from './work.js'
 
 /**
- * @param {import('./schema.d.ts').ResumeSchema} resume
+ * @param {import('../schema.d.ts').ResumeSchema} resume
  * @param {object} [options]
  * @param {string} [options.css]
  * @param {string} [options.js]

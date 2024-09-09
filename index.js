@@ -1,8 +1,8 @@
-import Resume from './resume.js'
+// @ts-expect-error `?raw` query
+import js from './assets/page.js?raw'
 // @ts-expect-error `?inline` query
-import css from './style.css?inline'
-// @ts-expect-error `?inline` query
-import js from './script.js?raw'
+import css from './assets/page.css?inline'
+import Resume from './components/resume.js'
 
 export const pdfRenderOptions = { mediaType: 'print' }
 
