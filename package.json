@@ -48,7 +48,8 @@
   "scripts": {
     "prebuild": "json2ts node_modules/@jsonresume/schema/schema.json schema.d.ts",
     "build": "vite build",
-    "dev": "vite",
+    "build-editor": "vite build editor",
+    "dev": "vite serve editor",
     "format": "prettier .",
     "prepare": "husky && npm run build",
     "test": "vitest",

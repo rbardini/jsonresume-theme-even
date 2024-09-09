@@ -4,10 +4,10 @@ import { oneDark } from '@codemirror/theme-one-dark'
 import { EditorView, keymap } from '@codemirror/view'
 import resume from '@jsonresume/schema/sample.resume.json' with { type: 'json' }
 import { basicSetup } from 'codemirror'
-import { debounce } from 'debounce'
+import debounce from 'debounce'
 
+import { render } from '../index.js'
 import './editor.css'
-import { render } from './index.js'
 
 const preview = document.querySelector('iframe')
 const printButton = document.querySelector('button[name=print]')

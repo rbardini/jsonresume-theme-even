@@ -4,16 +4,6 @@ import { viteStaticCopy } from 'vite-plugin-static-copy'
 import pkg from './package.json' with { type: 'json' }
 
 export default defineConfig(({ mode }) => {
-  if (mode === 'development') {
-    return {
-      build: {
-        outDir: './public',
-        target: 'esnext',
-      },
-      publicDir: false,
-    }
-  }
-
   return {
     build: {
       copyPublicDir: false,
