@@ -11,5 +11,5 @@ export const pdfRenderOptions = { mediaType: 'print' }
  * @returns {string}
  */
 export const render = resume => {
-  return Resume(resume, css, js)
+  return Resume(resume, { css, js })
 }

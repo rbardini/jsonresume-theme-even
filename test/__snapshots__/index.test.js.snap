@@ -11,9 +11,7 @@ exports[`renders a resume 1`] = `
   
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" />
-        <style>
-          
-        </style>
+        
         <script type="module">
           const pluralize = (num, str) => \`\${num} \${num === 1 ? str : str.concat('s')}\`
 
