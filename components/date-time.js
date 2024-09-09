@@ -15,6 +15,6 @@ const formatDate = dateString =>
  * @param {string} date
  * @returns {string}
  */
-export default function Duration(date) {
+export default function DateTime(date) {
   return html`<time datetime="${date}">${formatDate(date)}</time>`
 }

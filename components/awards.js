@@ -1,6 +1,6 @@
 import { html } from '@rbardini/html'
 import markdown from '../utils/markdown.js'
-import Date from './date.js'
+import DateTime from './date-time.js'
 
 /**
  * @param {import('../schema.d.ts').ResumeSchema['awards']} awards
@@ -19,7 +19,7 @@ export default function Awards(awards = []) {
                 <header>
                   <h4>${title}</h4>
                   <div class="meta">
-                    ${awarder && html`<div>Awarded by <strong>${awarder}</strong></div>`} ${date && Date(date)}
+                    ${awarder && html`<div>Awarded by <strong>${awarder}</strong></div>`} ${date && DateTime(date)}
                   </div>
                 </header>
                 ${summary && markdown(summary)}

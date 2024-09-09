@@ -1,5 +1,5 @@
 import { html } from '@rbardini/html'
-import Date from './date.js'
+import DateTime from './date-time.js'
 import Link from './link.js'
 
 /**
@@ -19,7 +19,7 @@ export default function Certificates(certificates = []) {
                 <header>
                   <h4>${Link(url, name)}</h4>
                   <div class="meta">
-                    ${issuer && html`<div>Issued by <strong>${issuer}</strong></div>`} ${date && Date(date)}
+                    ${issuer && html`<div>Issued by <strong>${issuer}</strong></div>`} ${date && DateTime(date)}
                   </div>
                 </header>
               </article>

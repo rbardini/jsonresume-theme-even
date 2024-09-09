@@ -1,5 +1,5 @@
 import { html } from '@rbardini/html'
-import Date from './date.js'
+import DateTime from './date-time.js'
 
 /**
  * @param {string} startDate
@@ -7,6 +7,6 @@ import Date from './date.js'
  * @returns {string}
  */
 export default function Duration(startDate, endDate) {
-  if (endDate === startDate) return Date(endDate)
-  return html`<time-duration>${Date(startDate)} – ${endDate ? Date(endDate) : 'Present'}</time-duration>`
+  if (endDate === startDate) return DateTime(endDate)
+  return html`<time-duration>${DateTime(startDate)} – ${endDate ? DateTime(endDate) : 'Present'}</time-duration>`
 }
