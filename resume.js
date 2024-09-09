@@ -17,9 +17,10 @@ import colors from './utils/colors.js'
 /**
  * @param {import('./schema.d.ts').ResumeSchema} resume
  * @param {string} css
+ * @param {string} js
  * @returns
  */
-export default function Resume(resume, css) {
+export default function Resume(resume, css, js) {
   return html`<!doctype html>
     <html lang="en" style="${colors(resume.meta)}">
       <head>
@@ -30,6 +31,9 @@ export default function Resume(resume, css) {
         <style>
           ${css}
         </style>
+        <script type="module">
+          ${js}
+        </script>
       </head>
       <body>
         ${Header(resume.basics)} ${Work(resume.work)} ${Volunteer(resume.volunteer)} ${Education(resume.education)}

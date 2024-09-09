@@ -7,5 +7,6 @@ import Date from './date.js'
  * @returns {string}
  */
 export default function Duration(startDate, endDate) {
-  return html`${Date(startDate)} – ${endDate ? Date(endDate) : 'Present'}`
+  if (endDate === startDate) return Date(endDate)
+  return html`<time-duration>${Date(startDate)} – ${endDate ? Date(endDate) : 'Present'}</time-duration>`
 }

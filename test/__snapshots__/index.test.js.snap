@@ -14,6 +14,40 @@ exports[`renders a resume 1`] = `
         <style>
           
         </style>
+        <script type="module">
+          const pluralize = (num, str) => \`\${num} \${num === 1 ? str : str.concat('s')}\`
+
+class TimeDuration extends HTMLElement {
+  connectedCallback() {
+    const [from, to] = this.querySelectorAll('time')
+    if (!from) return
+
+    const startDate = new Date(from.dateTime || from.textContent)
+    const endDate = new Date(to ? to.dateTime || to.textContent : Date.now())
+    const diffDate = new Date(endDate - startDate)
+
+    const years = diffDate.getFullYear() - 1970
+    const months = diffDate.getMonth()
+    const days = diffDate.getDate() - 1
+
+    const segments = [
+      years && pluralize(years, 'yr'),
+      months && pluralize(months, 'mo'),
+      days && !years && !months && pluralize(days, 'day'),
+    ].filter(Boolean)
+    if (!segments.length) return
+
+    const duration = document.createElement('time')
+    duration.classList.add('duration')
+    duration.textContent = '· '.concat(segments.join(' '))
+
+    this.append(' ', duration)
+  }
+}
+
+customElements.define('time-duration', TimeDuration)
+
+        </script>
       </head>
       <body>
         
@@ -69,7 +103,7 @@ exports[`renders a resume 1`] = `
                         <div>
                           <h5>CEO/President</h5>
                           <div class="meta">
-                            <div><time datetime="2013-12-01">Dec 2013</time> – <time datetime="2014-12-01">Dec 2014</time></div>
+                            <div><time-duration><time datetime="2013-12-01">Dec 2013</time> – <time datetime="2014-12-01">Dec 2014</time></time-duration></div>
                             <div>Palo Alto, CA</div>
                           </div>
                         </div>
@@ -96,7 +130,7 @@ exports[`renders a resume 1`] = `
                   <h4><a href="http://coderdojo.example.com/">CoderDojo</a></h4>
                   <div class="meta">
                     <strong>Teacher</strong>
-                    <div><time datetime="2012-01-01">Jan 2012</time> – <time datetime="2013-01-01">Jan 2013</time></div>
+                    <div><time-duration><time datetime="2012-01-01">Jan 2012</time> – <time datetime="2013-01-01">Jan 2013</time></time-duration></div>
                   </div>
                 </header>
                 <p>Global movement of free coding clubs for young people.</p>
@@ -119,7 +153,7 @@ exports[`renders a resume 1`] = `
                   <h4><a href="https://www.ou.edu/">University of Oklahoma</a></h4>
                   <div class="meta">
                     <strong>Information Technology</strong>
-                    <div><time datetime="2011-06-01">Jun 2011</time> – <time datetime="2014-01-01">Jan 2014</time></div>
+                    <div><time-duration><time datetime="2011-06-01">Jun 2011</time> – <time datetime="2014-01-01">Jan 2014</time></time-duration></div>
                   </div>
                 </header>
                 <p>Bachelor</p>
@@ -147,7 +181,7 @@ exports[`renders a resume 1`] = `
                       <strong>Team lead and Designer</strong>
                       at <strong>Smoogle</strong>
                     </div>
-                    <div><time datetime="2016-08-24">Aug 2016</time> – <time datetime="2016-08-24">Aug 2016</time></div> <div>application</div>
+                    <div><time datetime="2016-08-24">Aug 2016</time></div> <div>application</div>
                   </div>
                 </header>
                 <p>A mapping engine that misguides you</p>
