@@ -4,7 +4,10 @@ import js from './assets/page.js?raw'
 import css from './assets/page.css?inline'
 import Resume from './components/resume.js'
 
-export const pdfRenderOptions = { mediaType: 'print' }
+export const pdfRenderOptions = {
+  mediaType: 'print',
+  printBackground: true,
+}
 
 /**
  * @param {import('./schema.d.ts').ResumeSchema} resume
