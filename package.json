@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rbardini/jsonresume-theme-even"
+    "url": "git+https://github.com/rbardini/jsonresume-theme-even.git"
   },
   "license": "MIT",
   "author": "Rafael Bardini",
