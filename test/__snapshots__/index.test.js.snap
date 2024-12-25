@@ -259,9 +259,9 @@ customElements.define('time-duration', TimeDuration)
         </div>
       </section>
      
-      <section id="languages" class="display-unit">
+      <section id="languages">
         <h3>Languages</h3>
-        <div class="grid-list">
+        <div class="grid-list display-unit">
           <div><h4>English</h4> Native speaker</div>
         </div>
       </section>
