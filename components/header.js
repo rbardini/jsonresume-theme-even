@@ -18,7 +18,7 @@ export default function Header(basics = {}) {
   const { email, image, label, location, name, phone, profiles = [], summary, url } = basics
 
   return html`
-    <header class="masthead">
+    <header class="masthead display-unit">
       ${image && html`<img src="${image}" alt="" />`}
       <div>${name && html`<h1>${name}</h1>`} ${label && html`<h2>${label}</h2>`}</div>
       ${summary && html`<article>${markdown(summary)}</article>`}

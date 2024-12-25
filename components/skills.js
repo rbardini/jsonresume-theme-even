@@ -13,7 +13,7 @@ export default function Skills(skills = []) {
         <div class="grid-list">
           ${skills.map(
             ({ keywords = [], name }) => html`
-              <div>
+              <div class="display-unit">
                 ${name && html`<h4>${name}</h4>`}
                 ${keywords.length > 0 &&
                 html`

@@ -15,7 +15,7 @@ export default function Certificates(certificates = []) {
         <div class="stack">
           ${certificates.map(
             ({ date, issuer, name, url }) => html`
-              <article>
+              <article class="display-unit">
                 <header>
                   <h4>${Link(url, name)}</h4>
                   <div class="meta">

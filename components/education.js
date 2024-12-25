@@ -16,7 +16,7 @@ export default function Education(education = []) {
         <div class="stack">
           ${education.map(
             ({ area, courses = [], institution, startDate, endDate, studyType, url }) => html`
-              <article>
+              <article class="display-unit">
                 <header>
                   <h4>${Link(url, institution)}</h4>
                   <div class="meta">

@@ -16,7 +16,7 @@ export default function Volunteer(volunteer = []) {
         <div class="stack">
           ${volunteer.map(
             ({ highlights = [], organization, position, startDate, endDate, summary, url }) => html`
-              <article>
+              <article class="display-unit">
                 <header>
                   <h4>${Link(url, organization)}</h4>
                   <div class="meta">

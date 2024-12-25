@@ -8,7 +8,7 @@ export default function Languages(languages = []) {
   return (
     languages.length > 0 &&
     html`
-      <section id="languages">
+      <section id="languages" class="display-unit">
         <h3>Languages</h3>
         <div class="grid-list">
           ${languages.map(

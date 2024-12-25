@@ -14,7 +14,7 @@ export default function References(references = []) {
         <div class="stack">
           ${references.map(
             ({ name, reference }) => html`
-              <blockquote>
+              <blockquote class="display-unit">
                 ${reference && markdown(reference)}
                 ${name &&
                 html`

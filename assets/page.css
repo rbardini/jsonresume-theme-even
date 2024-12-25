@@ -280,6 +280,10 @@ blockquote > * + *,
     display: contents;
   }
 
+  .display-unit {
+    page-break-inside: avoid;
+  }
+
   .icon-list {
     flex-direction: column;
   }
