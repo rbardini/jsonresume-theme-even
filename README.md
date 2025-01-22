@@ -25,6 +25,16 @@ Inspired by [jsonresume-theme-flat](https://github.com/erming/jsonresume-theme-f
 npm install jsonresume-theme-even
 ```
 
+Specify the theme in your `resume.json`:
+
+```json
+{
+  "meta": {
+    "theme": "jsonresume-theme-even"
+    }
+}
+```
+
 ## Usage
 
 ### With resume-cli
