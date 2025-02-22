@@ -42,7 +42,7 @@ npx resume export resume.html
 
 ```console
 npm install resumed jsonresume-theme-even
-npx resumed render
+npx resumed render --theme jsonresume-theme-even
 ```
 
 ### Standalone usage
