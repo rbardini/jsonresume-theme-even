@@ -27,7 +27,7 @@ export default function Work(work = []) {
         <div class="stack">
           ${nestedWork.map(
             ({ description, name, url, items = [] }) => html`
-              <article>
+              <article class="display-unit">
                 <header>
                   <h4>${Link(url, name)}</h4>
                   <div class="meta">${description && html`<div>${description}</div>`}</div>

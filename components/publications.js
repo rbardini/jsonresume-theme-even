@@ -16,7 +16,7 @@ export default function Publications(publications = []) {
         <div class="stack">
           ${publications.map(
             ({ name, publisher, releaseDate, summary, url }) => html`
-              <article>
+              <article class="display-unit">
                 <header>
                   <h4>${Link(url, name)}</h4>
                   <div class="meta">

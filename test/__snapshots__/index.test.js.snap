@@ -49,7 +49,7 @@ customElements.define('time-duration', TimeDuration)
       </head>
       <body>
         
-    <header class="masthead">
+    <header class="masthead display-unit">
       <img src="image.jpg" alt="" />
       <div><h1>Richard Hendriks</h1> <h2>Programmer</h2></div>
       <article><p>Richard hails from Tulsa. He has earned degrees from the University of Oklahoma and Stanford. (Go Sooners and Cardinal!) Before starting Pied Piper, he worked for Hooli as a part time software developer. While his work focuses on applied information theory, mostly optimizing lossless compression schema of both the length-limited and adaptive variants, his non-work interests range widely, everything from quantum computing to chaos theory. He could tell you about it, but THAT would NOT be a “length-limited” conversation!</p></article>
@@ -90,7 +90,7 @@ customElements.define('time-duration', TimeDuration)
         <h3>Work</h3>
         <div class="stack">
           
-              <article>
+              <article class="display-unit">
                 <header>
                   <h4><a href="http://piedpiper.example.com">Pied Piper</a></h4>
                   <div class="meta"><div>Awesome compression company</div></div>
@@ -123,7 +123,7 @@ customElements.define('time-duration', TimeDuration)
         <h3>Volunteer</h3>
         <div class="stack">
           
-              <article>
+              <article class="display-unit">
                 <header>
                   <h4><a href="http://coderdojo.example.com/">CoderDojo</a></h4>
                   <div class="meta">
@@ -146,7 +146,7 @@ customElements.define('time-duration', TimeDuration)
         <h3>Education</h3>
         <div class="stack">
           
-              <article>
+              <article class="display-unit">
                 <header>
                   <h4><a href="https://www.ou.edu/">University of Oklahoma</a></h4>
                   <div class="meta">
@@ -171,7 +171,7 @@ customElements.define('time-duration', TimeDuration)
         <h3>Projects</h3>
         <div class="stack">
           
-              <article>
+              <article class="display-unit">
                 <header>
                   <h4><a href="http://missdirection.example.com">Miss Direction</a></h4>
                   <div class="meta">
@@ -202,7 +202,7 @@ customElements.define('time-duration', TimeDuration)
         <h3>Awards</h3>
         <div class="stack">
           
-              <article>
+              <article class="display-unit">
                 <header>
                   <h4>Digital Compression Pioneer Award</h4>
                   <div class="meta">
@@ -220,7 +220,7 @@ customElements.define('time-duration', TimeDuration)
         <h3>Publications</h3>
         <div class="stack">
           
-              <article>
+              <article class="display-unit">
                 <header>
                   <h4><a href="http://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)">Video compression for 3d media</a></h4>
                   <div class="meta">
@@ -238,7 +238,7 @@ customElements.define('time-duration', TimeDuration)
         <h3>Skills</h3>
         <div class="grid-list">
           
-              <div>
+              <div class="display-unit">
                 <h4>Web Development</h4>
                 
                   <ul class="tag-list">
@@ -247,7 +247,7 @@ customElements.define('time-duration', TimeDuration)
                 
               </div>
             
-              <div>
+              <div class="display-unit">
                 <h4>Compression</h4>
                 
                   <ul class="tag-list">
@@ -262,7 +262,7 @@ customElements.define('time-duration', TimeDuration)
       <section id="languages">
         <h3>Languages</h3>
         <div class="grid-list">
-          <div><h4>English</h4> Native speaker</div>
+          <div class="display-unit"><h4>English</h4> Native speaker</div>
         </div>
       </section>
     
@@ -271,7 +271,7 @@ customElements.define('time-duration', TimeDuration)
         <h3>Interests</h3>
         <div class="grid-list">
           
-              <div>
+              <div class="display-unit">
                 <h4>Wildlife</h4>
                 
                   <ul class="tag-list">
@@ -287,7 +287,7 @@ customElements.define('time-duration', TimeDuration)
         <h3>References</h3>
         <div class="stack">
           
-              <blockquote>
+              <blockquote class="display-unit">
                 <p>It is my pleasure to recommend Richard, his performance working as a consultant for Main St. Company proved that he will be a valuable addition to any company.</p>
                 
                   <p>

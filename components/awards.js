@@ -15,7 +15,7 @@ export default function Awards(awards = []) {
         <div class="stack">
           ${awards.map(
             ({ awarder, date, summary, title }) => html`
-              <article>
+              <article class="display-unit">
                 <header>
                   <h4>${title}</h4>
                   <div class="meta">
