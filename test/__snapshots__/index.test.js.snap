@@ -86,8 +86,10 @@ customElements.define('time-duration', TimeDuration)
               <article>
                 <header>
                   <h4><a href="http://piedpiper.example.com">Pied Piper</a></h4>
-                  <div class="meta"><div>Awesome compression company</div></div>
-                  
+                  <div class="meta">
+                    <div>Awesome compression company</div>
+                    
+                  </div>
                 </header>
                 <div class="timeline">
                   

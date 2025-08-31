@@ -31,8 +31,10 @@ export default function Work(work = []) {
               <article>
                 <header>
                   <h4>${Link(url, name)}</h4>
-                  <div class="meta">${description && html`<div>${description}</div>`}</div>
-                  ${items.length > 1 && html`<div>${Duration(items)}</div>`}
+                  <div class="meta">
+                    ${description && html`<div>${description}</div>`}
+                    ${items.length > 1 && html`<div>${Duration(items)}</div>`}
+                  </div>
                 </header>
                 <div class="timeline">
                   ${items.map(
