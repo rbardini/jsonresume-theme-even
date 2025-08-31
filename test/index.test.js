@@ -28,7 +28,6 @@ it('renders valid HTML', async () => {
   const htmlvalidate = new HtmlValidate({
     extends: ['html-validate:recommended', 'html-validate:prettier'],
     rules: {
-      'doctype-style': 'off',
       'no-inline-style': 'off',
       'no-trailing-whitespace': 'off',
       'tel-non-breaking': 'off',
