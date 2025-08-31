@@ -85,22 +85,21 @@ customElements.define('time-duration', TimeDuration)
           
               <article>
                 <header>
-                  <h4><a href="http://piedpiper.example.com">Pied Piper</a></h4>
+                  <h4>CEO/President</h4>
                   <div class="meta">
-                    <div>Awesome compression company</div>
                     
+                          <div>
+                            <strong><a href="http://piedpiper.example.com">Pied Piper</a></strong> · Awesome compression company
+                          </div>
+                          <div><time datetime="2013-12-01">Dec 2013</time> – <time datetime="2014-12-01">Dec 2014</time> <time-duration duration="31536000000"></time-duration></div>
+                          <div>Palo Alto, CA</div>
+                        
                   </div>
                 </header>
                 <div class="timeline">
                   
                       <div>
-                        <div>
-                          <h5>CEO/President</h5>
-                          <div class="meta">
-                            <div><time datetime="2013-12-01">Dec 2013</time> – <time datetime="2014-12-01">Dec 2014</time> <time-duration duration="31536000000"></time-duration></div>
-                            <div>Palo Alto, CA</div>
-                          </div>
-                        </div>
+                        
                         <p>Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.</p>
                         
                           <ul>
