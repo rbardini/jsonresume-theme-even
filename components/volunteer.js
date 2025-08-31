@@ -1,6 +1,6 @@
 import { html } from '@rbardini/html'
 import markdown from '../utils/markdown.js'
-import Duration from './duration.js'
+import DateTimeDuration from './date-time-duration.js'
 import Link from './link.js'
 
 /**
@@ -21,7 +21,7 @@ export default function Volunteer(volunteer = []) {
                   <h4>${Link(url, organization)}</h4>
                   <div class="meta">
                     <strong>${position}</strong>
-                    ${startDate && html`<div>${Duration(startDate, endDate)}</div>`}
+                    ${startDate && html`<div>${DateTimeDuration(startDate, endDate)}</div>`}
                   </div>
                 </header>
                 ${summary && markdown(summary)}

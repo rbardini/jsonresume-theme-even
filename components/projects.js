@@ -1,6 +1,6 @@
 import { html } from '@rbardini/html'
 import markdown from '../utils/markdown.js'
-import Duration from './duration.js'
+import DateTimeDuration from './date-time-duration.js'
 import Link from './link.js'
 
 /**
@@ -41,7 +41,8 @@ export default function Projects(projects = []) {
                       ${roles.length > 0 && html`<strong>${formatRoles(roles)}</strong>`}
                       ${entity && html`at <strong>${entity}</strong>`}
                     </div>
-                    ${startDate && html`<div>${Duration(startDate, endDate)}</div>`} ${type && html`<div>${type}</div>`}
+                    ${startDate && html`<div>${DateTimeDuration(startDate, endDate)}</div>`}
+                    ${type && html`<div>${type}</div>`}
                   </div>
                 </header>
                 ${description && markdown(description)}

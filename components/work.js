@@ -1,5 +1,6 @@
 import { html } from '@rbardini/html'
 import markdown from '../utils/markdown.js'
+import DateTimeDuration from './date-time-duration.js'
 import Duration from './duration.js'
 import Link from './link.js'
 
@@ -31,6 +32,7 @@ export default function Work(work = []) {
                 <header>
                   <h4>${Link(url, name)}</h4>
                   <div class="meta">${description && html`<div>${description}</div>`}</div>
+                  ${items.length > 1 && html`<div>${Duration(items)}</div>`}
                 </header>
                 <div class="timeline">
                   ${items.map(
@@ -39,7 +41,7 @@ export default function Work(work = []) {
                         <div>
                           <h5>${position}</h5>
                           <div class="meta">
-                            ${startDate && html`<div>${Duration(startDate, endDate)}</div>`}
+                            ${startDate && html`<div>${DateTimeDuration(startDate, endDate)}</div>`}
                             ${location && html`<div>${location}</div>`}
                           </div>
                         </div>

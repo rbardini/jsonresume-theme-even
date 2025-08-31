@@ -289,8 +289,12 @@ blockquote > * + *,
   }
 }
 
+time + time-duration::before {
+  content: '· ';
+}
+
 @media print {
-  .duration {
+  time-duration {
     display: none;
   }
 }

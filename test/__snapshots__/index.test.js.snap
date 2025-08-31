@@ -17,13 +17,10 @@ exports[`renders a resume 1`] = `
 
 class TimeDuration extends HTMLElement {
   connectedCallback() {
-    const [from, to] = this.querySelectorAll('time')
-    if (!from) return
+    const durationAttr = +this.getAttribute('duration')
+    if (!durationAttr) return this.remove()
 
-    const startDate = new Date(from.dateTime || from.textContent)
-    const endDate = new Date(to ? to.dateTime || to.textContent : Date.now())
-    const diffDate = new Date(endDate - startDate)
-
+    const diffDate = new Date(durationAttr)
     const years = diffDate.getFullYear() - 1970
     const months = diffDate.getMonth()
     const days = diffDate.getDate() - 1
@@ -35,11 +32,7 @@ class TimeDuration extends HTMLElement {
     ].filter(Boolean)
     if (!segments.length) return
 
-    const duration = document.createElement('time')
-    duration.classList.add('duration')
-    duration.textContent = '· '.concat(segments.join(' '))
-
-    this.append(' ', duration)
+    this.textContent = segments.join(' ')
   }
 }
 
@@ -94,6 +87,7 @@ customElements.define('time-duration', TimeDuration)
                 <header>
                   <h4><a href="http://piedpiper.example.com">Pied Piper</a></h4>
                   <div class="meta"><div>Awesome compression company</div></div>
+                  
                 </header>
                 <div class="timeline">
                   
@@ -101,7 +95,7 @@ customElements.define('time-duration', TimeDuration)
                         <div>
                           <h5>CEO/President</h5>
                           <div class="meta">
-                            <div><time-duration><time datetime="2013-12-01">Dec 2013</time> – <time datetime="2014-12-01">Dec 2014</time></time-duration></div>
+                            <div><time datetime="2013-12-01">Dec 2013</time> – <time datetime="2014-12-01">Dec 2014</time> <time-duration duration="31536000000"></time-duration></div>
                             <div>Palo Alto, CA</div>
                           </div>
                         </div>
@@ -128,7 +122,7 @@ customElements.define('time-duration', TimeDuration)
                   <h4><a href="http://coderdojo.example.com/">CoderDojo</a></h4>
                   <div class="meta">
                     <strong>Teacher</strong>
-                    <div><time-duration><time datetime="2012-01-01">Jan 2012</time> – <time datetime="2013-01-01">Jan 2013</time></time-duration></div>
+                    <div><time datetime="2012-01-01">Jan 2012</time> – <time datetime="2013-01-01">Jan 2013</time> <time-duration duration="31622400000"></time-duration></div>
                   </div>
                 </header>
                 <p>Global movement of free coding clubs for young people.</p>
@@ -151,7 +145,7 @@ customElements.define('time-duration', TimeDuration)
                   <h4><a href="https://www.ou.edu/">University of Oklahoma</a></h4>
                   <div class="meta">
                     <strong>Information Technology</strong>
-                    <div><time-duration><time datetime="2011-06-01">Jun 2011</time> – <time datetime="2014-01-01">Jan 2014</time></time-duration></div>
+                    <div><time datetime="2011-06-01">Jun 2011</time> – <time datetime="2014-01-01">Jan 2014</time> <time-duration duration="81648000000"></time-duration></div>
                   </div>
                 </header>
                 <p>Bachelor</p>
@@ -179,7 +173,8 @@ customElements.define('time-duration', TimeDuration)
                       <strong>Team lead and Designer</strong>
                       at <strong>Smoogle</strong>
                     </div>
-                    <div><time datetime="2016-08-24">Aug 2016</time></div> <div>application</div>
+                    <div><time datetime="2016-08-24">Aug 2016</time></div>
+                    <div>application</div>
                   </div>
                 </header>
                 <p>A mapping engine that misguides you</p>

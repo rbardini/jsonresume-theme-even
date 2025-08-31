@@ -1,12 +1,14 @@
 import { html } from '@rbardini/html'
-import DateTime from './date-time.js'
 
 /**
- * @param {string} startDate
- * @param {string} [endDate]
+ * @param {{startDate?: string, endDate?: string}[]} items
  * @returns {string}
  */
-export default function Duration(startDate, endDate) {
-  if (endDate === startDate) return DateTime(endDate)
-  return html`<time-duration>${DateTime(startDate)} – ${endDate ? DateTime(endDate) : 'Present'}</time-duration>`
+export default function Duration(items) {
+  const duration = items.reduce(
+    (acc, { startDate, endDate }) => acc + (startDate ? +new Date(endDate || Date.now()) - +new Date(startDate) : 0),
+    0,
+  )
+
+  return html`${duration > 0 && html`<time-duration duration="${duration}"></time-duration>`}`
 }
