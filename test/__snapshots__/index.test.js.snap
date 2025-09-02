@@ -145,11 +145,10 @@ customElements.define('time-duration', TimeDuration)
                 <header>
                   <h4><a href="https://www.ou.edu/">University of Oklahoma</a></h4>
                   <div class="meta">
-                    <strong>Information Technology</strong>
+                    <div>Bachelor in <strong>Information Technology</strong></div>
                     <div><time datetime="2011-06-01">Jun 2011</time> – <time datetime="2014-01-01">Jan 2014</time> <time-duration duration="81648000000"></time-duration></div>
                   </div>
                 </header>
-                <p>Bachelor</p>
                 
                   <h5>Courses</h5>
                   <ul>

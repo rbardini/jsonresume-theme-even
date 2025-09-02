@@ -20,11 +20,10 @@ export default function Education(education = []) {
                 <header>
                   <h4>${Link(url, institution)}</h4>
                   <div class="meta">
-                    ${area && html`<strong>${area}</strong>`}
+                    <div>${[studyType, area && html`<strong>${area}</strong>`].filter(Boolean).join(' in ')}</div>
                     ${startDate && html`<div>${DateTimeDuration(startDate, endDate)}</div>`}
                   </div>
                 </header>
-                ${studyType && markdown(studyType)}
                 ${courses.length > 0 &&
                 html`
                   <h5>Courses</h5>
