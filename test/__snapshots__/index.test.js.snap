@@ -17,10 +17,16 @@ exports[`renders a resume 1`] = `
 
 class TimeDuration extends HTMLElement {
   connectedCallback() {
-    const durationAttr = +this.getAttribute('duration')
-    if (!durationAttr) return this.remove()
+    const dates = this.getAttribute('dates')
+    if (!dates) return this.remove()
 
-    const diffDate = new Date(durationAttr)
+    const duration = dates.split('|').reduce((acc, _date, i, dates) => {
+      if (i % 2) return acc
+      const [startDate, endDate] = dates.slice(i)
+      return acc + (startDate ? +new Date(endDate || Date.now()) - +new Date(startDate) : 0)
+    }, 0)
+
+    const diffDate = new Date(duration)
     const years = diffDate.getFullYear() - 1970
     const months = diffDate.getMonth()
     const days = diffDate.getDate() - 1
@@ -91,7 +97,7 @@ customElements.define('time-duration', TimeDuration)
                           <div>
                             <strong><a href="http://piedpiper.example.com">Pied Piper</a></strong> · Awesome compression company
                           </div>
-                          <div><time datetime="2013-12-01">Dec 2013</time> – <time datetime="2014-12-01">Dec 2014</time> <time-duration duration="31536000000"></time-duration></div>
+                          <div><time datetime="2013-12-01">Dec 2013</time> – <time datetime="2014-12-01">Dec 2014</time> <time-duration dates="2013-12-01|2014-12-01"></time-duration></div>
                           <div>Palo Alto, CA</div>
                         
                   </div>
@@ -123,7 +129,7 @@ customElements.define('time-duration', TimeDuration)
                   <h4><a href="http://coderdojo.example.com/">CoderDojo</a></h4>
                   <div class="meta">
                     <strong>Teacher</strong>
-                    <div><time datetime="2012-01-01">Jan 2012</time> – <time datetime="2013-01-01">Jan 2013</time> <time-duration duration="31622400000"></time-duration></div>
+                    <div><time datetime="2012-01-01">Jan 2012</time> – <time datetime="2013-01-01">Jan 2013</time> <time-duration dates="2012-01-01|2013-01-01"></time-duration></div>
                   </div>
                 </header>
                 <p>Global movement of free coding clubs for young people.</p>
@@ -146,7 +152,7 @@ customElements.define('time-duration', TimeDuration)
                   <h4><a href="https://www.ou.edu/">University of Oklahoma</a></h4>
                   <div class="meta">
                     <div>Bachelor in <strong>Information Technology</strong></div>
-                    <div><time datetime="2011-06-01">Jun 2011</time> – <time datetime="2014-01-01">Jan 2014</time> <time-duration duration="81648000000"></time-duration></div>
+                    <div><time datetime="2011-06-01">Jun 2011</time> – <time datetime="2014-01-01">Jan 2014</time> <time-duration dates="2011-06-01|2014-01-01"></time-duration></div>
                   </div>
                 </header>
                 

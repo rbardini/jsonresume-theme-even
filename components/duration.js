@@ -5,10 +5,10 @@ import { html } from '@rbardini/html'
  * @returns {string}
  */
 export default function Duration(items) {
-  const duration = items.reduce(
-    (acc, { startDate, endDate }) => acc + (startDate ? +new Date(endDate || Date.now()) - +new Date(startDate) : 0),
-    0,
-  )
+  const dates = items
+    .map(({ startDate, endDate }) => [startDate || '', endDate || ''])
+    .flat()
+    .join('|')
 
-  return html`${duration > 0 && html`<time-duration duration="${duration}"></time-duration>`}`
+  return html`<time-duration dates="${dates}"></time-duration>`
 }
