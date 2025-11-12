@@ -4,12 +4,12 @@ import { html } from '@rbardini/html'
  * @param {import('../schema.d.ts').ResumeSchema['skills']} skills
  * @returns {string | false}
  */
-export default function Skills(skills = []) {
+export default function Skills(skills = [], label) {
   return (
     skills.length > 0 &&
     html`
       <section id="skills">
-        <h3>Skills</h3>
+        <h3>${label}</h3>
         <div class="grid-list">
           ${skills.map(
             ({ keywords = [], name }) => html`

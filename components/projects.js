@@ -13,12 +13,12 @@ const formatRoles = roles => (Intl.ListFormat ? new Intl.ListFormat('en').format
  * @param {import('../schema.d.ts').ResumeSchema['projects']} projects
  * @returns {string | false}
  */
-export default function Projects(projects = []) {
+export default function Projects(projects = [], label) {
   return (
     projects.length > 0 &&
     html`
       <section id="projects">
-        <h3>Projects</h3>
+        <h3>${label}</h3>
         <div class="stack">
           ${projects.map(
             ({

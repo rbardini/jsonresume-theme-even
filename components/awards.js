@@ -6,12 +6,12 @@ import DateTime from './date-time.js'
  * @param {import('../schema.d.ts').ResumeSchema['awards']} awards
  * @returns {string | false}
  */
-export default function Awards(awards = []) {
+export default function Awards(awards = [], label) {
   return (
     awards.length > 0 &&
     html`
       <section id="awards">
-        <h3>Awards</h3>
+        <h3>${label}</h3>
         <div class="stack">
           ${awards.map(
             ({ awarder, date, summary, title }) => html`
