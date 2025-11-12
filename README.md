@@ -79,7 +79,7 @@ Here's an example using the default theme colors:
 
 ### Sections
 
-## Ordering
+#### Ordering
 
 You can override what sections are displayed, and in what order, via the `.meta.sections` resume field.
 
@@ -107,7 +107,7 @@ Here's an example with all available sections in their default order:
 
 Any sections not in the above list are not registered and won't be displayed in the final render.
 
-## Custom Label
+#### Custom Labels
 
 You can override the default section labels. Particularly usefull if you want to translate a resume into another language.
 
@@ -115,7 +115,7 @@ You can override the default section labels. Particularly usefull if you want to
 {
   "meta": {
     "sectionLabels": {
-      "work": "Jobs"
+      "work": "Jobs",
       "projects": "Projekter"
     }
   }
