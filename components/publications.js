@@ -7,12 +7,12 @@ import Link from './link.js'
  * @param {import('../schema.d.ts').ResumeSchema['publications']} publications
  * @returns {string | false}
  */
-export default function Publications(publications = []) {
+export default function Publications(publications = [], label) {
   return (
     publications.length > 0 &&
     html`
       <section id="publications">
-        <h3>Publications</h3>
+        <h3>${label}</h3>
         <div class="stack">
           ${publications.map(
             ({ name, publisher, releaseDate, summary, url }) => html`

@@ -7,12 +7,12 @@ import Link from './link.js'
  * @param {import('../schema.d.ts').ResumeSchema['education']} education
  * @returns {string | false}
  */
-export default function Education(education = []) {
+export default function Education(education = [], label) {
   return (
     education.length > 0 &&
     html`
       <section id="education">
-        <h3>Education</h3>
+        <h3>${label}</h3>
         <div class="stack">
           ${education.map(
             ({ area, courses = [], institution, startDate, endDate, studyType, url }) => html`

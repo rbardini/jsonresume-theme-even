@@ -6,12 +6,12 @@ import Link from './link.js'
  * @param {import('../schema.d.ts').ResumeSchema['certificates']} certificates
  * @returns {string | false}
  */
-export default function Certificates(certificates = []) {
+export default function Certificates(certificates = [], label) {
   return (
     certificates.length > 0 &&
     html`
       <section id="certificates">
-        <h3>Certificates</h3>
+        <h3>${label}</h3>
         <div class="stack">
           ${certificates.map(
             ({ date, issuer, name, url }) => html`

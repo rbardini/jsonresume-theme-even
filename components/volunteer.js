@@ -7,12 +7,12 @@ import Link from './link.js'
  * @param {import('../schema.d.ts').ResumeSchema['volunteer']} volunteer
  * @returns {string | false}
  */
-export default function Volunteer(volunteer = []) {
+export default function Volunteer(volunteer = [], label) {
   return (
     volunteer.length > 0 &&
     html`
       <section id="volunteer">
-        <h3>Volunteer</h3>
+        <h3>${label}</h3>
         <div class="stack">
           ${volunteer.map(
             ({ highlights = [], organization, position, startDate, endDate, summary, url }) => html`
