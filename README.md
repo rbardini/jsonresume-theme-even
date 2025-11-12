@@ -112,7 +112,7 @@ Any sections not in the above list are not registered and won't be displayed in 
 You can override the default section labels. Particularly usefull if you want to translate a resume into another language.
 
 ```json
-`{
+{
   "meta": {
     "sectionLabels": {
       "work": "Jobs"
