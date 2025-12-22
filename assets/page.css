@@ -160,6 +160,11 @@ svg {
   vertical-align: text-bottom;
 }
 
+.icon-fa {
+  margin-right: 0.2em;
+  vertical-align: text-bottom;
+}
+
 .masthead {
   background: var(--color-dimmed);
   display: inherit;
