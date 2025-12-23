@@ -76,3 +76,17 @@ Here's an example using the default theme colors:
   }
 }
 ```
+
+### Icons
+
+By default, [Feather icons](https://feathericons.com/) are used for the profiles. You can also use [Font Awesome icons](https://fontawesome.com/) by setting the `.meta.themeOptions.icons` resume field to "fontawesome":
+
+```json
+{
+  "meta": {
+    "themeOptions": {
+      "icons": "fontawesome"
+    }
+  }
+}
+```

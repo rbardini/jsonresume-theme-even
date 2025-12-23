@@ -12,9 +12,10 @@ const formatCountry = countryCode =>
 
 /**
  * @param {import('../schema.d.ts').ResumeSchema['basics']} basics
+ * @param {{ iconSet?: 'feather' | 'fontawesome' }} [options]
  * @returns {string}
  */
-export default function Header(basics = {}) {
+export default function Header(basics = {}, { iconSet = 'feather' } = {}) {
   const { email, image, label, location, name, phone, profiles = [], summary, url } = basics
 
   return html`
@@ -26,28 +27,29 @@ export default function Header(basics = {}) {
         ${location?.city &&
         html`
           <li>
-            ${Icon('map-pin')} ${location.city}${location.countryCode && html`, ${formatCountry(location.countryCode)}`}
+            ${Icon('map-pin', undefined, iconSet)}
+            ${location.city}${location.countryCode && html`, ${formatCountry(location.countryCode)}`}
           </li>
         `}
         ${email &&
         html`
           <li>
-            ${Icon('mail')}
+            ${Icon('mail', undefined, iconSet)}
             <a href="mailto:${email}">${email}</a>
           </li>
         `}
         ${phone &&
         html`
           <li>
-            ${Icon('phone')}
+            ${Icon('phone', undefined, iconSet)}
             <a href="tel:${phone.replace(/\s/g, '')}">${phone}</a>
           </li>
         `}
-        ${url && html`<li>${Icon('link')} ${Link(url)}</li>`}
+        ${url && html`<li>${Icon('link', undefined, iconSet)} ${Link(url)}</li>`}
         ${profiles.map(
           ({ network, url, username }) => html`
             <li>
-              ${network && Icon(network, 'user')} ${Link(url, username)}
+              ${network && Icon(network, 'user', iconSet)} ${Link(url, username)}
               ${network && html`<span class="network">(${network})</span>`}
             </li>
           `,
