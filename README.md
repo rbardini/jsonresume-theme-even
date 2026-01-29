@@ -76,3 +76,9 @@ Here's an example using the default theme colors:
   }
 }
 ```
+
+### Certificate badges and notes
+
+If a [certificate](https://docs.jsonresume.org/schema#certificates) entry contains an `image` field, it is used as the URL of an image to display next to the entry as a badge for the certificate.
+
+If a certificate entry contains only `name` and optionally `url` but no `issuer` or `date`, it is considered as a "note" entry and rendered at the top of the list in a different format (for example to link to a full list).
