@@ -76,3 +76,7 @@ Here's an example using the default theme colors:
   }
 }
 ```
+
+### Grouping projects by type
+
+If the `.meta.themeOptions.projectsByType` is `true`, project entries are rendered as separate sections according to their `type` field, instead of as a single section.
