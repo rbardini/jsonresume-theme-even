@@ -280,6 +280,11 @@ blockquote > * + *,
     display: contents;
   }
 
+  /* Ensure sections remain scrollable targets despite display: contents */
+  section > h3 {
+    scroll-margin-top: 2em;
+  }
+
   .icon-list {
     flex-direction: column;
   }
@@ -296,5 +301,70 @@ time + time-duration::before {
 @media print {
   time-duration {
     display: none;
+  }
+}
+
+/* Table of Contents */
+.table-of-contents {
+  position: fixed;
+  top: 2em;
+  right: 2em;
+  max-width: 12em;
+  padding: 1em;
+  background: var(--color-dimmed);
+  border-radius: 0.5em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  max-height: calc(100vh - 4em);
+  overflow-y: auto;
+}
+
+.table-of-contents ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.table-of-contents li {
+  margin: 0;
+}
+
+.table-of-contents li + li {
+  margin-top: 0.5em;
+}
+
+.table-of-contents a {
+  display: block;
+  color: var(--color-secondary);
+  text-decoration: none;
+  padding: 0.3em 0.5em;
+  border-radius: 0.25em;
+  font-size: 0.9em;
+  transition: all 0.2s ease;
+}
+
+.table-of-contents a:hover {
+  color: var(--color-accent);
+  background: var(--color-background);
+  text-decoration: none;
+}
+
+.table-of-contents a.active {
+  color: var(--color-accent);
+  background: var(--color-background);
+  font-weight: bold;
+}
+
+/* Hide TOC on smaller screens and in print */
+@media print, (max-width: 64em) {
+  .table-of-contents {
+    display: none;
+  }
+}
+
+/* Adjust body padding when TOC is visible */
+@media (min-width: 64em) {
+  body:has(.table-of-contents) {
+    padding-right: 16em;
   }
 }

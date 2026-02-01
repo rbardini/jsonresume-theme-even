@@ -11,6 +11,7 @@ import Projects from './projects.js'
 import Publications from './publications.js'
 import References from './references.js'
 import Skills from './skills.js'
+import TableOfContents from './table-of-contents.js'
 import Volunteer from './volunteer.js'
 import Work from './work.js'
 
@@ -22,6 +23,7 @@ import Work from './work.js'
  * @returns
  */
 export default function Resume(resume, { css, js } = {}) {
+  const showTableOfContents = Boolean(resume.meta?.themeOptions?.showTableOfContents)
   return html`<!doctype html>
     <html lang="en" style="${colors(resume.meta)}">
       <head>
@@ -38,11 +40,12 @@ export default function Resume(resume, { css, js } = {}) {
           ${js}
         </script>`}
       </head>
-      <body>
-        ${Header(resume.basics)} ${Work(resume.work)} ${Volunteer(resume.volunteer)} ${Education(resume.education)}
-        ${Projects(resume.projects)} ${Awards(resume.awards)} ${Certificates(resume.certificates)}
-        ${Publications(resume.publications)} ${Skills(resume.skills)} ${Languages(resume.languages)}
-        ${Interests(resume.interests)} ${References(resume.references)}
+      <body id="top">
+        ${showTableOfContents && TableOfContents(resume)} ${Header(resume.basics)} ${Work(resume.work)}
+        ${Volunteer(resume.volunteer)} ${Education(resume.education)} ${Projects(resume.projects)}
+        ${Awards(resume.awards)} ${Certificates(resume.certificates)} ${Publications(resume.publications)}
+        ${Skills(resume.skills)} ${Languages(resume.languages)} ${Interests(resume.interests)}
+        ${References(resume.references)}
       </body>
     </html>`
 }

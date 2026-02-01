@@ -76,3 +76,19 @@ Here's an example using the default theme colors:
   }
 }
 ```
+
+### Table of contents
+
+You can enable a floating table of contents on the right side of the screen by setting `.meta.themeOptions.showTableOfContents` to `true`:
+
+```json
+{
+  "meta": {
+    "themeOptions": {
+      "showTableOfContents": true
+    }
+  }
+}
+```
+
+The table of contents automatically includes links to all resume sections that have content, plus a "Top" link to return to the beginning of the document. The active section is highlighted as you scroll through the resume. The table of contents is automatically hidden on smaller screens and in print mode.
