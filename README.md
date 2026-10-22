@@ -66,11 +66,11 @@ Here's an example using the default theme colors:
   "meta": {
     "themeOptions": {
       "colors": {
-        "background": ["#ffffff", "#191e23"],
-        "dimmed": ["#f3f4f5", "#23282d"],
-        "primary": ["#191e23", "#fbfbfc"],
-        "secondary": ["#6c7781", "#ccd0d4"],
-        "accent": ["#0073aa", "#00a0d2"]
+        "background": ["#ffffff", "#121113"],
+        "dimmed": ["#f3f4f6", "#222222"],
+        "primary": ["#111827", "#c1c1c1"],
+        "secondary": ["#6b7280", "#888888"],
+        "accent": ["#527575", "#5f8787"]
       }
     }
   }

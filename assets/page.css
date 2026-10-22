@@ -1,17 +1,17 @@
 :root {
   color-scheme: light dark;
 
-  --color-background-light: #ffffff; /* White */
-  --color-dimmed-light: #f3f4f5; /* Light Gray 200 */
-  --color-primary-light: #191e23; /* Dark Gray 900 */
-  --color-secondary-light: #6c7781; /* Dark Gray 300 */
-  --color-accent-light: #0073aa; /* WordPress Blue */
+  --color-background-light: #ffffff;
+  --color-dimmed-light: #f3f4f6;
+  --color-primary-light: #111827;
+  --color-secondary-light: #6b7280;
+  --color-accent-light: #527575;
 
-  --color-background-dark: #191e23; /* Dark Gray 900 */
-  --color-dimmed-dark: #23282d; /* Dark Gray 800 */
-  --color-primary-dark: #fbfbfc; /* Light Gray 100 */
-  --color-secondary-dark: #ccd0d4; /* Light Gray 700 */
-  --color-accent-dark: #00a0d2; /* Medium Blue */
+  --color-background-dark: #121113;
+  --color-dimmed-dark: #222222;
+  --color-primary-dark: #c1c1c1;
+  --color-secondary-dark: #888888;
+  --color-accent-dark: #5f8787;
 
   --color-background: var(--color-background-light);
   --color-dimmed: var(--color-dimmed-light);
