@@ -46,18 +46,22 @@ export default function Projects(projects = []) {
                   </div>
                 </header>
                 ${description && markdown(description)}
-                ${highlights.length > 0 &&
-                html`
-                  <ul>
-                    ${highlights.map(highlight => html`<li>${markdown(highlight)}</li>`)}
-                  </ul>
-                `}
-                ${keywords.length > 0 &&
-                html`
-                  <ul class="tag-list">
-                    ${keywords.map(keyword => html`<li>${keyword}</li>`)}
-                  </ul>
-                `}
+                ${
+                  highlights.length > 0 &&
+                  html`
+                    <ul>
+                      ${highlights.map(highlight => html`<li>${markdown(highlight)}</li>`)}
+                    </ul>
+                  `
+                }
+                ${
+                  keywords.length > 0 &&
+                  html`
+                    <ul class="tag-list">
+                      ${keywords.map(keyword => html`<li>${keyword}</li>`)}
+                    </ul>
+                  `
+                }
               </article>
             `,
           )}

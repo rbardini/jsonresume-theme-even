@@ -16,12 +16,14 @@ export default function References(references = []) {
             ({ name, reference }) => html`
               <blockquote>
                 ${reference && markdown(reference)}
-                ${name &&
-                html`
-                  <p>
-                    <cite>${name}</cite>
-                  </p>
-                `}
+                ${
+                  name &&
+                  html`
+                    <p>
+                      <cite>${name}</cite>
+                    </p>
+                  `
+                }
               </blockquote>
             `,
           )}

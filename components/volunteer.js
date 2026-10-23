@@ -25,12 +25,14 @@ export default function Volunteer(volunteer = []) {
                   </div>
                 </header>
                 ${summary && markdown(summary)}
-                ${highlights.length > 0 &&
-                html`
-                  <ul>
-                    ${highlights.map(highlight => html`<li>${markdown(highlight)}</li>`)}
-                  </ul>
-                `}
+                ${
+                  highlights.length > 0 &&
+                  html`
+                    <ul>
+                      ${highlights.map(highlight => html`<li>${markdown(highlight)}</li>`)}
+                    </ul>
+                  `
+                }
               </article>
             `,
           )}

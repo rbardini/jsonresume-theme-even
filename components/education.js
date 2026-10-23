@@ -24,13 +24,15 @@ export default function Education(education = []) {
                     ${startDate && html`<div>${DateTimeDuration(startDate, endDate)}</div>`}
                   </div>
                 </header>
-                ${courses.length > 0 &&
-                html`
-                  <h5>Courses</h5>
-                  <ul>
-                    ${courses.map(course => html`<li>${markdown(course)}</li>`)}
-                  </ul>
-                `}
+                ${
+                  courses.length > 0 &&
+                  html`
+                    <h5>Courses</h5>
+                    <ul>
+                      ${courses.map(course => html`<li>${markdown(course)}</li>`)}
+                    </ul>
+                  `
+                }
               </article>
             `,
           )}

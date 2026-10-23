@@ -33,42 +33,50 @@ export default function Work(work = []) {
                 <header>
                   <h4>${singleItem ? singleItem.position : Link(url, name)}</h4>
                   <div class="meta">
-                    ${singleItem
-                      ? html`
-                          <div>
-                            ${[html`<strong>${Link(url, name)}</strong>`, description].filter(Boolean).join(' · ')}
-                          </div>
-                          ${singleItem.startDate &&
-                          html`<div>${DateTimeDuration(singleItem.startDate, singleItem.endDate)}</div>`}
-                          ${singleItem.location && html`<div>${singleItem.location}</div>`}
-                        `
-                      : html`
-                          ${description && html`<div>${description}</div>`}
-                          ${items.some(item => item.startDate) && html`<div>${Duration(items)}</div>`}
-                        `}
+                    ${
+                      singleItem
+                        ? html`
+                            <div>
+                              ${[html`<strong>${Link(url, name)}</strong>`, description].filter(Boolean).join(' · ')}
+                            </div>
+                            ${
+                              singleItem.startDate &&
+                              html`<div>${DateTimeDuration(singleItem.startDate, singleItem.endDate)}</div>`
+                            }
+                            ${singleItem.location && html`<div>${singleItem.location}</div>`}
+                          `
+                        : html`
+                            ${description && html`<div>${description}</div>`}
+                            ${items.some(item => item.startDate) && html`<div>${Duration(items)}</div>`}
+                          `
+                    }
                   </div>
                 </header>
                 <div class="timeline">
                   ${items.map(
                     ({ highlights = [], location, position, startDate, endDate, summary }) => html`
                       <div>
-                        ${!singleItem &&
-                        html`
-                          <div>
-                            <h5>${position}</h5>
-                            <div class="meta">
-                              ${startDate && html`<div>${DateTimeDuration(startDate, endDate)}</div>`}
-                              ${location && html`<div>${location}</div>`}
+                        ${
+                          !singleItem &&
+                          html`
+                            <div>
+                              <h5>${position}</h5>
+                              <div class="meta">
+                                ${startDate && html`<div>${DateTimeDuration(startDate, endDate)}</div>`}
+                                ${location && html`<div>${location}</div>`}
+                              </div>
                             </div>
-                          </div>
-                        `}
+                          `
+                        }
                         ${summary && markdown(summary)}
-                        ${highlights.length > 0 &&
-                        html`
-                          <ul>
-                            ${highlights.map(highlight => html`<li>${markdown(highlight)}</li>`)}
-                          </ul>
-                        `}
+                        ${
+                          highlights.length > 0 &&
+                          html`
+                            <ul>
+                              ${highlights.map(highlight => html`<li>${markdown(highlight)}</li>`)}
+                            </ul>
+                          `
+                        }
                       </div>
                     `,
                   )}

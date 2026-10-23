@@ -23,26 +23,33 @@ export default function Header(basics = {}) {
       <div>${name && html`<h1>${name}</h1>`} ${label && html`<h2>${label}</h2>`}</div>
       ${summary && html`<article>${markdown(summary)}</article>`}
       <ul class="icon-list">
-        ${location?.city &&
-        html`
-          <li>
-            ${Icon('map-pin')} ${location.city}${location.countryCode && html`, ${formatCountry(location.countryCode)}`}
-          </li>
-        `}
-        ${email &&
-        html`
-          <li>
-            ${Icon('mail')}
-            <a href="mailto:${email}">${email}</a>
-          </li>
-        `}
-        ${phone &&
-        html`
-          <li>
-            ${Icon('phone')}
-            <a href="tel:${phone.replace(/\s/g, '')}">${phone}</a>
-          </li>
-        `}
+        ${
+          location?.city &&
+          html`
+            <li>
+              ${Icon('map-pin')}
+              ${location.city}${location.countryCode && html`, ${formatCountry(location.countryCode)}`}
+            </li>
+          `
+        }
+        ${
+          email &&
+          html`
+            <li>
+              ${Icon('mail')}
+              <a href="mailto:${email}">${email}</a>
+            </li>
+          `
+        }
+        ${
+          phone &&
+          html`
+            <li>
+              ${Icon('phone')}
+              <a href="tel:${phone.replace(/\s/g, '')}">${phone}</a>
+            </li>
+          `
+        }
         ${url && html`<li>${Icon('link')} ${Link(url)}</li>`}
         ${profiles.map(
           ({ network, url, username }) => html`

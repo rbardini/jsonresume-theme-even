@@ -15,12 +15,14 @@ export default function Skills(skills = []) {
             ({ keywords = [], name }) => html`
               <div>
                 ${name && html`<h4>${name}</h4>`}
-                ${keywords.length > 0 &&
-                html`
-                  <ul class="tag-list">
-                    ${keywords.map(keyword => html`<li>${keyword}</li>`)}
-                  </ul>
-                `}
+                ${
+                  keywords.length > 0 &&
+                  html`
+                    <ul class="tag-list">
+                      ${keywords.map(keyword => html`<li>${keyword}</li>`)}
+                    </ul>
+                  `
+                }
               </div>
             `,
           )}

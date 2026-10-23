@@ -29,14 +29,18 @@ export default function Resume(resume, { css, js } = {}) {
         ${Meta(resume.basics)}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" />
-        ${css &&
-        html`<style>
-          ${css}
-        </style>`}
-        ${js &&
-        html`<script type="module">
-          ${js}
-        </script>`}
+        ${
+          css &&
+          html`<style>
+            ${css}
+          </style>`
+        }
+        ${
+          js &&
+          html`<script type="module">
+            ${js}
+          </script>`
+        }
       </head>
       <body>
         ${Header(resume.basics)} ${Work(resume.work)} ${Volunteer(resume.volunteer)} ${Education(resume.education)}

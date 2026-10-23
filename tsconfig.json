@@ -5,11 +5,8 @@
     "checkJs": true,
     "declaration": true,
     "declarationMap": true,
-    "esModuleInterop": true,
     "module": "nodenext",
-    "moduleResolution": "nodenext",
     "noEmit": true,
-    "strict": true,
     "target": "esnext"
   }
 }
